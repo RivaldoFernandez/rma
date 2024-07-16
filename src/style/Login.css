@@ -1,0 +1,30 @@
+/* Login.css */
+
+/* Ejemplo de personalización adicional */
+.custom-input {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .custom-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Ejemplo de cómo aplicar estilos específicos para tamaños de pantalla */
+  @media (max-width: 640px) {
+    .custom-container {
+      padding: 20px;
+    }
+  }
+  
