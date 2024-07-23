@@ -1,0 +1,197 @@
+/* ------------------ Contenedor Principal ------------------ */
+
+.tarea-container-6 {
+    display: flex;
+    background-color: #E0F2E6;
+    flex-direction: column;
+    height: 100%;
+}
+.content-6 {
+    display: flex;
+    flex: 1;
+}
+
+
+/* ------------------ Barra de Búsqueda ------------------ */
+
+.search-cont-6 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+}
+
+/* ------------------ Vista Principal ------------------ */
+
+.tarea-content-6 {
+    flex: 1;
+    padding: 20px;
+;
+}
+
+/* -------- Buscador, iconos de notificación y perfil -------- */ 
+.search-bar-6 {
+    padding: 10px;
+    margin-left: 100px;
+    border: 1px solid #777373;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 10px; /* Espacio entre el buscador y los iconos */
+}
+
+.icons-6 {
+    display: flex;
+    align-items: center;
+}
+
+.icon-6 {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px; /* Espacio entre los iconos */
+}
+
+/* ------------------ Barra de Navegación Lateral ------------------ */
+
+.sidebar-6 {
+    background-color: #ffffff;
+    width: 20%;
+    padding: 20px;
+}
+
+.sidebar-menu-6 {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mb-4{
+    width: 150px;
+}
+
+.menu-link-6 {
+    display: block;
+    padding: 10px 0;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon-6 {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+/* ------------------ Ajustes y Cerrar Sesión ------------------ */
+
+.ajustes-cerrar-6 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 20%;
+    padding: 20px;
+}
+
+/* ------------------ Nombre de Bienvenida ------------------ */
+
+.bienve-nombre-6 {
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 20px; 
+}
+
+/* ------------------ Estilo de los Sensores ------------------ */
+
+.contenido-sensores-6 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.cont-sensor-6 {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sensor-item-6 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 132px; /*Tamaño de los cajones de sensores*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.sensor-item-6.selected {
+    background-color: #3a8f29; /* Color verde claro para el fondo */
+}
+
+.value-icon-container-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.sensor-value-6, .sensor-icon-6 {
+    display: inline;
+    margin: 0 1px;
+}
+
+.sensor-name-6 {
+    margin: 5px 0;
+    display: block;
+}
+
+.sensor-value-6 {
+    font-weight: bold;
+}
+
+
+/* ------------------ Grafico y maps ------------------ */
+.grafico-maps-6 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grafico-reporte-6{
+    width: 48%; 
+    height:auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 24px;
+}
+
+.title-gm-6 {
+    text-align: center;
+    font-weight: bold;
+    
+}
+.maps-sensores-6 {
+width: 48%; 
+    height: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 24px;
+}
+
+.maps-sensores-6 img {
+    width: 70%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}

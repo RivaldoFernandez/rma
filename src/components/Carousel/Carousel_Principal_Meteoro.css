@@ -1,0 +1,34 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.sensores-item-4 {
+    margin: 0 10px;
+}
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 2rem; 
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.carousel-button:focus {
+    outline: none; 
+}
+
+/* Estilo adicional para las imágenes */
+.carousel-image {
+    width: 50%; 
+    object-fit: cover;
+}

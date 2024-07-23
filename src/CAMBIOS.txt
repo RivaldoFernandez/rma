@@ -1,0 +1,5 @@
+El cerra sesion corregir segun
+Login agregar el de api
+En register tambien segun el api
+Sidebar de components no se esta usando aun 
+Carousel de campo falta por el cambio que se hizo aun no se me asigno la tarea

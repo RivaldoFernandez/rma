@@ -1,0 +1,9 @@
+.recuperar-contrasena-container {
+    background-image: url('../src/assets/cutivo1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tu diseño */
+  }

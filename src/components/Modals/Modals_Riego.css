@@ -1,0 +1,81 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.modal-buttons button:first-child {
+    background-color: #ccc; /* Color para el botón de Cerrar */
+}
+
+.modal-buttons button:last-child {
+    background-color: #28a745; /* Color para el botón de Guardar */
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #bbb;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #218838;
+}
+
+.modal h2 {
+    font-size: 1.3rem; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Negrita */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto */
+}

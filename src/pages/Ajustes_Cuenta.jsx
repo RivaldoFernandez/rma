@@ -1,0 +1,140 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logofibertel.png';
+import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
+
+import ajustesIcon from '../assets/icons/ajustes.png';
+import cerrarIcon from '../assets/icons/cerrar.png';
+import { FaCog, FaUser, FaTools, FaLifeRing } from 'react-icons/fa'; 
+import '../style/Ajustes_Cuenta.css';
+
+const Ajustes_Cuenta = () => {
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const handleOptionClick = (option) => {
+        setSelectedOption(option);
+    };
+    
+return (
+<div className="ajustes-container-ajustes">
+    <div className="content-ajustes">
+        <div className="sidebar-ajustes">
+            <ul className="sidebar-menu-ajustes">
+                <li>
+                    <Link to="/iniciio" className="menu-link-ajustes">
+                        <img src={logo} alt="Inicio" className="mb-4" style={{ width: '150px' }} />
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/iniciio" className="menu-link-ajustes">
+                        <FaHome className="menu-icon-ajustes" />
+                        Inicio
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/monitoreo" className="menu-link-ajustes">
+                        <FaChartLine className="menu-icon-ajustes" />
+                        Monitoreo
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/historial" className="menu-link-ajustes">
+                        <FaHistory className="menu-icon-ajustes" />
+                        Historial
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/sensores" className="menu-link-ajustes">
+                        <FaCloudSun className="menu-icon-ajustes" />
+                        <span>Sensores</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/campo" className="menu-link-ajustes">
+                        <FaMapSigns className="menu-icon-ajustes" />
+                        <span>Campo</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/tarea" className="menu-link-ajustes">
+                        <FaClipboardList className="menu-icon-ajustes" />
+                        <span>Tarea</span>
+                    </Link>
+                </li>
+            </ul>
+            <div className='ajustes-cerrar-ajustes'>
+                <ul>
+                    <li>
+                        <Link to="/ajustes" className="menu-link-ajustes">
+                        <img src={ajustesIcon} alt="Ajustes" className="menu-icon-ajustes" />
+                        <span>Ajustes</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cerrar" className="menu-link-ajustes">
+                        <img src={cerrarIcon} alt="Cerrar" className="menu-icon-ajustes" />
+                        <span>Cerrar Sesión</span>
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div className="ajustes-content-ajustes">
+            <div className="search-cont-ajustes">
+                <input type="text" placeholder="Buscar configuración" className="search-bar-ajustes" />
+                <div className='ajustes-icon-option'>
+                    <div className="section" onClick={() => handleOptionClick('general')}>
+                        <FaCog className="icon" />
+                        <h1>General</h1>
+                    </div>
+                    <div className="section" onClick={() => handleOptionClick('perfil')}>
+                        <FaUser className="icon" />
+                        <h1 className='text-position'>Perfil y contraseña</h1>
+                    </div>
+                    <div className="section" onClick={() => handleOptionClick('configuracion')}>
+                        <FaTools className="icon" />
+                        <h1>Configuración del Sistema</h1>
+                    </div>
+                    <div className="section" onClick={() => handleOptionClick('soporte')}>
+                        <FaLifeRing className="icon" />
+                        <h1>Soporte y ayuda</h1>
+                    </div>
+                </div>
+            </div>
+            <div className="resultado-content-ajustes">
+                {selectedOption === 'general' && (
+                    <form>
+                        <h2 className='text-title-option'>Configuración General</h2>
+                    </form>
+                )}
+                {selectedOption === 'perfil' && (
+                    <form>
+                        <h2 className='text-title-option'>Perfil y Contraseña</h2>
+                        <h2 className='text-title-option'>Perfil y Contraseña</h2>
+                        <p className='datos-perfil'><strong>Nombre Completo:</strong> Ornela Rincón</p>
+                        <p className='datos-perfil'><strong>Correo Electrónico:</strong> ornela_rincon@gmail.com</p>
+                        <p className='datos-perfil'><strong>Contraseña Actual:</strong> ***********</p>
+                    </form>
+                )}
+                {selectedOption === 'configuracion' && (
+                    <form>
+                        <h2 className='text-title-option'>Configuración del Sistema</h2>
+                    </form>
+                )}
+                {selectedOption === 'soporte' && (
+                    <form>
+                        <h2 className='text-title-option'>Soporte y Ayuda</h2>
+                    </form>
+                )}
+                {!selectedOption && <h2 className='text-title-option'>Selecciona una opción para ver el contenido</h2>}
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+);
+};
+
+export default Ajustes_Cuenta;

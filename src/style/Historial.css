@@ -1,0 +1,176 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.historial-container-3 {
+    display: flex;
+    background-color: #E0F2E6;
+    flex-direction: column;
+}
+
+
+.content-3 {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar-3 {
+    background-color: #ffffff;
+    width: 20%;
+    padding: 20px;
+}
+
+.sidebar-menu-3 {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-link-3 {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon-3 {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+
+/* ------------------ Ajustes y Cerrar Sesión ------------------ */
+
+.ajustes-cerrar-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 20%;
+    padding: 20px;
+}
+
+
+/* ------------------ Vista Principal ------------------ */
+
+.historial-content-3 {
+    flex: 1;
+    padding: 20px;
+;
+}
+
+
+/* -------- Buscador, iconos de notificación y perfil -------- */ 
+.search-bar-3 {
+    padding: 10px;
+    margin-left: 100px;
+    border: 1px solid #48b81c;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 10px; /* Espacio entre el buscador y los iconos */
+}
+
+.icons-3 {
+    display: flex;
+    align-items: center;
+}
+
+.icon-3 {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px; /* Espacio entre los iconos */
+}
+
+.search-cont-3 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+}
+
+
+/*------------- Graficos de Tempe y Hume--------------*/
+
+
+
+
+.sensor-humdad-3, .sensor-temperatura-3 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px; 
+    height: 250px; 
+    margin: 10px 0; 
+}
+
+
+
+
+/*---------------------- SELCCION ESTACION VALOR ---------------------*/
+
+.filtros-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #E0F2E6;
+    margin-top: 10px;
+}
+
+.filtro-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 30%; /* Adjust the width as needed */
+}
+
+.titulo {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+
+.select {
+    margin-left: 20px;
+    width: 40%;
+}
+
+.mensaje-container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    text-align: center; 
+    margin-bottom: 10px;     /* Center text within child elements */
+}
+
+.sensor-humdad-3 {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center horizontally within container */
+
+}
+
+
+/* -------------------- filtros-container-meteorologica ---------------------*/
+
+
+.filtros-container-meteorologica {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #E0F2E6;
+}
+
+.subtitulo{
+    margin-left: 20px;
+}

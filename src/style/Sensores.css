@@ -1,0 +1,181 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sensores-container-4 {
+    display: flex;
+    background-color: #E0F2E6;
+    flex-direction: column;
+}
+
+
+.content-4 {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar-4 {
+    background-color: #ffffff;
+    width: 20%;
+    padding: 20px;
+}
+
+.sidebar-menu-4 {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-link-4 {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon-4 {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.search-cont-4 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+}
+
+/* ------------------ Vista Principal ------------------ */
+
+.sensores-content-4 {
+    flex: 1;
+    padding: 20px;
+}
+
+/* -------- Buscador, iconos de notificación y perfil -------- */ 
+.search-bar-4 {
+    padding: 10px;
+    margin-left: 100px;
+    border: 1px solid #48b81c;
+    border-radius: 10px;
+    outline: none;
+    margin-right: 10px; /* Espacio entre el buscador y los iconos */
+}
+
+.icons-4 {
+    display: flex;
+    align-items: center;
+}
+
+.icon-4 {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px; /* Espacio entre los iconos */
+}
+
+/* ------------------ Ajustes y Cerrar Sesión ------------------ */
+
+.ajustes-cerrar-4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 20%;
+    padding: 20px;
+}
+
+
+/*================================VALVULA==============================*/
+.sensores-item-4 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* ------------------ Estación Meteorologica ------------------ */
+/* ------------------ Estilo de los Sensores ------------------ */
+
+.sensores-item-4 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 450px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+.contenido-sensores-4 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.value-icon-container-4 {
+    display: flex;
+    align-items: center;
+}
+
+
+.cont-sensor-4 {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sensor-img-4{
+    margin-left: -20px;
+}
+.container-text{
+    margin-left: 20px;
+    text-align: left;
+    
+}
+.sensor-value-4{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* ------------------ Estación Meteorologica ------------------ */
+/* ------------------ Estilo de los Sensores ------------------ */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Estacion-mt-4 {
+    background-color: #ffffff;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 16px;
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    text-align: center; /* Para centrar el texto dentro del h1 */
+}
+
+
+
+.mb-4{
+    width: 150px;
+}

@@ -1,49 +1,45 @@
 /* Fondo de imagen */
-.login-container {
-  background-image: url('../src/assets/cutivo1.png');
+.register-container {
+  background-image: url('../src/assets/cultivor.png');
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura según tu diseño */
+  height: 100vh;
 }
 
-.login-tom {
-  position: absolute;
+.register-tom {
+  position: relative;
   background-color: #ffffff;
-  height: 80%;
-  max-height: 90%;
-  width: 350px;
+  height: auto; 
+  max-height: 90vh;
+  width: 402px;
   margin-left: 10%;
-  margin-right: 10%;
   padding: 40px 64px 64px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: hidden auto;
+  overflow-y: auto;
 }
-.input-group {
-  margin-bottom: 5px;
-  width: 100%;
+.color-title{
+  color: #FFB84D ;  
+ 
 }
-.espacio{
-  margin-top: 20px;
+.color-buttom{
+  background-color: #FFB84D ; 
 }
 
-
-/* Estilos específicos para tamaños de pantalla menores a 768px */
 @media (max-width: 768px) {
-  .login-tom {
+  .register-tom {
     width: 90%;
     padding: 20px 32px 32px;
     margin-left: 10%;
     margin-right: 10%;
   }
 
-  .login-container {
+  .register-container {
     height: auto; /* Ajusta la altura para pantallas más pequeñas */
     padding: 20px;
   }
@@ -62,13 +58,5 @@
 
   label {
     font-size: 14px; /* Ajusta el tamaño de fuente para labels */
-  }
-
-  h1, h2, h3, h4 {
-    font-size: 16px; /* Ajusta el tamaño de fuente para headers */
-  }
-
-  .flex {
-    flex-direction: column;
   }
 }
