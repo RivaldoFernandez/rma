@@ -18,7 +18,7 @@ const Ajustes_Cuenta = () => {
 return (
 <div className="ajustes-container-ajustes">
     <div className="content-ajustes">
-        <div className="sidebar-ajustes">
+        <div className="sidebar-ajustes fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden ">
             <ul className="sidebar-menu-ajustes">
                 <li>
                     <Link to="/iniciio" className="menu-link-ajustes">
@@ -80,7 +80,7 @@ return (
             </div>
         </div>
 
-        <div className="ajustes-content-ajustes">
+        <div className="ajustes-content-ajustes ml-64">
             <div className="search-cont-ajustes">
                 <input type="text" placeholder="Buscar configuración" className="search-bar-ajustes" />
                 <div className='ajustes-icon-option'>

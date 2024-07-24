@@ -4,7 +4,7 @@
     display: flex;
     background-color: #E0F2E6;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
 }
 .content-6 {
     display: flex;
@@ -194,4 +194,128 @@ width: 48%;
     height: auto; 
     display: block;
     margin: 0 auto;
+}
+/*-----------------------------Contenido tarea---------------------------*/
+.container-general-tarea{
+    background-color: #ffffff;
+    border-radius: 16px;
+    flex-grow: 1;
+    height: 90%;
+}
+.container-tarea {
+    margin-top: 10px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.container-tarea-reporte {
+    display: flex;
+    width: 100%; 
+    max-width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title-tarea {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.report-container {
+    flex: 0.5; 
+    display: flex;
+
+    justify-content: space-between; 
+}
+
+.title-reporte {
+    margin-left: 30px; 
+}
+
+.subtitle-semanal {
+    margin-right: 60px;
+    margin-left: 15px;
+}
+
+
+
+.container-information {
+    margin-top: 10px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.container-information-reporte {
+    display: flex;
+    width: 100%; 
+    max-width: auto;
+}
+
+.title-information {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.report-container-date {
+    flex: 0.5; 
+    display: flex;
+
+    justify-content: space-between; 
+}
+
+.container-information-vista {
+    margin-top: 10px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column; 
+    flex-grow: 1;
+    height: auto;
+
+    overflow-y: auto;
+    max-height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 16px;
+
+}
+
+.report-container-date-hour {
+    flex: 0.5; 
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+/*-------------Boton de generar reporte PDF---------------*/
+
+.container-buttom-6 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.container-buttom {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 50px; 
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 16px;
+    background-color: #FFE5B2;
+}
+
+.my-button {
+    color: rgb(0, 0, 0);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+
 }

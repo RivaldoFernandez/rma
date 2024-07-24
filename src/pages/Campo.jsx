@@ -32,7 +32,7 @@ const Campo = () => {
 return (
 <div className="campo-container-5">
     <div className="content-5">
-        <div className="sidebar-5">
+        <div className="sidebar-5 fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
             <ul className="sidebar-menu-5">
                 <li>
                     <Link to="/iniciio" className="menu-link-5">
@@ -95,7 +95,7 @@ return (
                 </ul>
             </div>
         </div>
-        <div className="historial-content-5">
+        <div className="historial-content-5 ml-64">
             <div className='search-cont-5'>
                 <div style={{ display: 'flex' , alignItems: 'center' }}>
                     <input type="text" placeholder="Buscar" className="search-bar-5" style={{ width: '60%' ,

@@ -57,7 +57,7 @@ const Inicio = () => {
     return (
         <div className="inicio-container-1">
             <div className="content-1">
-                <div className="sidebar-1 ">
+                <div className="sidebar-1 fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
                     <ul className="sidebar-menu-1">
                         <li>
                             <Link to="/iniciio" className="menu-link-1">
@@ -121,7 +121,7 @@ const Inicio = () => {
                     </div>
                 </div>
                 <br />
-                <div className="inicio-content-1">
+                <div className="inicio-content-1 ml-64">
                     <div className='search-cont-1'>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <input type="text" placeholder="Buscar" className="search-bar-1" style={{ width: '60%', marginRight: '5' }} />

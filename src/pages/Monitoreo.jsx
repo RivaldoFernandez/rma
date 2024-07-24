@@ -24,7 +24,7 @@ const Monitoreo = () => {
 return (
 <div className="monitoreo-container-2">
     <div className="content-2">
-        <div className="sidebar-2">
+        <div className="sidebar-2 fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
             <ul className="sidebar-menu-2">
                 <li>
                     <Link to="/iniciio" className="menu-link-2">
@@ -87,7 +87,7 @@ return (
         </div>
 
 
-        <div className="monitoreo-content-2">
+        <div className="monitoreo-content-2 ml-64">
 
             <div className='search-cont-2'>
                 <div style={{ display: 'flex' , alignItems: 'center' }}>

@@ -16,7 +16,7 @@ const Monitoreo = () => {
 return (
 <div className="sensores-container-4">
     <div className="content-4">
-        <div className="sidebar-4">
+        <div className="sidebar-4 fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
             <ul className="sidebar-menu-4">
                 <li>
                     <Link to="/iniciio" className="menu-link-4">
@@ -81,7 +81,7 @@ return (
         </div>
 
 
-        <div className="sensores-content-4">
+        <div className="sensores-content-4 ml-64">
 
             <div className='search-cont-4'>
                 <div style={{ display: 'flex' , alignItems: 'center' }}>

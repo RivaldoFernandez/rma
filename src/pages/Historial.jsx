@@ -74,7 +74,7 @@ const Historial = () => {
     return (
         <div className="historial-container-3">
             <div className="content-3">
-                <div className="sidebar-3">
+                <div className="sidebar-3 fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
                     <ul className="sidebar-menu-3">
                         <li>
                             <Link to="/iniciio" className="menu-link-3">
@@ -135,7 +135,7 @@ const Historial = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="historial-content-3">
+                <div className="historial-content-3 ml-64">
                     <div className='search-cont-3'>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <input type="text" placeholder="Buscar" className="search-bar-3" style={{ width: '60%', marginRight: '5px' }} />
