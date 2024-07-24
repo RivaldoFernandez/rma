@@ -134,9 +134,28 @@
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
+/*-----------------El efecto de animación de cambio de colores segun sea selecionado -----------------*/
 .sensor-item-1.selected {
-    background-color: #3a8f29; 
+    background-color: #c4d0da;
+    border: 1px solid rgb(219, 212, 212);
+    animation: selectedPulse 0.7s ease-in-out infinite alternate;
+    color: #050505;
+    font-weight: bold;
+    font-size: 1.01rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+@keyframes selectedPulse {
+    0% {
+        transform: scale(1);
+        background-color: #c4d0da;
+    }
+    100% {
+        transform: scale(1.05);
+        background-color: #99f586;
+    }
+}
+/*-----------------El efecto de animación de cambio de colores segun sea selecionado -----------------*/
 
 .value-icon-container-1 {
     display: flex;

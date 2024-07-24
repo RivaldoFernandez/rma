@@ -8,7 +8,7 @@ import profileIcon from '../assets/usuario.png';
 import ImgCampo from '../assets/img/enviadocampo.png'
 import { AiOutlineSetting } from 'react-icons/ai';
 import { AiOutlinePlus } from 'react-icons/ai';
-import ValveModal from "../components/Modals/Modals_Riego"; // Importa el componente del modal
+import ValveModal from "../components/Modals/Modals_Riego"; 
 
 
 import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
@@ -87,7 +87,7 @@ return (
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Cerrar" className="menu-link-5">
+                        <Link to="/login" className="menu-link-5">
                         <img src={cerrarIcon} alt="Cerrar" className="menu-icon-5" />
                         <span>Cerrar Sesión</span>
                         </Link>
@@ -116,7 +116,7 @@ return (
                     <h1> <strong>Topologia</strong></h1>
                     <h2>Este gráfico muestra la estructura y comunicación entre la estación meteorológica y las
                         válvulas.</h2>
-                    {/* Aquí puedes agregar contenido relacionado con Topologia */}
+                    {/* Aquí se puede agregar segun la Topologia por el momento vacio */}
                 </div>
                 <div className='control-valvula-5'>
                             <h1><strong>Control de válvulas</strong></h1>

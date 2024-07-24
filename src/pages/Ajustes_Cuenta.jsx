@@ -65,13 +65,13 @@ return (
             <div className='ajustes-cerrar-ajustes'>
                 <ul>
                     <li>
-                        <Link to="/ajustes" className="menu-link-ajustes">
+                        <Link to="/Ajustes_Cuenta" className="menu-link-ajustes">
                         <img src={ajustesIcon} alt="Ajustes" className="menu-icon-ajustes" />
                         <span>Ajustes</span>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/cerrar" className="menu-link-ajustes">
+                        <Link to="/login" className="menu-link-ajustes">
                         <img src={cerrarIcon} alt="Cerrar" className="menu-icon-ajustes" />
                         <span>Cerrar Sesión</span>
                         </Link>
