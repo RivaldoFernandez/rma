@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura según tu diseño */
+  height: 100vh; 
 }
 
 .login-tom {
@@ -44,28 +44,28 @@
   }
 
   .login-container {
-    height: auto; /* Ajusta la altura para pantallas más pequeñas */
+    height: auto; 
     padding: 20px;
   }
 
   img {
-    width: 100px; /* Ajusta el tamaño del logo */
+    width: 100px; 
   }
 
   .custom-input {
-    font-size: 14px; /* Ajusta el tamaño de fuente para inputs */
+    font-size: 14px; 
   }
 
   .custom-button {
-    font-size: 14px; /* Ajusta el tamaño de fuente para botones */
+    font-size: 14px;
   }
 
   label {
-    font-size: 14px; /* Ajusta el tamaño de fuente para labels */
+    font-size: 14px; 
   }
 
   h1, h2, h3, h4 {
-    font-size: 16px; /* Ajusta el tamaño de fuente para headers */
+    font-size: 16px; 
   }
 
   .flex {

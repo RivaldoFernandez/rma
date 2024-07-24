@@ -35,7 +35,7 @@
     border: 1px solid #777373;
     border-radius: 10px;
     outline: none;
-    margin-right: 10px; /* Espacio entre el buscador y los iconos */
+    margin-right: 10px; 
 }
 
 .icons-1 {
@@ -46,7 +46,7 @@
 .icon-1 {
     width: 30px;
     height: 30px;
-    margin-left: 20px; /* Espacio entre los iconos */
+    margin-left: 20px;
 }
 
 /* ------------------ Barra de Navegación Lateral ------------------ */
@@ -127,7 +127,7 @@
     padding-right: 2px;
     padding-bottom: 20px;
     text-align: center;
-    width: 132px; /*Tamaño de los cajones de sensores*/
+    width: 132px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +135,7 @@
     transition: background-color 0.3s, border-color 0.3s;
 }
 .sensor-item-1.selected {
-    background-color: #3a8f29; /* Color verde claro para el fondo */
+    background-color: #3a8f29; 
 }
 
 .value-icon-container-1 {

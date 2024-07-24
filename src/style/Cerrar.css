@@ -93,14 +93,14 @@ html, body {
   .icon-cerrar {
     width: 30px;
     height: 30px;
-    margin-left: 20px; /* Espacio entre los iconos */
+    margin-left: 20px;
     margin-right: 20px;
     outline: none;
   }
   .icon-cerrar-2{
     width: 30px;
     height: 30px;
-    margin-left: 20px; /* Espacio entre los iconos */
+    margin-left: 20px; 
     margin-right: 150px;
     outline: none;
 
@@ -165,7 +165,7 @@ html, body {
         border: 1px solid #48b81c;
         border-radius: 10px;
         outline: none;
-        margin: 30px 20px 10px 5px; /* Margen: superior, derecho, inferior, izquierdo */
+        margin: 30px 20px 10px 5px; 
         width: calc(100% - 80px);
     }
     
@@ -196,20 +196,20 @@ html, body {
         position: absolute;
         top: 15px;
         left: 40px;
-        font-size: 30px; /* Aumentar el tamaño de la fuente */
-        padding: 10px; /* Agregar padding si es necesario */
+        font-size: 30px; 
+        padding: 10px; 
     }
     .search-cont-cerrar {
-        margin-top: 40px; /* Cambiar el margen superior a 40px */
+        margin-top: 40px; 
     }
 
     .search-bar-cerrar {
-        margin: 30px 20px 10px 5px; /* Margen: superior, derecho, inferior, izquierdo */
-        width: calc(100% - 40px); /* Ajustar el ancho si es necesario */
+        margin: 30px 20px 10px 5px; 
+        width: calc(100% - 40px);
     }
     .icon-cerrar-2 {
       outline: none;
-        margin-right: 30px; /* Cambiar el margen derecho a 30px */
+        margin-right: 30px; 
     }
     .icons-cerrar {
 

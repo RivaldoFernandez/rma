@@ -1,6 +1,4 @@
 
-
-
 .content-ajustes {
     display: flex;
     flex: 1;
@@ -71,11 +69,11 @@
 
 /* Contenido de los resultados */
 .resultado-content-ajustes {
-    flex: 10px; /* Ocupa la otra mitad del espacio disponible */
+    flex: 10px; 
     background-color: #E0F2E6;
     padding: 20px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    margin-left: 20px; /* Opcional: Espacio entre las dos secciones */
+    box-sizing: border-box; 
+    margin-left: 20px; 
 }
 .section {
     display: flex;
@@ -84,9 +82,9 @@
 }
 .icon {
     margin-top: 10px;
-    font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
-    color: #000000; /* Cambia el color del ícono si es necesario */
-    margin-right: 20px; /* Espacio entre el ícono y el texto */
+    font-size: 24px;
+    color: #000000; 
+    margin-right: 20px; 
 }
 
 .ajustes-icon-option {
@@ -102,21 +100,21 @@
     background-color: #E0F2E6;
     padding: 20px;
     height: 100%;
-    overflow-y: auto; /* Para permitir el desplazamiento si el contenido excede el alto del contenedor */
+    overflow-y: auto; 
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio entre los elementos del formulario */
+    gap: 15px; 
 }
 
 .text-title-option{
     margin-bottom: 15px;
-    font-size: 2rem; /* Tamaño del texto */
+    font-size: 2rem;
     color: #333;
-    text-align: center; /* Centra el texto */
-    font-weight: 700; /* Pone el texto en negrita (700 es un peso típico para negrita) */
+    text-align: center; 
+    font-weight: 700; 
 }
 
 

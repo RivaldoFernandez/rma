@@ -57,11 +57,11 @@ input[type="date"], select {
 }
 
 .modal-buttons button:first-child {
-    background-color: #ccc; /* Color para el botón de Cerrar */
+    background-color: #ccc; 
 }
 
 .modal-buttons button:last-child {
-    background-color: #28a745; /* Color para el botón de Guardar */
+    background-color: #28a745; 
 }
 
 .modal-buttons button:first-child:hover {
@@ -73,9 +73,9 @@ input[type="date"], select {
 }
 
 .modal h2 {
-    font-size: 1.3rem; /* Tamaño de fuente más grande */
-    font-weight: bold; /* Negrita */
+    font-size: 1.3rem; 
+    font-weight: bold; 
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: center; /* Centrar el texto */
+    text-align: center; 
 }

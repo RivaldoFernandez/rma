@@ -71,7 +71,7 @@ html, body {
     border: 1px solid #48b81c;
     border-radius: 10px;
     outline: none;
-    margin-right: 10px; /* Espacio entre el buscador y los iconos */
+    margin-right: 10px; 
 }
 
 .icons-3 {
@@ -82,7 +82,7 @@ html, body {
 .icon-3 {
     width: 30px;
     height: 30px;
-    margin-left: 20px; /* Espacio entre los iconos */
+    margin-left: 20px; 
 }
 
 .search-cont-3 {
@@ -128,7 +128,7 @@ html, body {
     padding: 5px;
     background-color: #ffffff;
     border-radius: 8px;
-    width: 30%; /* Adjust the width as needed */
+    width: 30%; 
 }
 
 .titulo {
@@ -146,16 +146,16 @@ html, body {
 .mensaje-container {
     margin-top: 5px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+    justify-content: center;
+    align-items: center;   
     text-align: center; 
-    margin-bottom: 10px;     /* Center text within child elements */
+    margin-bottom: 10px;   
 }
 
 .sensor-humdad-3 {
     display: flex;
-    flex-direction: column;  /* Stack children vertically */
-    align-items: center;     /* Center horizontally within container */
+    flex-direction: column; 
+    align-items: center;  
 
 }
 

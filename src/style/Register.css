@@ -40,23 +40,23 @@
   }
 
   .register-container {
-    height: auto; /* Ajusta la altura para pantallas más pequeñas */
+    height: auto; 
     padding: 20px;
   }
 
   img {
-    width: 100px; /* Ajusta el tamaño del logo */
+    width: 100px; 
   }
 
   .custom-input {
-    font-size: 14px; /* Ajusta el tamaño de fuente para inputs */
+    font-size: 14px; 
   }
 
   .custom-button {
-    font-size: 14px; /* Ajusta el tamaño de fuente para botones */
+    font-size: 14px; 
   }
 
   label {
-    font-size: 14px; /* Ajusta el tamaño de fuente para labels */
+    font-size: 14px; 
   }
 }

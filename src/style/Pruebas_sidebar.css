@@ -21,7 +21,7 @@
 .sidebar-menu-cerrar {
     list-style-type: none;
     padding: 0;
-    flex: 1; /* Takes up the remaining space */
+    flex: 1; 
 }
 
 /* Menu Link Style */
@@ -56,9 +56,9 @@
 
 /* Bottom Section Container */
 .ajustes-cerrar-cerrar {
-    margin-top: auto; /* Pushes the section to the bottom */
+    margin-top: auto; 
     padding: 20px 0;
-    border-top: 1px solid #ddd; /* Optional: adds a divider line */
+    border-top: 1px solid #ddd; 
 }
 
 /* Responsive Styles */
@@ -93,8 +93,8 @@
     .ajustes-cerrar-cerrar {
         position: relative;
         width: 100%;
-        margin-top: 20px; /* Optional: Adds spacing from the main content */
-        border-top: 1px solid #ddd; /* Optional: adds a divider line */
+        margin-top: 20px; 
+        border-top: 1px solid #ddd; 
     }
 
     .sidebar-toggle {
