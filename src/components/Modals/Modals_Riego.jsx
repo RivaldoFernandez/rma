@@ -1,40 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import "../Modals/Modals_Riego.css"; 
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
-// Modal configurado desde la raiz
+// Modal configurado desde la raíz
 Modal.setAppElement('#root');
-
-// Los dias
-const daysOfWeek = [
-    { id: 'monday', label: 'L' },
-    { id: 'tuesday', label: 'M' },
-    { id: 'wednesday', label: 'M'},
-    { id: 'thursday', label: 'J' },
-    { id: 'friday', label: 'V' },
-    { id: 'saturday', label: 'S' },
-    { id: 'sunday', label: 'D' },
-];
 
 const ValveModal = ({ isOpen, onRequestClose, valve }) => {
     const [startDate, setStartDate] = useState('');
-    const [selectedDays, setSelectedDays] = useState([]);
 
-    //Fechaa actual segun sea el dia
+    // Fecha actual según sea el día
     useEffect(() => {
         const today = new Date().toISOString().split('T')[0];
         setStartDate(today);
     }, []);
 
-    // Se maneja los checkboxes de los días de la semana
-    const handleChange = (event) => {
-        const { id, checked } = event.target;
-        setSelectedDays(prevSelectedDays => 
-            checked
-                ? [...prevSelectedDays, id]
-                : prevSelectedDays.filter(day => day !== id)
-        );
-    };
+    const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 
     return (
         <Modal
@@ -44,65 +25,136 @@ const ValveModal = ({ isOpen, onRequestClose, valve }) => {
             className="modal"
             overlayClassName="overlay"
         >
-            <h2>Programación de Válvula - {valve}</h2>
+            <div className="flex-container">
+                <h2 className='title-riego'>Programación de Válvula</h2>
+                <span className='text-right'>{valve}</span>
+            </div>
             <form>
                 <div>
-                    <label htmlFor="startDate">Fecha</label>
+                    <label htmlFor="startDateStart" className='label-del'>Del</label>
                     <input
                         type="date"
-                        id="startDate"
-                        name="startDate"
+                        id="startDateStart"
+                        name="startDateStart"
                         value={startDate}
                         onChange={(e) => setStartDate(e.target.value)}
+                        className='date-del-irrigation'
+                    />
+                    <label htmlFor="startDateEnd" className='label-al'> al</label>
+                    <input
+                        type="date"
+                        id="startDateEnd"
+                        name="startDateEnd"
+                        value={startDate}
+                        onChange={(e) => setStartDate(e.target.value)}
+                        className='date-al-irrigation'
+                    />
+                    <label htmlFor="lastWatering" className='date-title-ultimo'>Último riego programado:</label>
+                    <input
+                        type="date"
+                        id="lastWatering"
+                        name="lastWatering"
+                        value={startDate}
+                        onChange={(e) => setStartDate(e.target.value)}
+                        className='date-title-ultimo'
                     />
                 </div>
-
-                <h1 className='text-center font-bold mt-8'>Ciclo de Riego (días)</h1>
-                <div className="flex gap-4 mb-8 mt-8">
-                    {daysOfWeek.map(day => (
-                        <label key={day.id} className="flex items-center">
+                <div className='container-irrigation-izquierda-derecha'>
+                    <div className='container-izquierda'>
+                        <div className='container-kc'>
+                            <label htmlFor="kc" className='label-kc'>KC</label>
                             <input
-                                type="checkbox"
-                                id={day.id}
-                                checked={selectedDays.includes(day.id)}
-                                onChange={handleChange}
-                                className="form-checkbox h-5 w-5 text-blue-600"
-                            />
-                            <span className="ml-2">{day.label}</span>
-                        </label>
-                    ))}
-                </div>
-
-                <div className="p-4">
-                    <div className="flex flex-col space-y-4">
-                        <div className="flex items-center justify-between">
-                            <label htmlFor="start-time" className="text-gray-700 font-medium ml-4">Hora de Inicio</label>
-                            <input
-                                type="time"
-                                id="start-time"
-                                defaultValue="08:30" // Valor que se nos mostrara por defecto
-                                className="border border-gray-300 rounded-lg p-2 ml-20 w-24 text-right"
+                                type='text'
+                                id='kc'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-kc'
                             />
                         </div>
-
-                        <div className="flex items-center justify-between">
-                            <label htmlFor="end-time" className="text-gray-700 font-medium ml-4">Hora de Fin</label>
+                        <div className='container-kc'>
+                            <label htmlFor="frequency" className='label-kc'>Frecuencia de Riego:</label>
                             <input
-                                type="time"
-                                id="end-time"
-                                defaultValue="17:00" // Valor que se nos mostrara por defecto
-                                className="border border-gray-300 rounded-lg p-2 ml-20 w-24 text-right"
+                                type='text'
+                                id='frequency'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-kc'
+                            />
+                        </div>
+                        <div className='container-kc'>
+                            <label htmlFor="irrigationTime" className='label-kc'>Hora de Riego:</label>
+                            <input
+                                type='text'
+                                id='irrigationTime'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-kc'
+                            />
+                        </div>
+                        <div className='container-kc'>
+                            <label htmlFor="startTime" className='label-kc'>Hora de Inicio:</label>
+                            <input
+                                type='text'
+                                id='startTime'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-kc'
+                            />
+                        </div>
+                        <div className='container-kc'>
+                            <label htmlFor="endTime" className='label-kc'>Hora de Fin:</label>
+                            <input
+                                type='text'
+                                id='endTime'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-kc'
                             />
                         </div>
                     </div>
-                </div>
 
-                <div className="modal-buttons flex justify-between">
-                    <button type="button" onClick={onRequestClose}>Cerrar</button>
-                    <button type="button" onClick={() => {
-                        console.log('Datos guardados');
-                        onRequestClose();
-                    }}>Guardar</button>
+                    <div className='container-derecha'>
+                        <div className='container-eto'>
+                            <label htmlFor="eto" className='label-ETo'>ETo</label>
+                            <input
+                                type='text'
+                                id='eto'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-eto'
+                            />
+                        </div>
+                        <div className='container-eto'>
+                            <label htmlFor="systemDischarge" className='label-ETo'>Descarga del Sistema:</label>
+                            <input
+                                type='text'
+                                id='systemDischarge'
+                                pattern="[A-Za-z0-9]*"
+                                title="Solo se permiten letras y números"
+                                className='ingress-eto'
+                            />
+                        </div>
+                        <div className="days-list">
+                            {days.map((day, index) => (
+                                <div key={index} className="day-item">
+                                    <span className="day-label">{day}</span>
+                                    <input type="checkbox" id={`checkbox-${index}`} className="day-checkbox" />
+                                    <div className="icons">
+                                        <span className="icon-edit" title="Editar">
+                                            <FaEdit /> 
+                                        </span>
+                                        <span className="icon-delete" title="Eliminar">
+                                            <FaTrash /> 
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div className="modal-buttons">
+                    <button type="button" className="btn-save" onClick={() => saveChanges()}>Guardar Cambios</button>
+                    <button type="button" className="btn-cancel" onClick={() => closeModal()}>Cancelar</button>
                 </div>
             </form>
         </Modal>

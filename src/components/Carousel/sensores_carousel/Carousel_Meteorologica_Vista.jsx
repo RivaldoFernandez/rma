@@ -1,12 +1,12 @@
 import React from 'react';
-import CarouselSpacing from './Carousel_Meteorologica _Principal';
-import  ImgTempEjemplo from '../Carousel/img/ImgTempEjemplo.png'
-import  ImgTempEjemplo1 from '../Carousel/img/ImgTempEjemplo1.png'
+import  ImgTempEjemplo from "../img/ImgTempEjemplo.png"
+import  ImgTempEjemplo1 from "../img/ImgTempEjemplo1.png"
+import Carousel_Meteorologica_Principal from './Carousel_Meteorologica_Principal';
 const Carousel_Images = () => {
     const sensors = [
         {
             img: ImgTempEjemplo1,
-            title: 'Sensor de Temperatura',
+            title: 'Proimerrrrrroooooooo',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -22,7 +22,7 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: 'Sensor de Temperatura',
+            title: ' Humedad',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -38,7 +38,7 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: 'Sensor de Temperatura',
+            title: 'fernandez ',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -46,34 +46,27 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: 'Sensor de Humedad',
-            coveredArea: 'Área cubierta: 150 m²',
-            location: 'Ubicación en el campo:',
-            model: 'Modelo: -----',
-            specifications: 'Más especificaciones',
-        },
-        {
-            img: ImgTempEjemplo,
-            title: 'Sensor de Humedad',
-            coveredArea: 'Área cubierta: 150 m²',
+            title: 'rivaldo ',
+            coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
             specifications: 'Más especificaciones',
         },
         {
             img: ImgTempEjemplo1,
-            title: 'Sensor de Humedad',
-            coveredArea: 'Área cubierta: 150 m²',
+            title: 'ultimo ',
+            coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
             specifications: 'Más especificaciones',
         },
+
 
     ];
 
     return (
         <div>
-            <CarouselSpacing sensors={sensors} />
+            <Carousel_Meteorologica_Principal sensors={sensors} />
         </div>
     );
 };

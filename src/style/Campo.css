@@ -1,34 +1,38 @@
+/*--------------Estilos generales --------------------*/
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.campo-container-5 {
+/*--------------Contenedor principal --------------------*/
+.main-container {
     display: flex;
     background-color: #E0F2E6;
     flex-direction: column;
-    
 }
 
-
-.content-5 {
+/*--------------Contenido principal --------------------*/
+.content {
     display: flex;
     flex: 1;
 }
 
-.sidebar-5 {
+/*--------------Barra lateral --------------------*/
+.sidebar {
     background-color: #ffffff;
     width: 20%;
     padding: 20px;
 }
 
-.sidebar-menu-5 {
+/*--------------Menú de la barra lateral --------------------*/
+.sidebar-menu {
     list-style-type: none;
     padding: 0;
 }
 
-.menu-link-5 {
+/*--------------Enlaces del menú de la barra lateral --------------------*/
+.menu-link {
     display: block;
     padding: 10px 0;
     color: #333;
@@ -37,26 +41,21 @@ html, body {
     align-items: center;
 }
 
-.menu-icon-5 {
+/*--------------Iconos del menú --------------------*/
+.menu-icon {
     width: 25px;
     height: 25px;
     margin-right: 15px;
 }
 
-/* ------------------ Vista Principal ------------------ */
-
-.historial-content-5 {
+/*--------------Contenido principal --------------------*/
+.main-content {
     flex: 1;
     padding: 20px;
-;
 }
 
-
-
-
-/*===========================================*/
-
-.search-bar-5 {
+/*--------------Campo de búsqueda --------------------*/
+.search-input {
     padding: 10px;
     margin-left: 100px;
     border: 1px solid #48b81c;
@@ -65,38 +64,28 @@ html, body {
     margin-right: 10px;
 }
 
-
-
- /*--------------------- Fondo buscador -----------------------------*/
- .search-cont-5 {
+/*--------------Contenedor de búsqueda --------------------*/
+.search-container {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 16px;
 }
 
-.search-bar-5 {
-    padding: 10px;
-    margin-left: 100px;
-    border: 1px solid #48b81c;
-    border-radius: 10px;
-    outline: none;
-    margin-right: 10px; 
-}
-
-.icons-5 {
+/*--------------Contenedor de iconos --------------------*/
+.icons-container {
     display: flex;
     align-items: center;
 }
 
-.icon-5 {
+/*--------------Iconos de notificaciones y perfil --------------------*/
+.icon {
     width: 30px;
     height: 30px;
     margin-left: 20px; 
 }
 
-/* ------------------ Ajustes y Cerrar Sesión ------------------ */
-
-.ajustes-cerrar-5 {
+/*--------------Configuración y cierre de sesión --------------------*/
+.settings-logout {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -105,69 +94,66 @@ html, body {
     padding: 20px;
 }
 
-
-
-
-/* ------------------ Contenedor de imagenes, control y topologia ------------------ */
-.contenedor-3-campos-5 {
+/*--------------Contenedor de campos --------------------*/
+.field-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     margin-top: 30px;
 }
 
-.imagenes-mostrados-5,
-.topologia-5,
-.control-valvula-5 {
+/*--------------Topología, control de válvulas e imágenes --------------------*/
+.topology,
+.valve-control,
+.field-images {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 16px;
     flex: 1;
     height: 280px;
 }
-/* Agrega un espacio entre las secciones */
-.topologia-5 {
+
+/*--------------Topología --------------------*/
+.topology {
     margin-right: 50px;
 }
 
-
-
-.imagenes-mostrados-campo-5 {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 16px;
-    flex: 1;
-    height: 300px;
+/*--------------Imágenes del campo --------------------*/
+.field-images {
+    height: 330px;
+    background-color: #fbff00;
+    margin-top: 10px;
 }
 
+/*--------------Estilos de los encabezados --------------------*/
+h1 {
+    text-align: center;
+}
 
-
-
-/* ------------------ Imagen del campo ------------------ */
-.imagen-con-info {
+/*--------------Información de imágenes --------------------*/
+.image-info {
     margin-bottom: 20px;
     display: flex;
     margin-top: 15px;
     justify-content: center;
-    
-}
-.imagen-fecha-colum{
-    margin-right: 50px;
-    text-align: center;
 }
 
-.imagen-con-info img {
+/*--------------Imágenes dentro del contenedor de información --------------------*/
+.image-info img {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.imagen-con-info p {
+/*--------------Texto de información de imágenes --------------------*/
+.image-info p {
     margin-top: 10px;
     font-size: 14px;
     color: #666;
 }
-.imagen-con-info img {
+
+/*--------------Imagen dentro del contenedor de información --------------------*/
+.image-info img {
     margin-top: 10px;
     width: 200px; 
     height: 150px; 
@@ -176,64 +162,36 @@ html, body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.ver-mas-btn{
-    margin-top: 60px;
-    margin-left: 30px;
-    align-items: center; 
-    text-align: center; 
-}
-
-.ver-mas-btn h1 {
-    margin-left: none;
-    font-size: 20px;
-    color: #000000; 
-}
-
-
-
-/*---------------------Setting and text------------------------*/
-
-.text-setting-5 {
+/*--------------Estilos para configuración de válvulas --------------------*/
+.text-setting {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
 }
 
-.text-setting-5 h1 {
+/*--------------Encabezados en configuración de válvulas --------------------*/
+.text-setting h1 {
     margin: 0; 
 }
 
-.ajustes-icon {
-    margin-left: auto;
-    font-size: 30px;
-}
-.mb-4{
-    width: 150px;
-}
-
-
-/*----------------- Contendor de valvula de los items -------------------*/
-.contenedor-item-valvula {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center; 
-
-}
-
-.text-setting-valvula-5 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-
-.ajustes-icon-5 {
+/*--------------Íconos de configuración de válvulas --------------------*/
+.valve-settings-icon {
     margin-left: 15px; 
     font-size: 30px;
     margin-top: 4px;
     justify-content: center;
 }
 
-/*----------------- Contendor de valvula de los items -------------------*/
+/*--------------Contenedor de válvulas --------------------*/
+.valve-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+/*--------------Configuración de texto de válvulas --------------------*/
+.valve-text-setting {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+}

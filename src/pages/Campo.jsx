@@ -5,14 +5,9 @@ import ajustesIcon from '../assets/icons/ajustes.png';
 import cerrarIcon from '../assets/icons/cerrar.png';
 import alarmIcon from '../assets/notificaciones.png';
 import profileIcon from '../assets/usuario.png';
-import ImgCampo from '../assets/img/enviadocampo.png'
 import { AiOutlineSetting } from 'react-icons/ai';
 import ValveModal from "../components/Modals/Modals_Riego"; 
-
-
 import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
-
-
 import '../style/Campo.css';
 import CarouselCampoVista from '../components/Carousel/CarouselCampoVista';
 
@@ -29,104 +24,99 @@ const Campo = () => {
         setModalIsOpen(false);
     };
 
-return (
-<div className="campo-container-5">
-    <div className="content-5">
-        <div className="sidebar-5 fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
-            <ul className="sidebar-menu-5">
-                <li>
-                    <Link to="/iniciio" className="menu-link-5">
-                        <img src={logo} alt="Inicio" className="mb-4" style={{ width: '150px' }} />
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/iniciio" className="menu-link-5">
-                        <FaHome className="menu-icon-5" />
-                        Inicio
-                    </Link>
-
-                </li>
-                <li>
-                    <Link to="/monitoreo" className="menu-link-5">
-                        <FaChartLine className="menu-icon-5" />
-                        Monitoreo
-                    </Link>
-
-                </li>
-                <li>
-                    <Link to="/historial" className="menu-link-5">
-                        <FaHistory className="menu-icon-5" />
-                        Historial
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/sensores" className="menu-link-5">
-                        <FaCloudSun className="menu-icon-5" />
-                        <span>Sensores</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/campo" className="menu-link-5">
-                        <FaMapSigns className="menu-icon-5" />
-                        <span>Campo</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/tarea" className="menu-link-5">
-                        <FaClipboardList className="menu-icon-5" />
-                        <span>Tarea</span>
-                    </Link>
-                </li>
-            </ul>
-            <div className='ajustes-cerrar-5'>
-                <ul>
+    return (
+        <div className="main-container">
+            <div className="content">
+            <div className="sidebar fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
+                    <ul className="sidebar-menu">
                     <li>
-                        <Link to="/Ajustes_Cuenta" className="menu-link-5">
-                        <img src={ajustesIcon} alt="Ajustes" className="menu-icon-5" />
-                        <span>Ajustes</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/login" className="menu-link-5">
-                        <img src={cerrarIcon} alt="Cerrar" className="menu-icon-5" />
-                        <span>Cerrar Sesión</span>
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div className="historial-content-5 ml-64">
-            <div className='search-cont-5'>
-                <div style={{ display: 'flex' , alignItems: 'center' }}>
-                    <input type="text" placeholder="Buscar" className="search-bar-5" style={{ width: '60%' ,
-                        marginRight: '5px' }} />
-                    <div className="icons-5" style={{ marginRight: 'auto' }}>
-                        <Link to="/notificaciones">
-                            <img src={alarmIcon} alt="Notificaciones" className="icon-5" />
-                        </Link>
-                        <Link to="/ajustes_cuenta">
-                            <img src={profileIcon} alt="Ajustes_Cuenta" className="icon-5 profile-icon" />
-                        </Link>
+                            <Link to="/iniciio" className="menu-link-1">
+                                <img src={logo} alt="Inicio" className="mb-4" style={{ width: '150px' }} />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/inicio" className="menu-link">
+                                <FaHome className="menu-icon" />
+                                Inicio
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/monitoreo" className="menu-link">
+                                <FaChartLine className="menu-icon" />
+                                Monitoreo
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/historial" className="menu-link">
+                                <FaHistory className="menu-icon" />
+                                Historial
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/sensores" className="menu-link">
+                                <FaCloudSun className="menu-icon" />
+                                Sensores
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/campo" className="menu-link">
+                                <FaMapSigns className="menu-icon" />
+                                Campo
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/tarea" className="menu-link">
+                                <FaClipboardList className="menu-icon" />
+                                Tarea
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className='settings-logout'>
+                        <ul>
+                            <li>
+                                <Link to="/Ajustes_Cuenta" className="menu-link">
+                                    <img src={ajustesIcon} alt="Ajustes" className="menu-icon" />
+                                    Ajustes
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/login" className="menu-link">
+                                    <img src={cerrarIcon} alt="Cerrar" className="menu-icon" />
+                                    Cerrar Sesión
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+                <div className="main-content ml-64">
+                    <div className='search-container'>
+                        <div style={{ display: 'flex' , alignItems: 'center' }}>
+                            <input type="text" placeholder="Buscar" className="search-input" style={{ width: '60%' , marginRight: '5px' }} />
+                            <div className="icons-container" style={{ marginRight: 'auto' }}>
+                                <Link to="/notificaciones">
+                                    <img src={alarmIcon} alt="Notificaciones" className="icon" />
+                                </Link>
+                                <Link to="/ajustes_cuenta">
+                                    <img src={profileIcon} alt="Ajustes_Cuenta" className="icon profile-icon" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
 
-            <div className='contenedor-3-campos-5'>
-                <div className='topologia-5'>
-                    <h1> <strong>Topologia</strong></h1>
-                    <h2>Este gráfico muestra la estructura y comunicación entre la estación meteorológica y las
-                        válvulas.</h2>
-                    {/* Aquí se puede agregar segun la Topologia por el momento vacio */}
-                </div>
-                <div className='control-valvula-5'>
+                    <div className='field-container'>
+                        <div className='topology'>
+                            <h1> <strong>Topología</strong></h1>
+                            <h2>Este gráfico muestra la estructura y comunicación entre la estación meteorológica y las válvulas.</h2>
+                        </div>
+                        <div className='valve-control'>
                             <h1><strong>Control de válvulas</strong></h1>
                             <h2>En esta sección puedes controlar el estado de las válvulas</h2>
-                            <div className='contenedor-item-valvula'>
+                            <div className='valve-item-container'>
                                 {['Válvula 1', 'Válvula 2', 'Válvula 3', 'Válvula 4', 'Válvula 5'].map((valve, index) => (
-                                    <div key={index} className='text-setting-valvula-5'>
+                                    <div key={index} className='valve-text-setting'>
                                         <h1><strong>{valve}</strong></h1>
                                         <AiOutlineSetting
-                                            className="ajustes-icon-5"
+                                            className="valve-settings-icon"
                                             alt="ValvulaComponent"
                                             onClick={() => openModal(valve)}
                                         />
@@ -134,29 +124,28 @@ return (
                                 ))}
                             </div>
                         </div>
-            </div>
-            <div className='contenedor-3-campos-5'>
-                <div className='imagenes-mostrados-campo-5'>
-                    <div className='text-setting-5'>
-                        <h1><strong>Imágenes del campo</strong></h1>
+                    </div>
+                    <div className='field-container'>
+                        <div className='field-images'>
+                            <div className='image-text-setting'>
+                                <h1><strong>Imágenes del campo</strong></h1>
+                            </div>
+                            <h2>En esta sección puedes ver imágenes de tu campo para un análisis de estado y crecimiento.</h2>
+                            <div className="image-info">
+                                <CarouselCampoVista/>
+                            </div>
+                        </div>
+                    </div>
 
-                    </div>
-                        <h2>En esta sección puedes ver imágenes de tu campo para un análisis de estado y crecimiento.</h2>
-                    <div className="imagen-con-info">
-                        <CarouselCampoVista/>
-                    </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-    <ValveModal
+            <ValveModal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 valve={currentValve}
             />
-</div>
-);
+        </div>
+    );
 };
 
 export default Campo;

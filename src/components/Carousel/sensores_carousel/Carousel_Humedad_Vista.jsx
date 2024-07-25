@@ -1,7 +1,7 @@
 import React from 'react';
-import CarouselSpacing from './Carousel_Meteorologica _Principal';
-import  ImgTempEjemplo from '../Carousel/img/ImgTempEjemplo1.png';
-import  ImgTempEjemplo1 from '../Carousel/img/ImgTempEjemplo.png'
+import  ImgTempEjemplo from "../img/ImgTempEjemplo.png";
+import  ImgTempEjemplo1 from "../img/ImgTempEjemplo1.png"
+import Carousel_Humedad_Principal from './Carousel_Humedad_Principal';
 const Carousel_Humedad_Vista = () => {
     const sensors = [
         {
@@ -43,7 +43,7 @@ const Carousel_Humedad_Vista = () => {
 
     return (
         <div>
-            <CarouselSpacing sensors={sensors} />
+            <Carousel_Humedad_Principal sensors={sensors} />
         </div>
     );
 };

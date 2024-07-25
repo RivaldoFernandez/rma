@@ -1,33 +1,38 @@
+/*--------------Estilos generales --------------------*/
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.sensores-container-4 {
+/*--------------Contenedor principal de sensores --------------------*/
+.sensores-container-sensores {
     display: flex;
     background-color: #E0F2E6;
     flex-direction: column;
 }
 
-
-.content-4 {
+/*--------------Contenido de sensores --------------------*/
+.content-sensores {
     display: flex;
     flex: 1;
 }
 
-.sidebar-4 {
+/*--------------Barra lateral de sensores --------------------*/
+.sidebar-sensores {
     background-color: #ffffff;
     width: 20%;
     padding: 20px;
 }
 
-.sidebar-menu-4 {
+/*--------------Menú de la barra lateral de sensores --------------------*/
+.sidebar-menu-sensores {
     list-style-type: none;
     padding: 0;
 }
 
-.menu-link-4 {
+/*--------------Enlaces del menú de la barra lateral de sensores --------------------*/
+.menu-link-sensores {
     display: block;
     padding: 10px 0;
     color: #333;
@@ -36,27 +41,28 @@ html, body {
     align-items: center;
 }
 
-.menu-icon-4 {
+/*--------------Iconos del menú de la barra lateral de sensores --------------------*/
+.menu-icon-sensores {
     width: 25px;
     height: 25px;
     margin-right: 15px;
 }
 
-.search-cont-4 {
+/*--------------Contenedor de búsqueda --------------------*/
+.search-cont-sensores {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 16px;
 }
 
-/* ------------------ Vista Principal ------------------ */
-
-.sensores-content-4 {
+/*--------------Vista principal --------------------*/
+.sensores-content-sensores {
     flex: 1;
     padding: 20px;
 }
 
-/* -------- Buscador, iconos de notificación y perfil -------- */ 
-.search-bar-4 {
+/*--------------Buscador e iconos --------------------*/
+.search-bar-sensores {
     padding: 10px;
     margin-left: 100px;
     border: 1px solid #48b81c;
@@ -65,20 +71,21 @@ html, body {
     margin-right: 10px; 
 }
 
-.icons-4 {
+/*--------------Contenedor de iconos --------------------*/
+.icons-sensores {
     display: flex;
     align-items: center;
 }
 
-.icon-4 {
+/*--------------Iconos de notificación y perfil --------------------*/
+.icon-sensores {
     width: 30px;
     height: 30px;
     margin-left: 20px; 
 }
 
-/* ------------------ Ajustes y Cerrar Sesión ------------------ */
-
-.ajustes-cerrar-4 {
+/*--------------Configuración y cierre de sesión --------------------*/
+.ajustes-cerrar-sensores {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -87,9 +94,8 @@ html, body {
     padding: 20px;
 }
 
-
-/*================================VALVULA==============================*/
-.sensores-item-4 {
+/*==============Estilo de válvulas ==================*/
+.sensores-item-sensores {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 30px;
@@ -103,13 +109,9 @@ html, body {
     align-items: center;
 }
 
-
-
-/* ------------------ Estación Meteorologica ------------------ */
-/* ------------------ Estilo de los Sensores ------------------ */
-
-.sensores-item-4 {
-    background-color: #ffffff;
+/*--------------Estilo de válvulas con color --------------------*/
+.sensores-item-sensores {
+    background-color: #124ae2;
     border-radius: 8px;
     padding-top: 10px;
     padding-left: 10px;
@@ -120,18 +122,15 @@ html, body {
     align-items: center;
     gap: 20px; 
 }
-.contenido-sensores-4 {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-.value-icon-container-4 {
+
+/*--------------Contenedor de íconos y valores de sensores --------------------*/
+.value-icon-container-sensores {
     display: flex;
     align-items: center;
 }
 
-
-.cont-sensor-4 {
+/*--------------Contenedor de sensores --------------------*/
+.cont-sensor-sensores {
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -140,30 +139,32 @@ html, body {
     flex-wrap: wrap;
 }
 
-.sensor-img-4{
+/*--------------Imagen de sensor --------------------*/
+.sensor-img-sensores {
     margin-left: -20px;
 }
-.container-text{
+
+/*--------------Texto del sensor --------------------*/
+.container-text-sensores {
     margin-left: 20px;
     text-align: left;
-    
 }
-.sensor-value-4{
+
+/*--------------Valor del sensor --------------------*/
+.sensor-value-sensores {
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-
-/* ------------------ Estación Meteorologica ------------------ */
-/* ------------------ Estilo de los Sensores ------------------ */
-
-.container {
+/*--------------Estación meteorológica --------------------*/
+.container-sensores {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Estacion-mt-4 {
+/*--------------Estilo de estación meteorológica --------------------*/
+.Estacion-mt-sensores {
     background-color: #ffffff;
     margin-top: 20px;
     padding: 10px;
@@ -174,8 +175,7 @@ html, body {
     text-align: center; 
 }
 
-
-
-.mb-4{
+/*--------------Espacio adicional para elementos --------------------*/
+.mb-4-sensores {
     width: 150px;
 }
