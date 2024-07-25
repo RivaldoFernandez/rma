@@ -3,11 +3,11 @@ import React from 'react';
 import SensorItem from './SensorItem';
 import Humedad from '../img_com/humedad.png'; // Ajusta el path
 
-const HumedadSensor = ({ isSelected, onClick }) => {
+const HumedadSensor = ({ isSelected, onClick, valor }) => {
     return (
         <SensorItem
             sensor='Humedad'
-            value='100%'
+            value={valor}
             iconSrc={Humedad}
             isSelected={isSelected}
             onClick={onClick}
