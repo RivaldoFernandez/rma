@@ -41,9 +41,9 @@ const Register = () => {
     <div className="register-container flex justify-start items-center h-screen">
       <div className="register-tom bg-white border-gray-600 rounded-md p-10 shadow-lg">
         <img src={logo} alt="FIBERTEL Logo" className="mx-auto mb-4 " style={{ width: '150px' }} />
-        <form onSubmit={handleSubmit(onSubmit)} className="input-group">
-          <div className="input-group">
-            <label htmlFor="nombre" className="block color-title">Nombre Completo</label>
+        <form onSubmit={handleSubmit(onSubmit)} className="input-group-register">
+          <div className="input-group-register">
+            <label htmlFor="nombre" className="title-user-pass-register color-title">Nombre Completo</label>
             <input
               type="text"
               id="nombre"
@@ -53,8 +53,8 @@ const Register = () => {
             />
             {errors.nombre && <p className="text-red-500">{errors.nombre.message}</p>}
           </div>
-          <div className="input-group">
-            <label htmlFor="username" className="block color-title">Nombre de Usuario</label>
+          <div className="input-group-register">
+            <label htmlFor="username" className="title-user-pass-register color-title">Nombre de Usuario</label>
             <input
               type="text"
               id="username"
@@ -64,27 +64,28 @@ const Register = () => {
             />
             {errors.username && <p className="text-red-500">{errors.username.message}</p>}
           </div>
-          <div className="input-group">
-            <label htmlFor="email" className="block color-title">Correo Electrónico</label>
+          <div className="input-group-register">
+            <label htmlFor="email" className="title-user-pass-register color-title">Correo Electrónico</label>
             <input
               type="email"
               id="email"
-              className="w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="password-input px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               placeholder="Ingresa tu correo"
               {...register('email')}
             />
             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
           </div>
-          <div className="input-group">
-            <label htmlFor="contraseña" className="block color-title">Contraseña</label>
+          <div className="input-group-register">
+            <label htmlFor="contraseña" className="title-user-pass-register color-title">Contraseña</label>
             <div className="relative">
-              <input
+            <input
                 type={showPassword ? "text" : "password"}
                 id="contraseña"
-                className="w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="password-input px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 placeholder="Ingresa tu contraseña"
                 {...register('contraseña')}
               />
+
               <div className="absolute inset-y-0 right-0 flex items-center pr-3 mt-4">
                 {showPassword ? (
                   <AiFillEyeInvisible onClick={() => setShowPassword(false)} className="cursor-pointer text-xl" />
@@ -95,13 +96,13 @@ const Register = () => {
             </div>
             {errors.contraseña && <p className="text-red-500">{errors.contraseña.message}</p>}
           </div>
-          <div className="input-group">
-            <label htmlFor="confirmar_contraseña" className="block color-title">Confirmar Contraseña</label>
+          <div className="input-group-register">
+            <label htmlFor="confirmar_contraseña" className="title-user-pass-register color-title">Confirmar Contraseña</label>
             <div className="relative">
               <input
                 type={showConfirmPassword ? "text" : "password"}
                 id="confirmar_contraseña"
-                className="w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="password-input px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 placeholder="Confirma tu contraseña"
                 {...register('confirmar_contraseña')}
               />
@@ -118,8 +119,8 @@ const Register = () => {
               <p className="text-red-500">Las contraseñas no coinciden</p>
             )}
           </div>
-          <div className="input-group">
-            <label htmlFor="role" className="color-title block ">Rol</label>
+          <div className="input-group-register">
+            <label htmlFor="role" className="color-title title-user-pass-register ">Rol</label>
             <select
               id="role"
               {...register('role')}
@@ -132,8 +133,8 @@ const Register = () => {
             </select>
             {errors.role && <p className="text-red-500 text-sm mt-1">{errors.role.message}</p>}
           </div>
-          <div className="input-group">
-            <label htmlFor="raspberry" className="color-title block ">Raspberry</label>
+          <div className="input-group-register">
+            <label htmlFor="raspberry" className="color-title title-user-pass-register ">Raspberry</label>
             <select
               id="raspberry"
               {...register('raspberry')}

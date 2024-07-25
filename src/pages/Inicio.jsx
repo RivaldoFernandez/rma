@@ -27,7 +27,7 @@ import cerrarIcon from '../assets/icons/cerrar.png';
 
 
 
-import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
+import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList} from 'react-icons/fa';
 
 
 const Inicio = () => {

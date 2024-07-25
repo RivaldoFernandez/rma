@@ -29,16 +29,16 @@ const Recuperar_Contraseña = () => {
 
   return (
     <div className="recuperar-contrasena-container flex justify-center items-center h-screen">
-      <div className="recuperar-contrasena-form bg-white border-slate-600 rounded-md p-10 shadow-lg">
+      <div className="recuperar-contrasena-form bg-white border-slate-600 rounded-md p-20 shadow-lg">
         <h1 className="text-2xl font-semibold mb-4">Restablecer Contraseña</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-group">
-            <label htmlFor="nuevaContraseña" className="block text-green-600">Nueva Contraseña</label>
+          <div className="input-group-password">
+            <label htmlFor="nuevaContraseña" className="input-group-password text-green-600">Nueva Contraseña</label>
             <input
               type="password"
               id="nuevaContraseña"
               {...register('nuevaContraseña')}
-              className={`w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border ${errors.nuevaContraseña ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent`}
+              className={`input-group-password px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border ${errors.nuevaContraseña ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent`}
               placeholder="Ingresa tu nueva contraseña"
             />
             {errors.nuevaContraseña && <p className="text-red-500 text-sm mt-1">{errors.nuevaContraseña.message}</p>}

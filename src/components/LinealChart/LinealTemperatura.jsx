@@ -11,7 +11,6 @@ import {
     Filler,
 } from 'chart.js';
 
-// Registrar los componentes necesarios de Chart.js
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -23,23 +22,22 @@ ChartJS.register(
 );
 
 const LinealTemperatura = () => {
-    // Datos de ejemplo para los días y la temperatura
     const Dias = ["A", "B", "C", "D", "E", "F"];
-    const temperatura = [0, 20, 50, 20, 25, 60, 100]; // Datos de temperatura por día
+    const temperatura = [0, 20, 50, 20, 25, 60, 100];
 
     const data = {
-        labels: Dias, // Etiquetas de los días
+        labels: Dias,
         datasets: [{
             label: 'Temperatura por día',
-            data: temperatura, // Datos de temperatura
-            tension: 0.4, // Tensión de la curva de línea (opcional, ajusta según necesites)
-            borderColor: 'rgba(75, 192, 192, 1)', // Color de borde de la línea
-            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo del área bajo la línea
-            pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Color de los puntos
-            pointBorderColor: 'rgba(75, 192, 192, 1)', // Color del borde de los puntos
-            pointHoverBackgroundColor: 'rgba(75, 192, 192, 1)', // Color de fondo al pasar el mouse sobre los puntos
-            pointHoverBorderColor: 'rgba(220, 220, 220, 1)', // Color del borde al pasar el mouse sobre los puntos
-            borderWidth: 2, // Ancho del borde de la línea
+            data: temperatura,
+            tension: 0.4,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+            pointBorderColor: 'rgba(75, 192, 192, 1)',
+            pointHoverBackgroundColor: 'rgba(75, 192, 192, 1)',
+            pointHoverBorderColor: 'rgba(220, 220, 220, 1)',
+            borderWidth: 2,
         }],
     };
 
@@ -48,14 +46,14 @@ const LinealTemperatura = () => {
         plugins: {
             title: {
                 display: true,
-                text: 'Gráfico de Temperatura por Día', // Título del gráfico
+                text: 'Gráfico de Temperatura por Día',
                 font: {
-                    size: 18, // Tamaño de la fuente del título
+                    size: 18,
                 },
             },
             legend: {
                 display: true,
-                position: 'bottom', // Posición de la leyenda
+                position: 'bottom',
             },
         },
         scales: {
@@ -63,14 +61,14 @@ const LinealTemperatura = () => {
                 display: true,
                 title: {
                     display: true,
-                    text: 'Días', // Título del eje X
+                    text: 'Días',
                 },
             },
             y: {
                 display: true,
                 title: {
                     display: true,
-                    text: 'Temperatura (°C)', // Título del eje Y
+                    text: 'Temperatura (°C)',
                 },
             },
         },

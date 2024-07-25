@@ -139,7 +139,7 @@ return (
                 <div className='imagenes-mostrados-5'>
                     <div className='text-setting-5'>
                         <h1><strong>Imágenes del campo</strong></h1>
-                        <AiOutlineSetting className="ajustes-icon"  alt="AjustesImg"/>
+
                     </div>
 
 
@@ -156,13 +156,6 @@ return (
                         <div className='imagen-fecha-colum'>
                             <img src={ImgCampo} alt="Imagen del campo" />
                             <p>2024-07-18 15:30</p>
-                        </div>
-
-                        <div className='imagen-fecha-colum'>
-                            <div className="ver-mas-btn">
-                                <AiOutlinePlus style={{ fontSize: '35px', color: '#000000' }} />
-                                <h1><strong>Ver más</strong></h1>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ const Login = ({ onLogin }) => {
         <img src={logo} alt="FIBERTEL Logo" className="mx-auto mb-4" style={{ width: '150px' }} />
         <form onSubmit={handleSubmit(onSubmit)} className="input-group">
           <div className="input-group">
-            <label htmlFor="username" className="block text-green-600">Usuario</label>
+            <label htmlFor="username" className="title-user-pass text-green-600">Usuario</label>
             <input
               type="text"
               id="username"
@@ -45,7 +45,7 @@ const Login = ({ onLogin }) => {
             {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username.message}</p>}
           </div>
           <div className="input-group">
-            <label htmlFor="contraseña" className="block text-green-600">Contraseña</label>
+            <label htmlFor="contraseña" className="title-user-pass text-green-600">Contraseña</label>
             <input
               type="password"
               id="contraseña"

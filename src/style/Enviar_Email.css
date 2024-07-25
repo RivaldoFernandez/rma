@@ -7,3 +7,18 @@
     align-items: center;
     height: 100vh; 
   }
+
+  .input-group-email {
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .input-group-email-button{
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }

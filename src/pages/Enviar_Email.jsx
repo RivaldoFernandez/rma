@@ -41,11 +41,11 @@ const Enviar_Email = () => {
 
   return (
     <div className="enviar-email-container flex justify-center items-center h-screen">
-      <div className="enviar-email-form bg-white border-slate-600 rounded-md p-10 shadow-lg">
-        <h1 className="text-2xl font-semibold mb-4">Restablecer Contraseña</h1>
+      <div className="enviar-email-form bg-white border-slate-600 rounded-md p-20 shadow-lg">
+        <h1 className="text-2xl font-semibold mb-4 ">Restablecer Contraseña</h1>
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="email" className="block text-green-600">Correo Electrónico</label>
+          <div className="input-group-email">
+            <label htmlFor="email" className="input-group-email text-green-600">Correo Electrónico</label>
             <input
               type="email"
               id="email"
@@ -59,7 +59,7 @@ const Enviar_Email = () => {
           {submitMessage && <p className="text-green-600 mt-4">{submitMessage}</p>}
           <button
             type="submit"
-            className="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300 mt-4"
+            className="input-group-email-button bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300 mt-4"
           >
             Enviar
           </button>

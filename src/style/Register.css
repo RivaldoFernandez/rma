@@ -31,6 +31,32 @@
   background-color: #FFB84D ; 
 }
 
+.input-group-register {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+
+.text-red-500{
+  margin-left: 15px;
+  width: 100%;
+}
+.relative{
+  width: 100%;
+}
+.title-user-pass-register{
+  margin-left: 15px;
+  width: 100%;
+}
+
+
+
+
+.password-input{
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .register-tom {
     width: 90%;
