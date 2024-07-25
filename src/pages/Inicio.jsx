@@ -177,8 +177,8 @@ const Inicio = () => {
                             <h1 className='title-gm-1'>Gráfico</h1>
                             {renderizarGrafico()}
                         </div>
-                        <div className='maps-sensores-1'>
-                            <div className='title-gm-1'>
+                        <div className='maps-sensores-1-3'>
+                            <div className='title-gm-1-3'>
                                 <Maps_Vista/>
                             </div>
                         </div>
