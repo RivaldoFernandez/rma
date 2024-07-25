@@ -127,7 +127,7 @@
     padding-right: 2px;
     padding-bottom: 20px;
     text-align: center;
-    width: 132px; /*Tamaño de los cajones de sensores*/
+    width: 132px; 
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,21 +1,24 @@
+/* ---------- Estilo general ---------- */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+/* ---------- Estilo para historial-container-3 ---------- */
 .historial-container-3 {
     display: flex;
     background-color: #E0F2E6;
     flex-direction: column;
 }
 
-
+/* ---------- Estilo para content-3 ---------- */
 .content-3 {
     display: flex;
     flex: 1;
 }
 
+/* ---------- Estilo para sidebar-3 ---------- */
 .sidebar-3 {
     background-color: #ffffff;
     width: 20%;
@@ -42,9 +45,7 @@ html, body {
     margin-right: 15px;
 }
 
-
-/* ------------------ Ajustes y Cerrar Sesión ------------------ */
-
+/* ---------- Estilo para ajustes-cerrar-3 ---------- */
 .ajustes-cerrar-3 {
     position: absolute;
     bottom: 0;
@@ -54,17 +55,13 @@ html, body {
     padding: 20px;
 }
 
-
-/* ------------------ Vista Principal ------------------ */
-
+/* ---------- Estilo para historial-content-3 ---------- */
 .historial-content-3 {
     flex: 1;
     padding: 20px;
-;
 }
 
-
-/* -------- Buscador, iconos de notificación y perfil -------- */ 
+/* ---------- Estilo para search-bar-3 y icons-3 ---------- */
 .search-bar-3 {
     padding: 10px;
     margin-left: 100px;
@@ -91,12 +88,7 @@ html, body {
     border-radius: 16px;
 }
 
-
-/*------------- Graficos de Tempe y Hume--------------*/
-
-
-
-
+/* ---------- Estilo para sensor-humdad-3 y sensor-temperatura-3 ---------- */
 .sensor-humdad-3, .sensor-temperatura-3 {
     background-color: #ffffff;
     border-radius: 8px;
@@ -108,11 +100,7 @@ html, body {
     margin: 10px 0; 
 }
 
-
-
-
-/*---------------------- SELCCION ESTACION VALOR ---------------------*/
-
+/* ---------- Estilo para filtros-container ---------- */
 .filtros-container {
     display: flex;
     justify-content: space-around;
@@ -136,8 +124,6 @@ html, body {
     margin-left: 5px;
 }
 
-
-
 .select {
     margin-left: 20px;
     width: 40%;
@@ -156,13 +142,9 @@ html, body {
     display: flex;
     flex-direction: column; 
     align-items: center;  
-
 }
 
-
-/* -------------------- filtros-container-meteorologica ---------------------*/
-
-
+/* ---------- Estilo para filtros-container-meteorologica ---------- */
 .filtros-container-meteorologica {
     display: flex;
     justify-content: space-around;
@@ -171,6 +153,6 @@ html, body {
     background-color: #E0F2E6;
 }
 
-.subtitulo{
+.subtitulo {
     margin-left: 20px;
 }

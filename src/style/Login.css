@@ -1,4 +1,4 @@
-/* Fondo de imagen */
+/* ---------- Fondo de imagen ---------- */
 .login-container {
   background-image: url('../src/assets/cutivo1.png');
   background-size: cover;
@@ -9,6 +9,7 @@
   height: 100vh; 
 }
 
+/* ---------- Estilo para login-tom ---------- */
 .login-tom {
   position: absolute;
   background-color: #ffffff;
@@ -26,31 +27,29 @@
   overflow: hidden auto;
 }
 
+/* ---------- Estilo para input-group ---------- */
 .input-group {
   margin-bottom: 10px;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Asegura que los elementos estén en columna */
+  flex-direction: column;
 }
 
-
-
-.title-user-pass{
+.title-user-pass {
   margin-left: 15px;
   width: 100%;
 }
 
 .input-group input {
-  margin-top: 5px; /* Espacio entre el input y el mensaje de error */
+  margin-top: 5px;
 }
 
-.espacio{
+.espacio {
   margin-top: 20px;
   width: 100%;
 }
 
-
-/* Estilos específicos para tamaños de pantalla menores a 768px */
+/* ---------- Estilos específicos para tamaños de pantalla menores a 768px ---------- */
 @media (max-width: 768px) {
   .login-tom {
     width: 90%;
@@ -60,16 +59,16 @@
   }
 
   .login-container {
-    height: auto; 
+    height: auto;
     padding: 20px;
   }
 
   img {
-    width: 100px; 
+    width: 100px;
   }
 
   .custom-input {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .custom-button {
@@ -77,11 +76,11 @@
   }
 
   label {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   h1, h2, h3, h4 {
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   .flex {

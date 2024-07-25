@@ -1,24 +1,34 @@
-.enviar-email-container {
-    background-image: url('../src/assets/cultivor.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-  }
+/* ---------- Estilo general ---------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-  .input-group-email {
-    margin-bottom: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    
-  }
-  .input-group-email-button{
-    align-items: center;
-    margin-bottom: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+/* ---------- Estilo para .enviar-email-container ---------- */
+.enviar-email-container {
+  background-image: url('../src/assets/cultivor.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+/* ---------- Estilo para .input-group-email ---------- */
+.input-group-email {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Estilo para .input-group-email-button ---------- */
+.input-group-email-button {
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

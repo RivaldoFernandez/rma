@@ -1,4 +1,4 @@
-/* Fondo de imagen */
+/* ------------------------------ Contenedor Principal de Registro ------------------------------ */
 .register-container {
   background-image: url('../src/assets/cultivor.png');
   background-size: cover;
@@ -9,6 +9,7 @@
   height: 100vh;
 }
 
+/* ------------------------------ Estilo del Formulario de Registro ------------------------------ */
 .register-tom {
   position: relative;
   background-color: #ffffff;
@@ -23,14 +24,17 @@
   align-items: center;
   overflow-y: auto;
 }
-.color-title{
-  color: #FFB84D ;  
- 
-}
-.color-buttom{
-  background-color: #FFB84D ; 
+
+/* ------------------------------ Estilos de Color ------------------------------ */
+.color-title {
+  color: #FFB84D;  
 }
 
+.color-buttom {
+  background-color: #FFB84D; 
+}
+
+/* ------------------------------ Estilo del Grupo de Input de Registro ------------------------------ */
 .input-group-register {
   margin-bottom: 10px;
   width: 100%;
@@ -38,25 +42,29 @@
   flex-direction: column; /* Asegura que los elementos estén en columna */
 }
 
-.text-red-500{
-  margin-left: 15px;
-  width: 100%;
-}
-.relative{
-  width: 100%;
-}
-.title-user-pass-register{
+/* ------------------------------ Estilo de Texto en Rojo ------------------------------ */
+.text-red-500 {
   margin-left: 15px;
   width: 100%;
 }
 
-
-
-
-.password-input{
+/* ------------------------------ Estilo de Elementos Relativos ------------------------------ */
+.relative {
   width: 100%;
 }
 
+/* ------------------------------ Estilo del Título de Usuario y Contraseña ------------------------------ */
+.title-user-pass-register {
+  margin-left: 15px;
+  width: 100%;
+}
+
+/* ------------------------------ Estilo del Input de Contraseña ------------------------------ */
+.password-input {
+  width: 100%;
+}
+
+/* ------------------------------ Estilos Responsivos ------------------------------ */
 @media (max-width: 768px) {
   .register-tom {
     width: 90%;

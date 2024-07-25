@@ -1,3 +1,4 @@
+/* ------------------------------ Contenedor Principal ------------------------------ */
 .cerrar-container-cerrar {
     display: flex;
     background-color: #E0F2E6;
@@ -5,8 +6,7 @@
     height: 100vh;
 }
 
-
-/* Sidebar Container */
+/* ------------------------------ Contenedor de Sidebar ------------------------------ */
 .sidebar-cerrar {
     background-color: #ffffff;
     width: 20%;
@@ -17,14 +17,14 @@
     transition: width 0.3s ease;
 }
 
-/* Main Menu Style */
+/* ------------------------------ Estilo del Menú Principal ------------------------------ */
 .sidebar-menu-cerrar {
     list-style-type: none;
     padding: 0;
     flex: 1; 
 }
 
-/* Menu Link Style */
+/* ------------------------------ Estilo del Enlace del Menú ------------------------------ */
 .menu-link-cerrar {
     display: block;
     padding: 10px 0;
@@ -34,14 +34,14 @@
     align-items: center;
 }
 
-/* Menu Icon Style */
+/* ------------------------------ Estilo del Ícono del Menú ------------------------------ */
 .menu-icon-cerrar {
     width: 25px;
     height: 25px;
     margin-right: 15px;
 }
 
-/* Toggle Button Style */
+/* ------------------------------ Estilo del Botón de Alternancia ------------------------------ */
 .sidebar-toggle {
     display: none;
     position: absolute;
@@ -54,14 +54,14 @@
     cursor: pointer;
 }
 
-/* Bottom Section Container */
+/* ------------------------------ Contenedor de Sección Inferior ------------------------------ */
 .ajustes-cerrar-cerrar {
     margin-top: auto; 
     padding: 20px 0;
     border-top: 1px solid #ddd; 
 }
 
-/* Responsive Styles */
+/* ------------------------------ Estilos Responsivos ------------------------------ */
 @media (max-width: 768px) {
     .sidebar-cerrar {
         width: 100%;
