@@ -7,7 +7,6 @@ import alarmIcon from '../assets/notificaciones.png';
 import profileIcon from '../assets/usuario.png';
 import ImgCampo from '../assets/img/enviadocampo.png'
 import { AiOutlineSetting } from 'react-icons/ai';
-import { AiOutlinePlus } from 'react-icons/ai';
 import ValveModal from "../components/Modals/Modals_Riego"; 
 
 
@@ -15,6 +14,7 @@ import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList
 
 
 import '../style/Campo.css';
+import CarouselCampoVista from '../components/Carousel/CarouselCampoVista';
 
 const Campo = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -136,31 +136,16 @@ return (
                         </div>
             </div>
             <div className='contenedor-3-campos-5'>
-                <div className='imagenes-mostrados-5'>
+                <div className='imagenes-mostrados-campo-5'>
                     <div className='text-setting-5'>
                         <h1><strong>Imágenes del campo</strong></h1>
 
                     </div>
-
-
                         <h2>En esta sección puedes ver imágenes de tu campo para un análisis de estado y crecimiento.</h2>
                     <div className="imagen-con-info">
-                        <div className='imagen-fecha-colum'>
-                            <img src={ImgCampo} alt="Imagen del campo" />
-                            <p>2024-07-18 15:30</p>
-                        </div>
-                        <div className='imagen-fecha-colum'>
-                            <img src={ImgCampo} alt="Imagen del campo" />
-                            <p>2024-07-18 15:30</p>
-                        </div>
-                        <div className='imagen-fecha-colum'>
-                            <img src={ImgCampo} alt="Imagen del campo" />
-                            <p>2024-07-18 15:30</p>
-                        </div>
+                        <CarouselCampoVista/>
                     </div>
                 </div>
-
-
             </div>
 
         </div>

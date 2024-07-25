@@ -60,8 +60,6 @@ const Sidebar = () => {
                 return null;
         }
     };
-
-
     return (
         <div className="flex">
             <aside className={`fixed top-0 left-0 h-screen bg-white transition-all duration-300 ${isExpanded ? 'w-64' : 'w-16'} overflow-y-auto flex flex-col justify-between`}>

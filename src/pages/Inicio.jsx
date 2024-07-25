@@ -14,7 +14,6 @@ import BarometroSensor from '../components/SensorItems/BarometroSensor';
 import PhSensor from '../components/SensorItems/PhSensor';
 import PiranometroSensor from '../components/SensorItems/PiranometroSensor';
 import AnemometroSensor from '../components/SensorItems/AnemometroSensor';
-import MapsGeo from '../assets/img/maps_geogra.png';
 import '../style/Inicio.css'
 
 
@@ -28,6 +27,7 @@ import cerrarIcon from '../assets/icons/cerrar.png';
 
 
 import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList} from 'react-icons/fa';
+import Maps_Vista from '../components/MapaGoogle/MapsVista';
 
 
 const Inicio = () => {
@@ -54,6 +54,7 @@ const Inicio = () => {
         }
     };
 
+    
     return (
         <div className="inicio-container-1">
             <div className="content-1">
@@ -177,9 +178,9 @@ const Inicio = () => {
                             {renderizarGrafico()}
                         </div>
                         <div className='maps-sensores-1'>
-                            <h1 className='title-gm-1'>Maps</h1>
-                            <h2>Este mapa muestra la ubicación de todos los sensores instalados.</h2>
-                            <img src={MapsGeo} alt="Mapa de Sensores" />
+                            <div className='title-gm-1'>
+                                <Maps_Vista/>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,60 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; 
+}
+
+.carousel-button-left {
+    left: 10px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sensores-item-4 {
+    flex-shrink: 0;
+    width: calc(100% / 3); 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.value-icon-container-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sensor-img-4 {
+    width: 100%;
+    height: auto;
+}
+
+.container-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sensor-date, .sensor-time {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}

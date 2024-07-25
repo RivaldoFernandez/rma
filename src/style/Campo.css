@@ -131,6 +131,18 @@ html, body {
 }
 
 
+
+.imagenes-mostrados-campo-5 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+    flex: 1;
+    height: 300px;
+}
+
+
+
+
 /* ------------------ Imagen del campo ------------------ */
 .imagen-con-info {
     margin-bottom: 20px;
