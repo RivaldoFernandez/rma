@@ -1,4 +1,4 @@
-// MapsVista.jsx
+{/*
 
 import React, { useState } from 'react';
 import MapContainer from './MapContainer';
@@ -53,3 +53,4 @@ const Maps_Vista = () => {
 };
 
 export default Maps_Vista;
+*/}

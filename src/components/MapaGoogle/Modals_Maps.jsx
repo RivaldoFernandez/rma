@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+{/*import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './Modals_Maps.css'; // Asegúrate de que la ruta es correcta
 
@@ -124,4 +124,4 @@ const Modals_Maps = ({ isOpen, onClose, sensors, onAddSensor, onEditSensor, onDe
     );
 };
 
-export default Modals_Maps;
+export default Modals_Maps;*/}

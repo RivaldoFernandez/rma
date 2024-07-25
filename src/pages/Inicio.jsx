@@ -14,6 +14,7 @@ import BarometroSensor from '../components/SensorItems/BarometroSensor';
 import PhSensor from '../components/SensorItems/PhSensor';
 import PiranometroSensor from '../components/SensorItems/PiranometroSensor';
 import AnemometroSensor from '../components/SensorItems/AnemometroSensor';
+import  Maps_img from '../assets/img/maps_geogra.png'
 import '../style/Inicio.css'
 
 
@@ -27,7 +28,7 @@ import cerrarIcon from '../assets/icons/cerrar.png';
 
 
 import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList} from 'react-icons/fa';
-import Maps_Vista from '../components/MapaGoogle/MapsVista';
+
 
 
 const Inicio = () => {
@@ -171,15 +172,22 @@ const Inicio = () => {
                             />
                         </ul>
                     </div>
-                    {/* Renderiza el gráfico según el sensor seleccionado */}
+                    
                     <div className='grafico-maps-1'>
                         <div className='grafico-reporte-1'>
                             <h1 className='title-gm-1'>Gráfico</h1>
                             {renderizarGrafico()}
                         </div>
                         <div className='maps-sensores-1-3'>
-                            <div className='title-gm-1-3'>
-                                <Maps_Vista/>
+                            <div className='title-gm-1-3' >
+                                <h1 className='font-bold mb-2 text-gray-800 text-center'>
+                                    Maps
+                                </h1>
+                                <h2 className=' text-gray-600 text-lg '>Este mapa muestra la ubicación de todos los sensores instalados.</h2>
+                                
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <img src={Maps_img} style={{ width: '400px', height: 'auto' }} />
+                                </div>
                             </div>
                         </div>
                     </div>

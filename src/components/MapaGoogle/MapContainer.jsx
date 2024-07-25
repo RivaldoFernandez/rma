@@ -1,4 +1,4 @@
-import React from 'react';
+{/*import React from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import PropTypes from 'prop-types'; // Para validación de propiedades
 
@@ -65,3 +65,4 @@ Maps_Container.propTypes = {
 };
 
 export default Maps_Container;
+*/}

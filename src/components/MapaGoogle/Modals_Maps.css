@@ -1,7 +1,7 @@
-/* Modals_Maps.css */
+/* 
 
 .modal {
-    /* Estilo para el modal */
+
     position: fixed;
     top: 50%;
     left: 50%;
@@ -16,7 +16,7 @@
 }
 
 .overlay {
-    /* Estilo para el overlay del modal */
+
     position: fixed;
     top: 0;
     left: 0;
@@ -27,14 +27,14 @@
 }
 
 .form-group {
-    /* Estilo para el contenedor de los campos del formulario */
+
     display: flex;
     align-items: center;
     margin-bottom: 16px;
 }
 
 .form-group label {
-    /* Estilo para las etiquetas del formulario */
+
     width: 100px;
     font-size: 16px;
     font-weight: bold;
@@ -42,7 +42,7 @@
 }
 
 .form-group input {
-    /* Estilo para los campos de entrada del formulario */
+
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 4px;
@@ -50,13 +50,13 @@
 }
 
 .button-group {
-    /* Estilo para el grupo de botones */
+
     display: flex;
     gap: 16px;
 }
 
 .button {
-    /* Estilo base para los botones */
+
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
@@ -65,7 +65,7 @@
 }
 
 .button.add {
-    /* Estilo para el botón de agregar o guardar cambios */
+
     background-color: #007bff;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .button.cancel {
-    /* Estilo para el botón de cancelar */
+
     background-color: #6c757d;
 }
 
@@ -83,14 +83,14 @@
 }
 
 .sensor-list {
-    /* Estilo para la lista de sensores */
+
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .sensor-list li {
-    /* Estilo para los elementos de la lista de sensores */
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +101,7 @@
 }
 
 .sensor-list button {
-    /* Estilo para los botones en la lista de sensores */
+
     padding: 4px 8px;
     border: none;
     border-radius: 4px;
@@ -124,3 +124,4 @@
 .sensor-list .delete:hover {
     background-color: #c82333;
 }
+*/
