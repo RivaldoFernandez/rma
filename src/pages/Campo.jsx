@@ -7,7 +7,7 @@ import alarmIcon from '../assets/notificaciones.png';
 import profileIcon from '../assets/usuario.png';
 import { AiOutlineSetting } from 'react-icons/ai';
 import ValveModal from "../components/Modals/Modals_Riego"; 
-import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
+import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList, FaCog, FaSignOutAlt } from 'react-icons/fa';
 import '../style/Campo.css';
 import CarouselCampoVista from '../components/Carousel/CarouselCampoVista';
 
@@ -74,15 +74,15 @@ const Campo = () => {
                     <div className='settings-logout'>
                         <ul>
                             <li>
-                                <Link to="/Ajustes_Cuenta" className="menu-link">
-                                    <img src={ajustesIcon} alt="Ajustes" className="menu-icon" />
-                                    Ajustes
+                                <Link to="/Ajustes_Cuenta" className="menu-link-1">
+                                    <FaCog className="menu-icon-1" />
+                                    <span>Ajustes</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/login" className="menu-link">
-                                    <img src={cerrarIcon} alt="Cerrar" className="menu-icon" />
-                                    Cerrar Sesión
+                                <Link to="/login" className="menu-link-1">
+                                    <FaSignOutAlt className="menu-icon-1" />
+                                    <span>Cerrar Sesión</span>
                                 </Link>
                             </li>
                         </ul>

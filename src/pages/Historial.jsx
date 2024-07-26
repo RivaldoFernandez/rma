@@ -15,7 +15,7 @@ import cerrarIcon from '../assets/icons/cerrar.png';
 import alarmIcon from '../assets/notificaciones.png';
 import profileIcon from '../assets/usuario.png';
 
-import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
+import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList, FaCog, FaSignOutAlt } from 'react-icons/fa';
 
 import '../style/Historial.css';
 
@@ -121,14 +121,14 @@ const Historial = () => {
                     <div className='ajustes-cerrar-3'>
                         <ul>
                             <li>
-                                <Link to="/Ajustes_Cuenta" className="menu-link-3">
-                                    <img src={ajustesIcon} alt="Ajustes" className="menu-icon-3" />
+                                <Link to="/Ajustes_Cuenta" className="menu-link-1">
+                                    <FaCog className="menu-icon-1" />
                                     <span>Ajustes</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/login" className="menu-link-3">
-                                    <img src={cerrarIcon} alt="Cerrar" className="menu-icon-3" />
+                                <Link to="/login" className="menu-link-1">
+                                    <FaSignOutAlt className="menu-icon-1" />
                                     <span>Cerrar Sesión</span>
                                 </Link>
                             </li>

@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logofibertel.png';
-import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList } from 'react-icons/fa';
-
-import ajustesIcon from '../assets/icons/ajustes.png';
-import cerrarIcon from '../assets/icons/cerrar.png';
-import { FaCog, FaUser, FaTools, FaLifeRing } from 'react-icons/fa'; 
+import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList, FaSignOutAlt,  FaCog, FaUser, FaTools, FaLifeRing } from 'react-icons/fa';
 import '../style/Ajustes_Cuenta.css';
 
 const Ajustes_Cuenta = () => {
@@ -65,43 +61,44 @@ return (
             <div className='ajustes-cerrar-ajustes'>
                 <ul>
                     <li>
-                        <Link to="/Ajustes_Cuenta" className="menu-link-ajustes">
-                        <img src={ajustesIcon} alt="Ajustes" className="menu-icon-ajustes" />
-                        <span>Ajustes</span>
+                        <Link to="/Ajustes_Cuenta" className="menu-link-1">
+                            <FaCog className="menu-icon-1" />
+                            <span>Ajustes</span>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/login" className="menu-link-ajustes">
-                        <img src={cerrarIcon} alt="Cerrar" className="menu-icon-ajustes" />
-                        <span>Cerrar Sesión</span>
+                        <Link to="/login" className="menu-link-1">
+                            <FaSignOutAlt className="menu-icon-1" />
+                            <span>Cerrar Sesión</span>
                         </Link>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div className="ajustes-content-ajustes ml-64">
-            <div className="search-cont-ajustes">
+        <div className="ajustes-content-ajustes ">
+            <div className="search-cont-ajustes ml-64">
                 <input type="text" placeholder="Buscar configuración" className="search-bar-ajustes" />
                 <div className='ajustes-icon-option'>
-                    <div className="section" onClick={() => handleOptionClick('general')}>
+                    <div className="section cursor-pointer" onClick={() => handleOptionClick('general')}>
                         <FaCog className="icon" />
                         <h1>General</h1>
                     </div>
-                    <div className="section" onClick={() => handleOptionClick('perfil')}>
+                    <div className="section cursor-pointer" onClick={() => handleOptionClick('perfil')}>
                         <FaUser className="icon" />
                         <h1 className='text-position'>Perfil y contraseña</h1>
                     </div>
-                    <div className="section" onClick={() => handleOptionClick('configuracion')}>
+                    <div className="section cursor-pointer" onClick={() => handleOptionClick('configuracion')}>
                         <FaTools className="icon" />
                         <h1>Configuración del Sistema</h1>
                     </div>
-                    <div className="section" onClick={() => handleOptionClick('soporte')}>
+                    <div className="section cursor-pointer" onClick={() => handleOptionClick('soporte')}>
                         <FaLifeRing className="icon" />
                         <h1>Soporte y ayuda</h1>
                     </div>
                 </div>
             </div>
+
             <div className="resultado-content-ajustes">
                 {selectedOption === 'general' && (
                     <form>
@@ -110,7 +107,6 @@ return (
                 )}
                 {selectedOption === 'perfil' && (
                     <form>
-                        <h2 className='text-title-option'>Perfil y Contraseña</h2>
                         <h2 className='text-title-option'>Perfil y Contraseña</h2>
                         <p className='datos-perfil'><strong>Nombre Completo:</strong> Ornela Rincón</p>
                         <p className='datos-perfil'><strong>Correo Electrónico:</strong> ornela_rincon@gmail.com</p>

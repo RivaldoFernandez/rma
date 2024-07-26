@@ -22,12 +22,10 @@ import '../style/Inicio.css'
 import alarmIcon from '../assets/notificaciones.png';
 import profileIcon from '../assets/usuario.png';
 import logo from '../assets/logofibertel.png';
-import ajustesIcon from '../assets/icons/ajustes.png';
-import cerrarIcon from '../assets/icons/cerrar.png';
 
 
 
-import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList} from 'react-icons/fa';
+import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList, FaCog, FaSignOutAlt} from 'react-icons/fa';
 
 
 
@@ -109,13 +107,13 @@ const Inicio = () => {
                         <ul>
                             <li>
                                 <Link to="/Ajustes_Cuenta" className="menu-link-1">
-                                    <img src={ajustesIcon} alt="Ajustes" className="menu-icon-1" />
+                                    <FaCog className="menu-icon-1" />
                                     <span>Ajustes</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/login" className="menu-link-1">
-                                    <img src={cerrarIcon} alt="Cerrar" className="menu-icon-1" />
+                                    <FaSignOutAlt className="menu-icon-1" />
                                     <span>Cerrar Sesión</span>
                                 </Link>
                             </li>
