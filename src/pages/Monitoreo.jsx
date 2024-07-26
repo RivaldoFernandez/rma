@@ -19,11 +19,11 @@ import { FaHome, FaChartLine, FaHistory, FaCloudSun, FaMapSigns, FaClipboardList
 
 
 import '../style/Monitoreo.css';
-import useAxios from '../hooks/UseAxios';
+//import useAxios from '../hooks/UseAxios';
 const Monitoreo = () => {
-    const {data, error, loading} = useAxios( 'https://3p7jzhtc-8000.brs.devtunnels.ms/api/lecturasRaspberry/ultima/1/');
-    if (loading) return <p>cargando</p>;
-    if (error) return  <p>error {error.message}</p>;
+    // const {data, error, loading} = useAxios( 'https://3p7jzhtc-8000.brs.devtunnels.ms/api/lecturasRaspberry/ultima/1/');
+    // if (loading) return <p>cargando</p>;
+    // if (error) return  <p>error {error.message}</p>;
     
 return (
 <div className="monitoreo-container-2">
