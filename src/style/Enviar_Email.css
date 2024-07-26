@@ -7,7 +7,7 @@ html, body {
 
 /* ---------- Estilo para .enviar-email-container ---------- */
 .enviar-email-container {
-  background-image: url('../src/assets/cultivor.png');
+  background-image: url("https://meteobot.com/wp-content/uploads/2022/11/Meteobot-Pro.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

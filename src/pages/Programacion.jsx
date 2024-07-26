@@ -18,6 +18,7 @@ import {
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
+import Programacion_Valvula from "../components/Programacion_Riego/Programacion_Riego_Valula";
 
 const Programacion_Riego = () => {
   return (
@@ -124,6 +125,7 @@ const Programacion_Riego = () => {
             </div>
           </div>
           <div className="bienve-nombre-programacion">
+            <Programacion_Valvula/>
             
           </div>
         </div>

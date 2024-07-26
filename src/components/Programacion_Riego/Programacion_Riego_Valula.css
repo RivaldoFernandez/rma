@@ -1,0 +1,208 @@
+/*-----------------------------------------------------Estilos para el rango de fechas----------------------------------*/
+.valve-date-input {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .valve-date-title-last {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  /*-----------------------------------------------------Estilos para el contenedor----------------------------------*/
+  .valve-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .valve-container-left,
+  .valve-container-right {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    flex: 1;
+    margin-top: 30px;
+  }
+  
+  .container-del-alo {
+    display: flex;
+  }
+  
+  .valve-container-left {
+    background-color: #ffffff;
+    align-items: flex-start;
+  }
+  
+  .valve-container-right {
+    background-color: #ffffff;
+    align-items: flex-end;
+  }
+  
+  /*-----------------------------------------------------Estilos para el campo de entrada----------------------------------*/
+  .valve-input-field-container {
+    margin-bottom: 10px;
+  }
+  
+  .valve-input-field {
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #f0ba09;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .valve-input-field-label {
+    margin-right: 10px;
+  }
+  
+  /*-----------------------------------------------------Estilos para los botones del formulario----------------------------------*/
+  .valve-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .valve-btn-save {
+    background-color: #70d300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .valve-btn-cancel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /*-----------------------------------------------------Estilos para el contenido----------------------------------*/
+  .valve-content {
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    margin-top: 20px;
+  }
+  
+  .valve-welcome {
+    padding: 20px;
+  }
+  
+  .ingreso-semana {
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 16px;
+  }
+  
+  /*-----------------------------------------------------Estilos para el título----------------------------------*/
+  .valve-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container-del-al {
+    display: flex;
+  }
+  
+  /*------------- Estilos para los días y los botones de editar y eliminar-----------------*/
+  .day-checkbox {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .valve-day-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .valve-day-checkbox-input {
+    margin-right: 10px;
+  }
+  
+  .valve-day-checkbox-label {
+    flex: 1;
+  }
+  
+  .valve-day-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .icon {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .edit-icon {
+    color: #4caf50;
+  }
+  
+  .delete-icon {
+    color: #f44336;
+  }
+  
+  .icon:hover {
+    opacity: 0.8;
+  }
+  
+  /* SemanaInput.css */
+
+.week-container {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+  }
+  
+  .edit-week {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+  }
+  .view-week {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    margin: 0 auto; /* Centra el contenedor horizontalmente en su contenedor padre */
+    border: 1px solid #ff0808; /* Borde rojo alrededor del contenedor */
+    background-color: #70d300; /* Fondo verde claro para el contenedor */
+    padding: 5px; /* Espaciado interno del contenedor */
+    border-radius: 5px; /* Bordes redondeados del contenedor */
+    text-align: center; /* Alinea el texto en el centro */
+  }
+  
+  .ingreso-semana {
+    margin-right: 10px; /* Espacio entre el campo de entrada y los íconos */
+  }
+  
+  .icon {
+    margin-left: 10px; /* Espacio entre los íconos */
+    cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre el ícono */
+  }
+  
+  .save-icon {
+    color: green; /* Color verde para el ícono de guardar */
+  }
+  
+  .edit-icon {
+    color: blue; /* Color azul para el ícono de editar */
+  }
+  
