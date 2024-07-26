@@ -1,6 +1,6 @@
 /* ------------------------------ Contenedor Principal de Registro ------------------------------ */
 .register-container {
-  background-image: url('../src/assets/cultivor.png');
+  background-image: url("https://ieqfb.com/wp-content/uploads/cultivos-1.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

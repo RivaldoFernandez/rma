@@ -1,6 +1,6 @@
 /* ---------- Fondo de imagen ---------- */
 .login-container {
-  background-image: url('../src/assets/cutivo1.png');
+  background-image: url("https://meteobot.com/wp-content/uploads/2022/11/Meteobot-Pro.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
