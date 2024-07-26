@@ -15,6 +15,7 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
+  FaTint ,
 } from "react-icons/fa";
 
 import "../style/Sensores.css";
@@ -67,6 +68,12 @@ const Sensores = () => {
               <Link to="/campo" className="menu-link-sensores">
                 <FaMapSigns className="menu-icon-sensores" />
                 <span>Campo</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/programacion_riego" className="menu-link-1">
+                <FaTint  className="menu-icon-1" />
+                <span>Programación</span>
               </Link>
             </li>
             <li>

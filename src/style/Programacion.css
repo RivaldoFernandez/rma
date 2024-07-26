@@ -1,12 +1,12 @@
 /* ------------------ Contenedor Principal ------------------ */
 
-.inicio-container-1 {
+.program-container-programacion {
     display: flex;
     background-color: #E0F2E6;
     flex-direction: column;
     height: 100%;
 }
-.content-1 {
+.content-programacion {
     display: flex;
     flex: 1;
 }
@@ -14,7 +14,7 @@
 
 /* ------------------ Barra de Búsqueda ------------------ */
 
-.search-cont-1 {
+.search-cont-programacion {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 16px;
@@ -22,14 +22,13 @@
 
 /* ------------------ Vista Principal ------------------ */
 
-.inicio-content-1 {
+.program-content-programacion {
     flex: 1;
     padding: 20px;
-;
 }
 
 /* -------- Buscador, iconos de notificación y perfil -------- */ 
-.search-bar-1 {
+.search-bar-programacion {
     padding: 10px;
     margin-left: 100px;
     border: 1px solid #777373;
@@ -38,12 +37,12 @@
     margin-right: 10px; 
 }
 
-.icons-1 {
+.icons-programacion {
     display: flex;
     align-items: center;
 }
 
-.icon-1 {
+.icon-programacion {
     width: 30px;
     height: 30px;
     margin-left: 20px;
@@ -51,22 +50,22 @@
 
 /* ------------------ Barra de Navegación Lateral ------------------ */
 
-.sidebar-1 {
+.sidebar-programacion {
     background-color: #ffffff;
     width: 20%;
     padding: 20px;
 }
 
-.sidebar-menu-1 {
+.sidebar-menu-programacion {
     list-style-type: none;
     padding: 0;
 }
 
-.mb-4{
+.mb-4-programacion {
     width: 150px;
 }
 
-.menu-link-1 {
+.menu-link-programacion {
     display: block;
     padding: 10px 0;
     color: #000000;
@@ -75,7 +74,7 @@
     align-items: center;
 }
 
-.menu-icon-1 {
+.menu-icon-programacion {
     width: 25px;
     height: 25px;
     margin-right: 15px;
@@ -83,11 +82,10 @@
 
 /* ------------------ Ajustes y Cerrar Sesión ------------------ */
 
-.ajustes-cerrar-1 {
+.ajustes-cerrar-programacion {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 20%;
     padding: 20px;
 }

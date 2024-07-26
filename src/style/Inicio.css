@@ -1,227 +1,221 @@
 /* ------------------ Contenedor Principal ------------------ */
 
 .inicio-container-1 {
-    display: flex;
-    background-color: #E0F2E6;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  background-color: #e0f2e6;
+  flex-direction: column;
+  height: 100%;
 }
 .content-1 {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
-
 
 /* ------------------ Barra de Búsqueda ------------------ */
 
 .search-cont-1 {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 16px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 16px;
 }
 
 /* ------------------ Vista Principal ------------------ */
 
 .inicio-content-1 {
-    flex: 1;
-    padding: 20px;
-;
+  flex: 1;
+  padding: 20px;
 }
 
-/* -------- Buscador, iconos de notificación y perfil -------- */ 
+/* -------- Buscador, iconos de notificación y perfil -------- */
 .search-bar-1 {
-    padding: 10px;
-    margin-left: 100px;
-    border: 1px solid #777373;
-    border-radius: 10px;
-    outline: none;
-    margin-right: 10px; 
+  padding: 10px;
+  margin-left: 100px;
+  border: 1px solid #777373;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 10px;
 }
 
 .icons-1 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon-1 {
-    width: 30px;
-    height: 30px;
-    margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
 }
 
 /* ------------------ Barra de Navegación Lateral ------------------ */
 
 .sidebar-1 {
-    background-color: #ffffff;
-    width: 20%;
-    padding: 20px;
+  background-color: #ffffff;
+  width: 20%;
+  padding: 20px;
 }
 
 .sidebar-menu-1 {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
-.mb-4{
-    width: 150px;
+.mb-4 {
+  width: 150px;
 }
 
 .menu-link-1 {
-    display: block;
-    padding: 10px 0;
-    color: #000000;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  display: block;
+  padding: 10px 0;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .menu-icon-1 {
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
 }
 
 /* ------------------ Ajustes y Cerrar Sesión ------------------ */
 
 .ajustes-cerrar-1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
 }
 
 /* ------------------ Nombre de Bienvenida ------------------ */
 
 .bienve-nombre-1 {
-    margin-top: 10px;
-    margin-left: 50px;
-    font-size: 20px; 
+  margin-top: 10px;
+  margin-left: 35px;
+  font-size: 20px;
 }
 
 /* ------------------ Estilo de los Sensores ------------------ */
 
 .contenido-sensores-1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
 }
 
 .cont-sensor-1 {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .sensor-item-1 {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding-top: 20px;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-bottom: 20px;
-    text-align: center;
-    width: 132px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 /*-----------------El efecto de animación de cambio de colores segun sea selecionado -----------------*/
 .sensor-item-1.selected {
-    background-color: #c4d0da;
-    border: 1px solid rgb(219, 212, 212);
-    animation: selectedPulse 0.7s ease-in-out infinite alternate;
-    color: #050505;
-    font-weight: bold;
-    font-size: 1.01rem; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #c4d0da;
+  border: 1px solid rgb(219, 212, 212);
+  animation: selectedPulse 0.7s ease-in-out infinite alternate;
+  color: #050505;
+  font-weight: bold;
+  font-size: 1.01rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes selectedPulse {
-    0% {
-        transform: scale(1);
-        background-color: #c4d0da;
-    }
-    100% {
-        transform: scale(1.05);
-        background-color: #99f586;
-    }
+  0% {
+    transform: scale(1);
+    background-color: #c4d0da;
+  }
+  100% {
+    transform: scale(1.05);
+    background-color: #99f586;
+  }
 }
 /*-----------------El efecto de animación de cambio de colores segun sea selecionado -----------------*/
 
 .value-icon-container-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
 }
 
-.sensor-value-1, .sensor-icon-1 {
-    display: inline;
-    margin: 0 1px;
+.sensor-value-1,
+.sensor-icon-1 {
+  display: inline;
+  margin: 0 1px;
 }
 
 .sensor-name-1 {
-    margin: 5px 0;
-    display: block;
+  margin: 5px 0;
+  display: block;
 }
 
 .sensor-value-1 {
-    font-weight: bold;
+  font-weight: bold;
 }
-
 
 /* ------------------ Grafico y maps ------------------ */
 .grafico-maps-1 {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.grafico-reporte-1{
-    width: 48%; 
-    height:auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 24px;
+.grafico-reporte-1 {
+  width: 48%;
+  height: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
 }
 
 .title-gm-1 {
-    text-align: center;
-    font-weight: bold;
-    
+  text-align: center;
+  font-weight: bold;
 }
-.title-gm-1-3{
-    font-weight: bold;
-    border-radius: 24px;
+.title-gm-1-3 {
+  font-weight: bold;
+  border-radius: 24px;
 }
-.maps-sensores-1-3{
-    margin-left: 30px;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 24px;
-    
+.maps-sensores-1-3 {
+  margin-left: 30px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
 }
 
 .title-gm-localizar {
-    font-weight: bold;
-    background-color: rgb(114, 241, 76);
-    border-radius: 16px;
-    padding: 10px;
-    margin-top: 10px;
+  font-weight: bold;
+  background-color: rgb(114, 241, 76);
+  border-radius: 16px;
+  padding: 10px;
+  margin-top: 10px;
 }
 .maps-sensores-1 {
-    margin-left: 30px;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 24px;
+  margin-left: 30px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
 }
-
-

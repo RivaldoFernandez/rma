@@ -24,6 +24,7 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
+  FaTint ,
 } from "react-icons/fa";
 
 import "../style/Monitoreo.css";
@@ -76,6 +77,12 @@ const Monitoreo = () => {
               <Link to="/campo" className="menu-link-2">
                 <FaMapSigns className="menu-icon-2" />
                 <span>Campo</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/programacion_riego" className="menu-link-1">
+                <FaTint  className="menu-icon-1" />
+                <span>Programación</span>
               </Link>
             </li>
             <li>

@@ -15,6 +15,7 @@ import Recuperar_Contraseña from './pages/RecuperarContraseña';
 import Enviar_Email from './pages/Enviar_Email';
 import Notificaciones from './pages/Noticaciones';
 import Tarea from './pages/Tarea';
+import Programacion_Riego from './pages/Programacion';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -42,6 +43,7 @@ function App() {
       <Route path="/recuperar_contraseña" element={<Recuperar_Contraseña/>}/>
       <Route path="/enviar_email" element={<Enviar_Email/>}/>
       <Route path="/tarea" element={<Tarea/>}/>
+      <Route path="/programacion_riego" element={<Programacion_Riego/>}/>
     </Routes>
   );
 }

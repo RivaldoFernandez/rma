@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import alarmIcon from "../assets/notificaciones.png";
 import profileIcon from "../assets/usuario.png";
 import logo from "../assets/logofibertel.png";
-import ajustesIcon from "../assets/icons/ajustes.png";
-import cerrarIcon from "../assets/icons/cerrar.png";
+
 import {
   FaHome,
   FaChartLine,
@@ -15,6 +14,7 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
+  FaTint ,
 } from "react-icons/fa";
 
 import "../style/Tarea.css";
@@ -63,6 +63,12 @@ const Tarea = () => {
               <Link to="/campo" className="menu-link-6">
                 <FaMapSigns className="menu-icon-6" />
                 <span>Campo</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/programacion_riego" className="menu-link-1">
+                <FaTint  className="menu-icon-1" />
+                <span>Programación</span>
               </Link>
             </li>
             <li>
