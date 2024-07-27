@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../style/Programacion.css";
 
 // Importa los íconos necesarios
@@ -15,12 +15,19 @@ import {
   FaTint,
   FaCog,
   FaSignOutAlt,
-  FaBell,
   FaUser,
 } from "react-icons/fa";
 import Programacion_Valvula from "../components/Programacion_Riego/Programacion_Riego_Valula";
 
 const Programacion_Riego = () => {
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path
+      ? "menu-link-programacion active"
+      : "menu-link-programacion";
+  };
+
   return (
     <div className="program-container-programacion">
       <div className="content-programacion">
@@ -67,7 +74,10 @@ const Programacion_Riego = () => {
               </Link>
             </li>
             <li>
-              <Link to="/programacion_riego" className="menu-link-programacion">
+              <Link
+                to="/programacion_riego"
+                className={getLinkClass("/programacion_riego")}
+              >
                 <FaTint className="menu-icon-programacion" />
                 <span>Programación</span>
               </Link>
@@ -106,14 +116,10 @@ const Programacion_Riego = () => {
                 className="search-bar-programacion"
                 style={{ width: "60%", marginRight: "5" }}
               />
-              <div className="icons-programacion" style={{ marginRight: "auto" }}>
-              <Link to="/notificaciones">
-                  <FaBell
-                    className="icon-1"
-                    size={24}
-                    aria-label="Notificaciones"
-                  />
-                </Link>
+              <div
+                className="icons-programacion"
+                style={{ marginRight: "auto" }}
+              >
                 <Link to="/ajustes_cuenta">
                   <FaUser
                     className="icon-1 profile-icon"
@@ -125,8 +131,7 @@ const Programacion_Riego = () => {
             </div>
           </div>
           <div className="bienve-nombre-programacion">
-            <Programacion_Valvula/>
-            
+            <Programacion_Valvula />
           </div>
         </div>
       </div>

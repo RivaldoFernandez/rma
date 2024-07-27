@@ -191,19 +191,13 @@
   border-radius: 24px;
 }
 
-.title-gm-1 {
-  text-align: center;
-  font-weight: bold;
-}
-.title-gm-1-3 {
-  font-weight: bold;
-  border-radius: 24px;
-}
+
 .maps-sensores-1-3 {
   margin-left: 30px;
   background-color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 24px;
+  padding: 20px;
 }
 
 .title-gm-localizar {

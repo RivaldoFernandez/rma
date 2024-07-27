@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
 import {
   FaHome,
@@ -23,6 +23,13 @@ const Ajustes_Cuenta = () => {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
+
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? "menu-link-ajustes active" : "menu-link-ajustes";
+  };
+
 
   return (
     <div className="ajustes-container-ajustes">
@@ -85,7 +92,7 @@ const Ajustes_Cuenta = () => {
           <div className="ajustes-cerrar-ajustes">
             <ul>
               <li>
-                <Link to="/Ajustes_Cuenta" className="menu-link-1">
+                <Link to="/Ajustes_Cuenta" className={getLinkClass("/Ajustes_Cuenta")}>
                   <FaCog className="menu-icon-1" />
                   <span>Ajustes</span>
                 </Link>

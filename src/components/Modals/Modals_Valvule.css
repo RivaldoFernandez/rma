@@ -98,10 +98,12 @@ select {
 }
 
 .ingress-eto-valvulas {
-  background-color: #e0f2e6;
+  background-color: #fbfdfc;
   padding: 4px;
   border-radius: 1px;
-  border: 1px solid #f0ba09;
+  border: 1px solid#f0ba09;
+  margin-top: 20px;
+  border-radius: 16px;
 }
 
 .label-ETo-valvulas {
@@ -117,10 +119,12 @@ select {
 }
 
 .ingress-kc-valvulas {
-  background-color: #e0f2e6;
+  background-color: #fbfdfc;
   padding: 4px;
   border-radius: 1px;
-  border: 1px solid #f0ba09;
+  border: 1px solid#f0ba09;
+  margin-top: 20px;
+  border-radius: 16px;
 }
 
 /*-------------Los dias de la semana ------------------*/

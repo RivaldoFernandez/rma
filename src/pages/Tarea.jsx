@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // Importa los íconos necesarios
 import logo from "../assets/logofibertel.png";
 
@@ -13,13 +13,17 @@ import {
   FaCog,
   FaSignOutAlt,
   FaTint,
-  FaBell,
   FaUser,
 } from "react-icons/fa";
 
 import "../style/Tarea.css";
 
 const Tarea = () => {
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? "menu-link-6 active" : "menu-link-6";
+  };
   return (
     <div className="tarea-container-6">
       <div className="content-6">
@@ -72,7 +76,7 @@ const Tarea = () => {
               </Link>
             </li>
             <li>
-              <Link to="/tarea" className="menu-link-6">
+              <Link to="/tarea" className={getLinkClass("/tarea")}>
                 <FaClipboardList className="menu-icon-6" />
                 <span>Tarea</span>
               </Link>
@@ -106,13 +110,6 @@ const Tarea = () => {
                 style={{ width: "60%", marginRight: "5" }}
               />
               <div className="icons-6" style={{ marginRight: "auto" }}>
-                <Link to="/notificaciones">
-                  <FaBell
-                    className="icon-1"
-                    size={24}
-                    aria-label="Notificaciones"
-                  />
-                </Link>
                 <Link to="/ajustes_cuenta">
                   <FaUser
                     className="icon-1 profile-icon"

@@ -6,7 +6,7 @@ import LinealTemperatura from "../components/LinealChart/LinealTemperatura";
 import LinealHumedad from "../components/LinealChart/LinealHumedad";
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
 
 import {
@@ -18,8 +18,7 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
-  FaTint ,
-  FaBell,
+  FaTint,
   FaUser,
 } from "react-icons/fa";
 
@@ -76,6 +75,11 @@ const Historial = () => {
         return null;
     }
   };
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? "menu-link-3 active" : "menu-link-3";
+  };
 
   return (
     <div className="historial-container-3">
@@ -93,43 +97,46 @@ const Historial = () => {
               </Link>
             </li>
             <li>
-              <Link to="/iniciio" className="menu-link-3">
+              <Link to="/iniciio" className={getLinkClass("/iniciio")}>
                 <FaHome className="menu-icon-3" />
                 Inicio
               </Link>
             </li>
             <li>
-              <Link to="/monitoreo" className="menu-link-3">
+              <Link to="/monitoreo" className={getLinkClass("/monitoreo")}>
                 <FaChartLine className="menu-icon-3" />
                 Monitoreo
               </Link>
             </li>
             <li>
-              <Link to="/historial" className="menu-link-3">
+              <Link to="/historial" className={getLinkClass("/historial")}>
                 <FaHistory className="menu-icon-3" />
                 Historial
               </Link>
             </li>
             <li>
-              <Link to="/sensores" className="menu-link-3">
+              <Link to="/sensores" className={getLinkClass("/sensores")}>
                 <FaCloudSun className="menu-icon-3" />
                 <span>Sensores</span>
               </Link>
             </li>
             <li>
-              <Link to="/campo" className="menu-link-3">
+              <Link to="/campo" className={getLinkClass("/campo")}>
                 <FaMapSigns className="menu-icon-3" />
                 <span>Campo</span>
               </Link>
             </li>
             <li>
-              <Link to="/programacion_riego" className="menu-link-1">
-                <FaTint  className="menu-icon-1" />
+              <Link
+                to="/programacion_riego"
+                className={getLinkClass("/programacion_riego")}
+              >
+                <FaTint className="menu-icon-3" />
                 <span>Programación</span>
               </Link>
             </li>
             <li>
-              <Link to="/tarea" className="menu-link-3">
+              <Link to="/tarea" className={getLinkClass("/tarea")}>
                 <FaClipboardList className="menu-icon-3" />
                 <span>Tarea</span>
               </Link>
@@ -138,14 +145,14 @@ const Historial = () => {
           <div className="ajustes-cerrar-3">
             <ul>
               <li>
-                <Link to="/Ajustes_Cuenta" className="menu-link-1">
-                  <FaCog className="menu-icon-1" />
+                <Link to="/Ajustes_Cuenta" className="menu-link-3">
+                  <FaCog className="menu-icon-3" />
                   <span>Ajustes</span>
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="menu-link-1">
-                  <FaSignOutAlt className="menu-icon-1" />
+                <Link to="/login" className="menu-link-3">
+                  <FaSignOutAlt className="menu-icon-3" />
                   <span>Cerrar Sesión</span>
                 </Link>
               </li>
@@ -162,13 +169,6 @@ const Historial = () => {
                 style={{ width: "60%", marginRight: "5px" }}
               />
               <div className="icons-3" style={{ marginRight: "auto" }}>
-              <Link to="/notificaciones">
-                  <FaBell
-                    className="icon-1"
-                    size={24}
-                    aria-label="Notificaciones"
-                  />
-                </Link>
                 <Link to="/ajustes_cuenta">
                   <FaUser
                     className="icon-1 profile-icon"

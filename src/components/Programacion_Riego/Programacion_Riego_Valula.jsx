@@ -140,13 +140,13 @@ const Programacion_Valvula = () => {
                     className="date-al-irrigation-valvule"
                   />
                 </div>
-                <div className="container-kc-valvule">
-                  <label htmlFor="kc" className="label-kc-valvule">
+                <div className="container-kc-valvule-2">
+                  <label htmlFor="kc" className="label-kc-valvule mr-4">
                     KC
                   </label>
                   <input type="number" id="kc" className="ingress-kc-valvule" />
                 </div>
-                <div className="container-kc-valvule">
+                <div className="container-kc-valvule-2">
                   <label htmlFor="frequency" className="label-kc-valvule">
                     Frecuencia de Riego:
                   </label>
@@ -156,7 +156,7 @@ const Programacion_Valvula = () => {
                     className="ingress-kc-valvule"
                   />
                 </div>
-                <div className="container-kc-valvule">
+                <div className="container-kc-valvule-2">
                   <label htmlFor="irrigationTime" className="label-kc-valvule">
                     Hora de Riego:
                   </label>
@@ -166,7 +166,7 @@ const Programacion_Valvula = () => {
                     className="ingress-kc-valvule"
                   />
                 </div>
-                <div className="container-kc-valvule">
+                <div className="container-kc-valvule-2">
                   <label htmlFor="startTime" className="label-kc-valvule">
                     Hora de Inicio:
                   </label>
@@ -176,7 +176,7 @@ const Programacion_Valvula = () => {
                     className="ingress-kc-valvule"
                   />
                 </div>
-                <div className="container-kc-valvule">
+                <div className="container-kc-valvule-2">
                   <label htmlFor="endTime" className="label-kc-valvule">
                     Hora de Fin:
                   </label>
@@ -206,7 +206,7 @@ const Programacion_Valvula = () => {
                   />
                 </div>
                 <div className="container-eto-valvula">
-                  <label htmlFor="eto" className="label-ETo">
+                  <label htmlFor="eto" className="label-ETo mr-4">
                     ETo
                   </label>
                   <input
@@ -218,14 +218,12 @@ const Programacion_Valvula = () => {
                   />
                 </div>
                 <div className="container-eto-valvula">
-                  <label htmlFor="systemDischarge" className="label-ETo">
+                  <label htmlFor="systemDischarge" className="label-ETo mr-4">
                     Descarga del Sistema:
                   </label>
                   <input
                     type="text"
                     id="systemDischarge"
-                    pattern="[A-Za-z0-9]*"
-                    title="Solo se permiten letras y números"
                     className="ingress-eto-valvula"
                   />
                 </div>

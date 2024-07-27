@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
 
 import {
@@ -12,7 +12,6 @@ import {
   FaCog,
   FaSignOutAlt,
   FaTint,
-  FaBell,
   FaUser,
 } from "react-icons/fa";
 
@@ -22,6 +21,13 @@ import Carousel_Humedad_Vista from "../components/Carousel/sensores_carousel/Car
 
 /*--------------Componente principal Sensores --------------------*/
 const Sensores = () => {
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path
+      ? "menu-link-sensores active"
+      : "menu-link-sensores";
+  };
   return (
     <div className="sensores-container-sensores">
       <div className="content-sensores">
@@ -57,7 +63,7 @@ const Sensores = () => {
               </Link>
             </li>
             <li>
-              <Link to="/sensores" className="menu-link-sensores">
+              <Link to="/sensores" className={getLinkClass("/sensores")}>
                 <FaCloudSun className="menu-icon-sensores" />
                 <span>Sensores</span>
               </Link>
@@ -111,13 +117,6 @@ const Sensores = () => {
                 style={{ width: "60%", marginRight: "5px" }}
               />
               <div className="icons-sensores" style={{ marginRight: "auto" }}>
-                <Link to="/notificaciones">
-                  <FaBell
-                    className="icon-1"
-                    size={24}
-                    aria-label="Notificaciones"
-                  />
-                </Link>
                 <Link to="/ajustes_cuenta">
                   <FaUser
                     className="icon-1 profile-icon"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
 import { AiOutlineSetting } from "react-icons/ai";
 import ValveModal from "../components/Modals/Modals_Riego";
@@ -12,8 +12,7 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
-  FaTint ,
-  FaBell,
+  FaTint,
   FaUser,
 } from "react-icons/fa";
 import "../style/Campo.css";
@@ -32,13 +31,19 @@ const Campo = () => {
     setModalIsOpen(false);
   };
 
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? "menu-link active" : "menu-link";
+  };
+
   return (
     <div className="main-container">
       <div className="content">
         <div className="sidebar fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
           <ul className="sidebar-menu">
             <li>
-              <Link to="/iniciio" className="menu-link-1">
+              <Link to="/iniciio" className="menu-link">
                 <img
                   src={logo}
                   alt="Inicio"
@@ -72,14 +77,14 @@ const Campo = () => {
               </Link>
             </li>
             <li>
-              <Link to="/campo" className="menu-link">
+              <Link to="/campo" className={getLinkClass("/campo")}>
                 <FaMapSigns className="menu-icon" />
-                Campo
+                <span>Campo</span>
               </Link>
             </li>
             <li>
               <Link to="/programacion_riego" className="menu-link-1">
-                <FaTint  className="menu-icon-1" />
+                <FaTint className="menu-icon-1" />
                 <span>Programación</span>
               </Link>
             </li>
@@ -117,13 +122,6 @@ const Campo = () => {
                 style={{ width: "60%", marginRight: "5px" }}
               />
               <div className="icons-container" style={{ marginRight: "auto" }}>
-              <Link to="/notificaciones">
-                  <FaBell
-                    className="icon-1"
-                    size={24}
-                    aria-label="Notificaciones"
-                  />
-                </Link>
                 <Link to="/ajustes_cuenta">
                   <FaUser
                     className="icon-1 profile-icon"
@@ -191,7 +189,6 @@ const Campo = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
       <ValveModal
