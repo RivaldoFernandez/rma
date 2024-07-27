@@ -140,17 +140,15 @@ const Monitoreo = () => {
             </div>
           </div>
           <div className="valvula-container">
-            <h1 className="nombre-valvula">
-              <strong>Válvula</strong>
-            </h1>
+            <div className="valvula-container-ultima-hora">
 
-            <div className="selecction-valvula">
-              <h1 className="selecionar-valvu">Seleccionar Válvula:</h1>
-              <select name="valvula">
-                <option value="valvula1">Válvula 1</option>
-                <option value="valvula2">Válvula 2</option>
-                <option value="valvula3">Válvula 3</option>
-              </select>
+              <div className="valvula-container-title-humedad">
+                <h1>Sensor de Humedad</h1>
+              </div>
+              <div className="valvula-container-ultima-lectura">
+                <h1 className="ultima-hora">Última Lectura: </h1>
+                <h2 className="hora-fecha"> Hora y Fecha</h2>
+              </div>
             </div>
           </div>
 
@@ -160,19 +158,27 @@ const Monitoreo = () => {
                 <HumedadSensor />
               </li>
               <li className="sensores-item-2">
-                <ConductividadSensor />
+                <HumedadSensor />
               </li>
 
               <li className="sensores-item-2">
-                <PhSensor />
+                <HumedadSensor />
               </li>
             </ul>
           </div>
-          <div>
-            <h1 className="nombre-estacion">
-              <strong>Estación meteorológica:</strong>
-            </h1>
+          <div className="estacion-meteorologica-container">
+            <div className="estacion-meteorologica-container-ultima-hora">
 
+              <div className="estacion-meteorologica-container-title-humedad">
+                <h1>Estación meteorológica</h1>
+              </div>
+              <div className="estacion-meteorologica-container-ultima-lectura">
+                <h1 className="estacion-ultima-hora">Última Lectura: </h1>
+                <h2 className="estacion-hora-fecha"> Hora y Fecha</h2>
+              </div>
+            </div>
+          </div>
+          <div>
             <div className="contenido-sensores-2">
               <ul className="cont-sensor-2">
                 <li className="sensores-item-v-2">
