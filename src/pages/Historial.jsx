@@ -20,6 +20,7 @@ import {
   FaSignOutAlt,
   FaTint,
   FaUser,
+  FaCalendarAlt,
 } from "react-icons/fa";
 
 import "../style/Historial.css";
@@ -206,9 +207,16 @@ const Historial = () => {
                 <option value="Humedad">Humedad</option>
               </select>
             </div>
-            <div className="filtro-item">
-              <h1 className="titulo">REPORTE</h1>
-              <h1 className="subtitulo">Semanal</h1>
+            <div className="filtro-item-humedad">
+              <div className="lista-horizontal">
+                <span>6M</span>
+                <span>3M</span>
+                <span>1M</span>
+                <span>7D</span>
+              </div>
+              <div className="calendario">
+                <FaCalendarAlt  size={24} />
+              </div>
             </div>
           </div>
           <div className="mensaje-container">
@@ -234,9 +242,17 @@ const Historial = () => {
                 <option value="Anemómetro">Anemómetro</option>
               </select>
             </div>
-            <div className="filtro-item">
-              <h1 className="titulo">REPORTE</h1>
-              <h1 className="subtitulo">Semanal</h1>
+            <div className="filtro-item-meteoro">
+              <div div className="lista-horizontal-meteorologica">
+                <span>1S</span>
+                <span>1M</span>
+                <span>3M</span>
+                <span>6M</span>
+                <span>1A</span>
+              </div>
+              <div className="calendario-meteorologica">
+                <FaCalendarAlt  size={24} />
+              </div>
             </div>
           </div>
           <div className="mensaje-container">

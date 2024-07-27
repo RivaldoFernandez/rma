@@ -108,12 +108,7 @@ input[type="date"], select {
 .container-eto {
     margin-bottom: 5px;
 }
-.ingress-eto{
-    background-color: #E0F2E6;
-    padding: 4px;
-    border-radius: 1px;
-    border: 1px solid#f0ba09;
-}
+
 .label-ETo{
     margin-right: 2px;
 }
@@ -129,12 +124,7 @@ input[type="date"], select {
 }
 
 
-.ingress-kc{
-    background-color: #E0F2E6;
-    padding: 4px;
-    border-radius: 1px;
-    border: 1px solid#f0ba09;
-}
+
 
 /*-------------Los dias de la semana ------------------*/
 .days-list {
@@ -205,3 +195,12 @@ input[type="date"], select {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.ingress-kc, .ingress-eto {
+    background-color: #fbfdfc;
+    padding: 4px;
+    border-radius: 1px;
+    border: 1px solid#f0ba09;
+    margin-top: 20px;
+    border-radius: 16px;
+  }

@@ -1,157 +1,249 @@
 /* ---------- Estilo general ---------- */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ---------- Estilo para historial-container-3 ---------- */
 .historial-container-3 {
-    display: flex;
-    background-color: #E0F2E6;
-    flex-direction: column;
+  display: flex;
+  background-color: #e0f2e6;
+  flex-direction: column;
 }
 
 /* ---------- Estilo para content-3 ---------- */
 .content-3 {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 /* ---------- Estilo para sidebar-3 ---------- */
 .sidebar-3 {
-    background-color: #ffffff;
-    width: 20%;
-    padding: 20px;
+  background-color: #ffffff;
+  width: 20%;
+  padding: 20px;
 }
 
 .sidebar-menu-3 {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .menu-link-3 {
-    display: block;
-    padding: 10px 0;
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .menu-icon-3 {
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
 }
 
 /* ---------- Estilo para ajustes-cerrar-3 ---------- */
 .ajustes-cerrar-3 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
 }
 
 /* ---------- Estilo para historial-content-3 ---------- */
 .historial-content-3 {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 /* ---------- Estilo para search-bar-3 y icons-3 ---------- */
 .search-bar-3 {
-    padding: 10px;
-    margin-left: 100px;
-    border: 1px solid #48b81c;
-    border-radius: 10px;
-    outline: none;
-    margin-right: 10px; 
+  padding: 10px;
+  margin-left: 100px;
+  border: 1px solid #48b81c;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 10px;
 }
 
 .icons-3 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon-3 {
-    width: 30px;
-    height: 30px;
-    margin-left: 20px; 
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
 }
 
 .search-cont-3 {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 16px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 16px;
 }
 
 /* ---------- Estilo para sensor-humdad-3 y sensor-temperatura-3 ---------- */
-.sensor-humdad-3, .sensor-temperatura-3 {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    max-width: 500px; 
-    height: 250px; 
-    margin: 10px 0; 
+.sensor-humdad-3,
+.sensor-temperatura-3 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  margin: 10px 0;
 }
 
 /* ---------- Estilo para filtros-container ---------- */
 .filtros-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: #E0F2E6;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #e0f2e6;
+  margin-top: 10px;
 }
 
 .filtro-item {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 30%; 
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 30%;
 }
 
 .titulo {
-    font-weight: bold;
-    margin-left: 5px;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 .select {
-    margin-left: 20px;
-    width: 40%;
+  margin-left: 20px;
+  width: 40%;
 }
 
 .mensaje-container {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    text-align: center; 
-    margin-bottom: 10px;   
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .sensor-humdad-3 {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ---------- Estilo para filtros-container-meteorologica ---------- */
 .filtros-container-meteorologica {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: #E0F2E6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #e0f2e6;
 }
 
 .subtitulo {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+/*------------- Filtro por Meses y Días estacion de valvulas humedad--------------*/
+.filtro-item-humedad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+.lista-horizontal {
+  display: flex;
+  margin-left: 20px;
+  gap: 10px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.lista-horizontal span {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+.lista-horizontal span:hover {
+    background-color: #00f7ff; 
+    transform: scale(1.05); 
+  }
+.calendario :hover {
+    background-color: #00f7ff; 
+    transform: scale(1.05);
+  }
+
+/*------------- Calendario--------------*/
+.calendario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/*------------- Filtro por Meses y Días estacion meteorologicas --------------*/
+
+.filtro-item-meteoro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista-horizontal-meteorologica {
+  display: flex;
+  flex: 1;
+  justify-content: space-between; 
+  margin-left: 10px;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.lista-horizontal-meteorologica span {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #968d8d;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  text-align: center;
+  cursor: pointer;
+}
+.lista-horizontal-meteorologica span:hover {
+    background-color: #00f7ff; 
+    transform: scale(1.05); 
+  }
+.calendario-meteorologica :hover {
+    background-color: #00f7ff; 
+    transform: scale(1.05);
+  }
+
+.calendario-meteorologica {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-top: 8px;
 }

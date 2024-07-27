@@ -142,7 +142,7 @@ const Programacion_Valvula = () => {
                 </div>
                 <div className="container-kc-valvule-2">
                   <label htmlFor="kc" className="label-kc-valvule mr-4">
-                    KC
+                    KC:
                   </label>
                   <input type="number" id="kc" className="ingress-kc-valvule" />
                 </div>
@@ -207,7 +207,7 @@ const Programacion_Valvula = () => {
                 </div>
                 <div className="container-eto-valvula">
                   <label htmlFor="eto" className="label-ETo mr-4">
-                    ETo
+                    ETo:
                   </label>
                   <input
                     type="text"

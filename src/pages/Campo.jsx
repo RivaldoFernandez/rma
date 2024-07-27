@@ -140,7 +140,7 @@ const Campo = () => {
                   <strong>Imágenes del campo</strong>
                 </h1>
               </div>
-              <h2>
+              <h2 className="mt-3">
                 En esta sección puedes ver imágenes de tu campo para un análisis
                 de estado y crecimiento.
               </h2>
@@ -151,20 +151,23 @@ const Campo = () => {
           </div>
           <div className="field-container">
             <div className="topology">
-              <h1>
-                {" "}
-                <strong>Topología</strong>
-              </h1>
-              <h2>
+              <div className="image-text-setting">
+                <h1 >
+                  <strong>Topología</strong>
+                </h1>
+              </div>
+              <h2 className="mt-3">
                 Este gráfico muestra la estructura y comunicación entre la
                 estación meteorológica y las válvulas.
               </h2>
             </div>
             <div className="valve-control">
-              <h1>
-                <strong>Control de válvulas</strong>
-              </h1>
-              <h2>
+              <div className="image-text-setting">
+                <h1>
+                  <strong>Control de válvulas</strong>
+                </h1>
+              </div>
+              <h2 className="mt-3">
                 En esta sección puedes controlar el estado de las válvulas
               </h2>
               <div className="valve-item-container">

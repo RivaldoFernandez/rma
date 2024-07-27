@@ -123,27 +123,27 @@ const Tarea = () => {
           <div className="container-general-tarea">
             <div className="container-tarea">
               <div className="container-tarea-reporte">
-                <div className="title-tarea">
+                <div className="title-tarea text-xl font-bold">
                   <strong>Tareas</strong>
                 </div>
                 <div className="report-container">
-                  <h1 className="title-reporte">
+                  <h1 className="title-reporte text-xl font-bold">
                     <strong>Reporte</strong>
                   </h1>
-                  <h2 className="subtitle-semanal">Semanal</h2>
+                  <h2 className="subtitle-semanal text-xl font-bold"> <strong>Semanal</strong></h2>
                 </div>
               </div>
             </div>
             <div className="container-information">
               <div className="container-information-reporte">
-                <div className="title-information">
+                <div className="title-information text-base  font-bold">
                   <strong>Información</strong>
                 </div>
                 <div className="report-container-date">
-                  <h1 className="title-reporte">
+                  <h1 className="title-reporte text-base  font-bold">
                     <strong>Fecha</strong>
                   </h1>
-                  <h2 className="subtitle-semanal">Hora</h2>
+                  <h2 className="subtitle-semanal-hour text-base  font-bold"> <strong>Hora</strong></h2>
                 </div>
               </div>
             </div>

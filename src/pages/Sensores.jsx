@@ -131,7 +131,7 @@ const Sensores = () => {
           {/*-------------- Títulos y Carouseles de Sensores --------------------*/}
           <div className="container-sensores">
             <h1 className="Estacion-mt-sensores">
-              <strong>Estación Meteorológica :</strong>
+              <strong>Estación Meteorológica</strong>
             </h1>
           </div>
 

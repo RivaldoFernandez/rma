@@ -58,7 +58,7 @@ const Modals_Valvule = ({ isOpen, onRequestClose, day, valve }) => {
             />
             <div className="container-kc-valvulas">
               <label htmlFor="kc" className="label-kc-valvulas">
-                KC
+                KC:
               </label>
               <input type="text" id="kc" className="ingress-kc-valvulas" />
             </div>
@@ -109,7 +109,7 @@ const Modals_Valvule = ({ isOpen, onRequestClose, day, valve }) => {
             />
             <div className="container-eto-valvulas">
               <label htmlFor="eto" className="label-ETo-valvulas">
-                ETo
+                ETo:
               </label>
               <input type="text" id="eto" className="ingress-eto-valvulas" />
             </div>

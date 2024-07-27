@@ -119,7 +119,7 @@ html, body {
 
 /*--------------Imágenes del campo --------------------*/
 .field-images {
-    height: 330px;
+    height: 350px;
     background-color: #ffffff;
     margin-top: 10px;
 }
@@ -193,4 +193,7 @@ h1 {
     display: flex;
     align-items: center; 
     margin-bottom: 10px;
+}
+.image-text-setting{
+    font-size: 1.5rem;
 }
