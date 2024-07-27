@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "../style/Programacion.css";
 
 // Importa los íconos necesarios
-import alarmIcon from "../assets/notificaciones.png";
-import profileIcon from "../assets/usuario.png";
 import logo from "../assets/logofibertel.png";
 
 import {
@@ -17,6 +15,8 @@ import {
   FaTint,
   FaCog,
   FaSignOutAlt,
+  FaBell,
+  FaUser,
 } from "react-icons/fa";
 import Programacion_Valvula from "../components/Programacion_Riego/Programacion_Riego_Valula";
 
@@ -107,18 +107,18 @@ const Programacion_Riego = () => {
                 style={{ width: "60%", marginRight: "5" }}
               />
               <div className="icons-programacion" style={{ marginRight: "auto" }}>
-                <Link to="/notificaciones">
-                  <img
-                    src={alarmIcon}
-                    alt="Notificaciones"
-                    className="icon-programacion"
+              <Link to="/notificaciones">
+                  <FaBell
+                    className="icon-1"
+                    size={24}
+                    aria-label="Notificaciones"
                   />
                 </Link>
                 <Link to="/ajustes_cuenta">
-                  <img
-                    src={profileIcon}
-                    alt="Ajustes_Cuenta"
-                    className="icon-programacion profile-icon-programacion"
+                  <FaUser
+                    className="icon-1 profile-icon"
+                    size={24}
+                    aria-label="Ajustes Cuenta"
                   />
                 </Link>
               </div>

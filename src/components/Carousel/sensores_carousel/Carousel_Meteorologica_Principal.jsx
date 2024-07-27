@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "../sensores_carousel/Carousel_Principal_Meteoro.css"; 
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Carousel_Meteorologica_Principal = ({ sensors }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const sensorsToShow = 2; // Para la vista de dos contenidos imagenes
+    const sensorsToShow = 2; // Para la vista de dos contenidos
     const totalSensors = sensors.length;
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            nextSlide();
-        }, 2000); // Desplazamiento automático cada 2 segundos
-
-        return () => clearInterval(intervalId); // Limpia el intervalo cuando el componente se desmonta
-    }, [currentIndex]);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSensors);
@@ -23,17 +15,14 @@ const Carousel_Meteorologica_Principal = ({ sensors }) => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSensors) % totalSensors);
     };
 
-    // Duplica las imágenes para crear el efecto de bucle
-    const extendedSensors = [...sensors, ...sensors];
-
     return (
         <div className="meteor-carousel">
             <button onClick={prevSlide} className="meteor-carousel-button">
                 <FaChevronLeft size={30} />
             </button>
             <div className="meteor-carousel-images">
-                <div className="meteor-carousel-wrapper" style={{ transform: `translateX(-${currentIndex * (100 / sensorsToShow)}%)` }}>
-                    {extendedSensors.map((sensor, index) => (
+                <div className="meteor-carousel-wrapper" style={{ transform: `translateX(-${currentIndex * (100 / sensorsToShow)}%)`, transition: 'transform 0.5s ease-in-out' }}>
+                    {sensors.map((sensor, index) => (
                         <div key={index} className='meteor-sensor-item'>
                             <div className='meteor-sensor-content'>
                                 <img className='meteor-sensor-img' src={sensor.img} alt="Sensor" />

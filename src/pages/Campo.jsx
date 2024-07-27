@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
-import alarmIcon from "../assets/notificaciones.png";
-import profileIcon from "../assets/usuario.png";
 import { AiOutlineSetting } from "react-icons/ai";
 import ValveModal from "../components/Modals/Modals_Riego";
 import {
@@ -15,6 +13,8 @@ import {
   FaCog,
   FaSignOutAlt,
   FaTint ,
+  FaBell,
+  FaUser,
 } from "react-icons/fa";
 import "../style/Campo.css";
 import CarouselCampoVista from "../components/Carousel/CarouselCampoVista";
@@ -117,20 +117,40 @@ const Campo = () => {
                 style={{ width: "60%", marginRight: "5px" }}
               />
               <div className="icons-container" style={{ marginRight: "auto" }}>
-                <Link to="/notificaciones">
-                  <img src={alarmIcon} alt="Notificaciones" className="icon" />
+              <Link to="/notificaciones">
+                  <FaBell
+                    className="icon-1"
+                    size={24}
+                    aria-label="Notificaciones"
+                  />
                 </Link>
                 <Link to="/ajustes_cuenta">
-                  <img
-                    src={profileIcon}
-                    alt="Ajustes_Cuenta"
-                    className="icon profile-icon"
+                  <FaUser
+                    className="icon-1 profile-icon"
+                    size={24}
+                    aria-label="Ajustes Cuenta"
                   />
                 </Link>
               </div>
             </div>
           </div>
 
+          <div className="field-container">
+            <div className="field-images">
+              <div className="image-text-setting">
+                <h1>
+                  <strong>Imágenes del campo</strong>
+                </h1>
+              </div>
+              <h2>
+                En esta sección puedes ver imágenes de tu campo para un análisis
+                de estado y crecimiento.
+              </h2>
+              <div className="image-info">
+                <CarouselCampoVista />
+              </div>
+            </div>
+          </div>
           <div className="field-container">
             <div className="topology">
               <h1>
@@ -171,22 +191,7 @@ const Campo = () => {
               </div>
             </div>
           </div>
-          <div className="field-container">
-            <div className="field-images">
-              <div className="image-text-setting">
-                <h1>
-                  <strong>Imágenes del campo</strong>
-                </h1>
-              </div>
-              <h2>
-                En esta sección puedes ver imágenes de tu campo para un análisis
-                de estado y crecimiento.
-              </h2>
-              <div className="image-info">
-                <CarouselCampoVista />
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <ValveModal

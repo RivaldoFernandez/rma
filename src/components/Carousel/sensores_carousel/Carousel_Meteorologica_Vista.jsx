@@ -6,7 +6,7 @@ const Carousel_Images = () => {
     const sensors = [
         {
             img: ImgTempEjemplo1,
-            title: 'Proimerrrrrroooooooo',
+            title: 'Sensor de Humedad',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -22,7 +22,7 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: ' Humedad',
+            title: ' Humedad 23',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -38,7 +38,7 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: 'fernandez ',
+            title: 'Sensor de Humedad 23',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -46,7 +46,7 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: 'rivaldo ',
+            title: 'Sensor de Humedad',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',
@@ -54,7 +54,7 @@ const Carousel_Images = () => {
         },
         {
             img: ImgTempEjemplo1,
-            title: 'ultimo ',
+            title: 'Sensor de Humedad 3333333',
             coveredArea: 'Área cubierta: 100 m²',
             location: 'Ubicación en el campo:',
             model: 'Modelo: -----',

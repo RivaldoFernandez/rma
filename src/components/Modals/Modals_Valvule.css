@@ -1,0 +1,194 @@
+/* Estilo para centrar y dimensionar el modal */
+.modal-valvulas {
+  width: 80%;
+  max-width: 800px;
+  height: 80%;
+  max-height: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el overlay que cubre toda la pantalla */
+.overlay-valvulas {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.modal-valvulas h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flex-container-valvulas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-right-valvulas {
+  background-color: rgb(243, 221, 122);
+  border-radius: 16px;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="date"],
+select {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  padding: 3px;
+}
+
+.date-title-ultimo-valvulas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-al-valvulas,
+.date-title-ultimo-valvulas {
+  margin-left: 20px;
+}
+
+/*------------------ Container de divididos------------------*/
+.container-irrigation-izquierda-derecha-valvulas {
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+}
+
+.container-derecha-valvulas {
+  flex: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container-eto-valvulas {
+  margin-bottom: 5px;
+}
+
+.ingress-eto-valvulas {
+  background-color: #e0f2e6;
+  padding: 4px;
+  border-radius: 1px;
+  border: 1px solid #f0ba09;
+}
+
+.label-ETo-valvulas {
+  margin-right: 2px;
+}
+
+.container-izquierda-valvulas {
+  flex: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+
+.ingress-kc-valvulas {
+  background-color: #e0f2e6;
+  padding: 4px;
+  border-radius: 1px;
+  border: 1px solid #f0ba09;
+}
+
+/*-------------Los dias de la semana ------------------*/
+.days-list-valvulas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  align-items: flex-end;
+}
+
+.day-label-valvulas {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.day-checkbox-valvulas {
+  margin-right: 5px;
+}
+
+.icons-valvulas {
+  gap: 3px;
+}
+
+.icon-edit-valvulas,
+.icon-delete-valvulas {
+  cursor: pointer; /* Cursor de puntero para los iconos */
+  color: #007bff; /* Color para los iconos */
+  margin-top: 10px;
+}
+
+.icon-edit-valvulas:hover {
+  color: #000000; /* Color en hover para el icono de editar */
+}
+
+.icon-delete-valvulas:hover {
+  color: #dc3545; /* Color en hover para el icono de eliminar */
+}
+
+/* ------------------Estilo para los botones del modal --------------------*/
+.modal-buttons-valvulas {
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones al final */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-save-valvulas {
+  background-color: #4caf50; /* Color verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn-cancel-valvulas {
+  background-color: #f44336; /* Color rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

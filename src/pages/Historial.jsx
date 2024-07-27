@@ -1,6 +1,5 @@
 import LinealConductividadE from "../components/LinealChart/LinealConductividadE";
 import LinealBarometro from "../components/LinealChart/LinealBarometro";
-import LinealPH from "../components/LinealChart/LinealPH";
 import LinealPiranometro from "../components/LinealChart/LinealPiranometro";
 import LinealAnemometro from "../components/LinealChart/LinealAnemometro";
 import LinealTemperatura from "../components/LinealChart/LinealTemperatura";
@@ -9,9 +8,6 @@ import LinealHumedad from "../components/LinealChart/LinealHumedad";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
-
-import alarmIcon from "../assets/notificaciones.png";
-import profileIcon from "../assets/usuario.png";
 
 import {
   FaHome,
@@ -23,6 +19,8 @@ import {
   FaCog,
   FaSignOutAlt,
   FaTint ,
+  FaBell,
+  FaUser,
 } from "react-icons/fa";
 
 import "../style/Historial.css";
@@ -164,18 +162,18 @@ const Historial = () => {
                 style={{ width: "60%", marginRight: "5px" }}
               />
               <div className="icons-3" style={{ marginRight: "auto" }}>
-                <Link to="/notificaciones">
-                  <img
-                    src={alarmIcon}
-                    alt="Notificaciones"
-                    className="icon-3"
+              <Link to="/notificaciones">
+                  <FaBell
+                    className="icon-1"
+                    size={24}
+                    aria-label="Notificaciones"
                   />
                 </Link>
                 <Link to="/ajustes_cuenta">
-                  <img
-                    src={profileIcon}
-                    alt="Ajustes_Cuenta"
-                    className="icon-3 profile-icon"
+                  <FaUser
+                    className="icon-1 profile-icon"
+                    size={24}
+                    aria-label="Ajustes Cuenta"
                   />
                 </Link>
               </div>

@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
-import ajustesIcon from "../assets/icons/ajustes.png";
-import cerrarIcon from "../assets/icons/cerrar.png";
-import alarmIcon from "../assets/notificaciones.png";
-import profileIcon from "../assets/usuario.png";
 
 import {
   FaHome,
@@ -15,7 +11,9 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
-  FaTint ,
+  FaTint,
+  FaBell,
+  FaUser,
 } from "react-icons/fa";
 
 import "../style/Sensores.css";
@@ -72,7 +70,7 @@ const Sensores = () => {
             </li>
             <li>
               <Link to="/programacion_riego" className="menu-link-1">
-                <FaTint  className="menu-icon-1" />
+                <FaTint className="menu-icon-1" />
                 <span>Programación</span>
               </Link>
             </li>
@@ -114,17 +112,17 @@ const Sensores = () => {
               />
               <div className="icons-sensores" style={{ marginRight: "auto" }}>
                 <Link to="/notificaciones">
-                  <img
-                    src={alarmIcon}
-                    alt="Notificaciones"
-                    className="icon-sensores"
+                  <FaBell
+                    className="icon-1"
+                    size={24}
+                    aria-label="Notificaciones"
                   />
                 </Link>
                 <Link to="/ajustes_cuenta">
-                  <img
-                    src={profileIcon}
-                    alt="Ajustes_Cuenta"
-                    className="icon-sensores profile-icon-sensores"
+                  <FaUser
+                    className="icon-1 profile-icon"
+                    size={24}
+                    aria-label="Ajustes Cuenta"
                   />
                 </Link>
               </div>

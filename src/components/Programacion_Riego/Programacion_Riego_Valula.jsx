@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../Programacion_Riego/Programacion_Riego_Valula.css";
 import { FaEdit, FaSave, FaTrash } from "react-icons/fa";
+import { MdCheckBox } from "react-icons/md";
+import Modals_Valvule from "../Modals/Modals_Valvule";
 
 const Programacion_Valvula = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isEditing, setIsEditing] = useState(false); // Nuevo estado para el modo de edición
-  const [startDate, setStartDate] = useState("");
-  const [valve, setValve] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
+  const [startDateStart, setStartDateStart] = useState(""); // Fecha de inicio
+  const [startDateEnd, setStartDateEnd] = useState(""); // Fecha de fin
+  const [lastWatering, setLastWatering] = useState(""); // Último riego
   const [days, setDays] = useState([
     { name: "Lunes", checked: false },
     { name: "Martes", checked: false },
@@ -16,31 +18,27 @@ const Programacion_Valvula = () => {
     { name: "Sábado", checked: false },
     { name: "Domingo", checked: false },
   ]);
+  const [isEditingSemana, setIsEditingSemana] = useState(false);
+  const [week, setWeek] = useState("");
+  const [valve] = useState("01"); // Número de la válvula
 
-  // Establece la fecha actual por defecto
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [currentDay, setCurrentDay] = useState(""); // Día actual para editar
+
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
-    setStartDate(today);
+    setStartDateStart(today);
+    setStartDateEnd(today);
+    setLastWatering(today);
   }, []);
 
-  const openModal = (valveName) => {
-    setValve(valveName);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setIsEditing(false); // Desactiva el modo de edición al cerrar el modal
-  };
-
   const saveChanges = () => {
-    // Aquí podrías añadir lógica para guardar los cambios
-    setIsEditing(false); // Desactiva el modo de edición después de guardar
+    setIsEditing(false);
     closeModal();
   };
 
   const handleEdit = () => {
-    setIsEditing(true); // Activa el modo de edición
+    setIsEditing(true);
   };
 
   const handleCheckboxChange = (index) => {
@@ -53,20 +51,25 @@ const Programacion_Valvula = () => {
 
   const handleDelete = (index) => {
     const updatedDays = [...days];
-    updatedDays[index].checked = false; // Solo desmarcar el checkbox
+    updatedDays[index].checked = false;
     setDays(updatedDays);
   };
 
-  // edicion de dia
-  const [isEditingSemana, setIsEditingSemana] = useState(false); // Estado para el modo de edición de la semana
-  const [week, setWeek] = useState(""); // Estado para el valor de la semana
-
   const handleEditSemana = () => {
-    setIsEditingSemana(true); // Activa el modo de edición de la semana
+    setIsEditingSemana(true);
   };
 
   const handleSaveSemana = () => {
-    setIsEditingSemana(false); // Desactiva el modo de edición de la semana después de guardar
+    setIsEditingSemana(false);
+  };
+
+  const openModal = (day) => {
+    setCurrentDay(day);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
 
   return (
@@ -74,10 +77,13 @@ const Programacion_Valvula = () => {
       <div className="valve-content">
         <div className="valve-welcome">
           <h1 className="valve-title">
-            <strong>Valvula 01</strong>
+            <strong>Válvula {valve}</strong>
           </h1>
           <div className="week-container">
-            <span>Semana: </span>
+            <span>
+              {" "}
+              <strong>Semana: </strong>
+            </span>
             {isEditingSemana ? (
               <div className="edit-week">
                 <input
@@ -88,12 +94,20 @@ const Programacion_Valvula = () => {
                   value={week}
                   onChange={(e) => setWeek(e.target.value)}
                 />
-                <FaSave className="icon save-icon" onClick={handleSaveSemana} />
+                <FaSave
+                  className="save-icon-container"
+                  onClick={handleSaveSemana}
+                />
               </div>
             ) : (
               <div className="view-week">
-                <span>{week || "Sin asignar"}</span>
-                <FaEdit className="icon edit-icon" onClick={handleEditSemana} />
+                <span className="ver-datos-semanas">
+                  {week || "Sin asignar"}
+                </span>
+                <FaEdit
+                  className="edit-icon-container"
+                  onClick={handleEditSemana}
+                />
               </div>
             )}
           </div>
@@ -102,40 +116,83 @@ const Programacion_Valvula = () => {
             <div className="valve-container">
               <div className="valve-container-left">
                 <div className="container-del-al">
-                  <label htmlFor="startDateStart" className="valve-label-from">
+                  <label htmlFor="startDateStart" className="label-del-valvule">
                     Del
                   </label>
                   <input
                     type="date"
                     id="startDateStart"
                     name="startDateStart"
-                    value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
-                    className="valve-date-input"
+                    value={startDateStart}
+                    onChange={(e) => setStartDateStart(e.target.value)}
+                    className="date-del-irrigation-valvule"
                   />
-                  <label htmlFor="startDateEnd" className="valve-label-to">
+                  <label htmlFor="startDateEnd" className="label-al-valvule">
+                    {" "}
                     al
                   </label>
                   <input
                     type="date"
                     id="startDateEnd"
                     name="startDateEnd"
-                    value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
-                    className="valve-date-input"
+                    value={startDateEnd}
+                    onChange={(e) => setStartDateEnd(e.target.value)}
+                    className="date-al-irrigation-valvule"
                   />
                 </div>
-                <InputField id="kc" label="KC" />
-                <InputField id="frequency" label="Frecuencia de Riego" />
-                <InputField id="irrigationTime" label="Hora de Riego" />
-                <InputField id="startTime" label="Hora de Inicio" />
-                <InputField id="endTime" label="Hora de Fin" />
+                <div className="container-kc-valvule">
+                  <label htmlFor="kc" className="label-kc-valvule">
+                    KC
+                  </label>
+                  <input type="number" id="kc" className="ingress-kc-valvule" />
+                </div>
+                <div className="container-kc-valvule">
+                  <label htmlFor="frequency" className="label-kc-valvule">
+                    Frecuencia de Riego:
+                  </label>
+                  <input
+                    type="number"
+                    id="frequency"
+                    className="ingress-kc-valvule"
+                  />
+                </div>
+                <div className="container-kc-valvule">
+                  <label htmlFor="irrigationTime" className="label-kc-valvule">
+                    Hora de Riego:
+                  </label>
+                  <input
+                    type="time"
+                    id="irrigationTime"
+                    className="ingress-kc-valvule"
+                  />
+                </div>
+                <div className="container-kc-valvule">
+                  <label htmlFor="startTime" className="label-kc-valvule">
+                    Hora de Inicio:
+                  </label>
+                  <input
+                    type="time"
+                    id="startTime"
+                    className="ingress-kc-valvule"
+                  />
+                </div>
+                <div className="container-kc-valvule">
+                  <label htmlFor="endTime" className="label-kc-valvule">
+                    Hora de Fin:
+                  </label>
+                  <input
+                    type="time"
+                    id="endTime"
+                    className="ingress-kc-valvule"
+                  />
+                </div>
               </div>
+
               <div className="valve-container-right">
-                <div className="container-del-al">
+                <div className="container-ultimo-riego">
                   <label
                     htmlFor="lastWatering"
-                    className="valve-date-title-last"
+                    className="date-title-ultimo-valvula"
                   >
                     Último riego programado:
                   </label>
@@ -143,12 +200,35 @@ const Programacion_Valvula = () => {
                     type="date"
                     id="lastWatering"
                     name="lastWatering"
-                    value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
-                    className="valve-date-input"
+                    value={lastWatering}
+                    onChange={(e) => setLastWatering(e.target.value)}
+                    className="date-title-ultimo-valvula"
                   />
                 </div>
-                <InputField id="eto" label="ETo" />
+                <div className="container-eto-valvula">
+                  <label htmlFor="eto" className="label-ETo">
+                    ETo
+                  </label>
+                  <input
+                    type="text"
+                    id="eto"
+                    pattern="[A-Za-z0-9]*"
+                    title="Solo se permiten letras y números"
+                    className="ingress-eto-valvula"
+                  />
+                </div>
+                <div className="container-eto-valvula">
+                  <label htmlFor="systemDischarge" className="label-ETo">
+                    Descarga del Sistema:
+                  </label>
+                  <input
+                    type="text"
+                    id="systemDischarge"
+                    pattern="[A-Za-z0-9]*"
+                    title="Solo se permiten letras y números"
+                    className="ingress-eto-valvula"
+                  />
+                </div>
                 <div className="day-checkbox">
                   {days.map((day, index) => (
                     <div key={index} className="valve-day-checkbox">
@@ -174,14 +254,18 @@ const Programacion_Valvula = () => {
                             onClick={saveChanges} // Mostrar el ícono de guardar en modo de edición
                           />
                         ) : (
-                          <FaEdit
-                            className="icon edit-icon"
+                          <MdCheckBox
+                            className="icon check-icon"
                             onClick={handleEdit} // Mostrar el ícono de editar en modo normal
                           />
                         )}
+                        <FaEdit
+                          className="icon edit-icon"
+                          onClick={() => openModal(day.name)} // Mostrar el Modals_Valvule con el nombre del día actual
+                        />
                         <FaTrash
                           className="icon delete-icon"
-                          onClick={() => handleDelete(index)} // Mostrar el ícono de eliminar y desmarcar el checkbox
+                          onClick={() => handleDelete(index)} // Manejar la eliminación del checkbox
                         />
                       </div>
                     </div>
@@ -208,36 +292,17 @@ const Programacion_Valvula = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <div className="valve-overlay">
-          <div className="valve-modal">
-            <button className="valve-btn-save" onClick={saveChanges}>
-              Guardar
-            </button>
-            <button className="valve-btn-cancel" onClick={closeModal}>
-              Cancelar
-            </button>
-          </div>
-        </div>
+
+      {modalIsOpen && (
+        <Modals_Valvule
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          day={currentDay} // Pasar el nombre del día actual al componente Modals_Valvule
+          valve={valve} // Pasar el número de la válvula al componente Modals_Valvule
+        />
       )}
     </div>
   );
 };
-
-// Componente de campo de entrada reutilizable
-const InputField = ({ id, label }) => (
-  <div className="valve-input-field-container">
-    <label htmlFor={id} className="valve-input-field-label">
-      {label}
-    </label>
-    <input
-      type="text"
-      id={id}
-      pattern="[A-Za-z0-9]*"
-      title="Solo se permiten letras y números"
-      className="valve-input-field"
-    />
-  </div>
-);
 
 export default Programacion_Valvula;

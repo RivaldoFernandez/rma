@@ -134,22 +134,6 @@ const ValveModal = ({ isOpen, onRequestClose, valve }) => {
                                 className='ingress-eto'
                             />
                         </div>
-                        <div className="days-list">
-                            {days.map((day, index) => (
-                                <div key={index} className="day-item">
-                                    <span className="day-label">{day}</span>
-                                    <input type="checkbox" id={`checkbox-${index}`} className="day-checkbox" />
-                                    <div className="icons">
-                                        <span className="icon-edit" title="Editar">
-                                            <FaEdit /> 
-                                        </span>
-                                        <span className="icon-delete" title="Eliminar">
-                                            <FaTrash /> 
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
                 <div className="modal-buttons">

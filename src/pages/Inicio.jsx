@@ -18,8 +18,7 @@ import Maps_img from "../assets/img/maps_geogra.png";
 import "../style/Inicio.css";
 
 // Importa los íconos necesarios
-import alarmIcon from "../assets/notificaciones.png";
-import profileIcon from "../assets/usuario.png";
+
 import logo from "../assets/logofibertel.png";
 
 import {
@@ -31,7 +30,9 @@ import {
   FaClipboardList,
   FaCog,
   FaSignOutAlt,
-  FaTint ,
+  FaTint,
+  FaBell,
+  FaUser,
 } from "react-icons/fa";
 
 const Inicio = () => {
@@ -105,7 +106,7 @@ const Inicio = () => {
             </li>
             <li>
               <Link to="/programacion_riego" className="menu-link-1">
-                <FaTint  className="menu-icon-1" />
+                <FaTint className="menu-icon-1" />
                 <span>Programación</span>
               </Link>
             </li>
@@ -145,17 +146,17 @@ const Inicio = () => {
               />
               <div className="icons-1" style={{ marginRight: "auto" }}>
                 <Link to="/notificaciones">
-                  <img
-                    src={alarmIcon}
-                    alt="Notificaciones"
+                  <FaBell
                     className="icon-1"
+                    size={24}
+                    aria-label="Notificaciones"
                   />
                 </Link>
                 <Link to="/ajustes_cuenta">
-                  <img
-                    src={profileIcon}
-                    alt="Ajustes_Cuenta"
+                  <FaUser
                     className="icon-1 profile-icon"
+                    size={24}
+                    aria-label="Ajustes Cuenta"
                   />
                 </Link>
               </div>

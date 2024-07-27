@@ -37,6 +37,22 @@ const Carousel_Humedad_Vista = () => {
             model: 'Modelo: -----',
             specifications: 'Más especificaciones',
         },
+        {
+            img: ImgTempEjemplo,
+            title: 'Válvula 5',
+            coveredArea: 'Área cubierta: 100 m²',
+            location: 'Ubicación en el campo:',
+            model: 'Modelo: -----',
+            specifications: 'Más especificaciones',
+        },
+        {
+            img: ImgTempEjemplo,
+            title: 'Válvula 4',
+            coveredArea: 'Área cubierta: 100 m²',
+            location: 'Ubicación en el campo:',
+            model: 'Modelo: -----',
+            specifications: 'Más especificaciones',
+        },
         
 
     ];
