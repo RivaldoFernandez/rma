@@ -103,7 +103,6 @@ html, body {
 
 /*--------------Topología, control de válvulas e imágenes --------------------*/
 .topology,
-.valve-control,
 .field-images {
     background-color: #ffffff;
     padding: 15px;
@@ -111,7 +110,16 @@ html, body {
     flex: 1;
     height: 280px;
 }
+.valve-control-dispositive {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+    flex: 1;
+    height: 280px;
+    overflow: auto; 
+  }
 
+  
 /*--------------Topología --------------------*/
 .topology {
     margin-right: 50px;
@@ -182,18 +190,10 @@ h1 {
 }
 
 /*--------------Contenedor de válvulas --------------------*/
-.valve-item-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
+.container-dispositive-3{
+
 }
 
-/*--------------Configuración de texto de válvulas --------------------*/
-.valve-text-setting {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 10px;
-}
 .image-text-setting{
     font-size: 1.5rem;
 }

@@ -25,7 +25,7 @@ const Login = ({ onLogin }) => {
     onLogin();
 
     // Redirect to the /inicio path after successful login
-    navigate('/inicio');
+    navigate('/iniciio');
   };
 
   return (

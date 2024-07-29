@@ -82,7 +82,7 @@ const Inicio = () => {
             </li>
             <li>
               <Link to="/iniciio" className={getLinkClass("/iniciio")}>
-                <FaHome className="menu-icon-1" />
+                <FaHome className="menu-icon-1 ml-1.5" />
                 Inicio
               </Link>
             </li>
@@ -208,14 +208,14 @@ const Inicio = () => {
 
           <div className="grafico-maps-1">
             <div className="grafico-reporte-1">
-              <h1 className="font-bold mb-2 font-black text-center text-xl ">
+              <h1 className="font-bold mb-2  mt-2 font-black text-center text-xl ">
                 Gráfico
               </h1>
               {renderizarGrafico()}
             </div>
             <div className="maps-sensores-1-3">
               <div>
-                <h1 className="font-bold mb-2 font-black text-center text-xl">
+                <h1 className="font-bold mb-2 mt-2 font-black text-center text-xl">
                   Maps
                 </h1>
                 <h2 className=" text-gray-1000 text-lg ">

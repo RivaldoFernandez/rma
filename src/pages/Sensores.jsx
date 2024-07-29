@@ -64,7 +64,7 @@ const Sensores = () => {
             </li>
             <li>
               <Link to="/sensores" className={getLinkClass("/sensores")}>
-                <FaCloudSun className="menu-icon-sensores" />
+                <FaCloudSun className="menu-icon-sensores  ml-1.5" />
                 <span>Sensores</span>
               </Link>
             </li>

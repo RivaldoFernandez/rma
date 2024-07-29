@@ -71,7 +71,7 @@
 
 @layer components {
   .active {
-    @apply bg-gray-200 font-normal shadow-lg border-l-4 border-gray-600;
+    @apply bg-gray-200 font-normal shadow-lg border-l-2 border-gray-600;
     padding-left: 1px;
     border-radius: 10px;
   }

@@ -18,8 +18,7 @@ const Programacion_Valvula = () => {
     { name: "Sábado", checked: false },
     { name: "Domingo", checked: false },
   ]);
-  const [isEditingSemana, setIsEditingSemana] = useState(false);
-  const [week, setWeek] = useState("");
+
   const [valve] = useState("01"); // Número de la válvula
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -55,14 +54,6 @@ const Programacion_Valvula = () => {
     setDays(updatedDays);
   };
 
-  const handleEditSemana = () => {
-    setIsEditingSemana(true);
-  };
-
-  const handleSaveSemana = () => {
-    setIsEditingSemana(false);
-  };
-
   const openModal = (day) => {
     setCurrentDay(day);
     setModalIsOpen(true);
@@ -72,6 +63,22 @@ const Programacion_Valvula = () => {
     setModalIsOpen(false);
   };
 
+  // Obtener la semana actual
+  const currentWeek = getWeekNumber(new Date());
+
+  // Generar la semana siguiente
+  const nextWeek = currentWeek + 1;
+
+  const [selectedWeek, setSelectedWeek] = useState(nextWeek);
+
+  // Manejar el cambio de selección
+  const handleChange = (event) => {
+    setSelectedWeek(parseInt(event.target.value, 10));
+  };
+
+  // Mostrar semanas actuales y siguientes
+  const weeksToShow = [currentWeek, nextWeek];
+
   return (
     <div className="valve-program-container">
       <div className="valve-content">
@@ -79,37 +86,22 @@ const Programacion_Valvula = () => {
           <h1 className="valve-title">
             <strong>Válvula {valve}</strong>
           </h1>
-          <div className="week-container">
-            <span>
-              {" "}
-              <strong>Semana: </strong>
-            </span>
-            {isEditingSemana ? (
-              <div className="edit-week">
-                <input
-                  type="number"
-                  min="0"
-                  max="auto"
-                  className="ingreso-semana"
-                  value={week}
-                  onChange={(e) => setWeek(e.target.value)}
-                />
-                <FaSave
-                  className="save-icon-container"
-                  onClick={handleSaveSemana}
-                />
-              </div>
-            ) : (
-              <div className="view-week">
-                <span className="ver-datos-semanas">
-                  {week || "Sin asignar"}
-                </span>
-                <FaEdit
-                  className="edit-icon-container"
-                  onClick={handleEditSemana}
-                />
-              </div>
-            )}
+          <div className="week-container flex items-center space-x-4">
+            <span className="font-bold">Semana: </span>
+            <div className="filter-item-dev flex flex-col items-start justify-center border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <select
+                name="semana"
+                value={selectedWeek}
+                onChange={handleChange}
+                className="w-24 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {weeksToShow.map((week) => (
+                  <option key={week} value={week}>
+                    {week}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
           <div className="container-general-form">
@@ -304,3 +296,10 @@ const Programacion_Valvula = () => {
 };
 
 export default Programacion_Valvula;
+
+const getWeekNumber = (date) => {
+  const d = new Date(date.getTime());
+  d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+  const yearStart = new Date(d.getFullYear(), 0, 1);
+  return Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+};

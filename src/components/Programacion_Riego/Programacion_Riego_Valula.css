@@ -101,22 +101,7 @@
   padding: 20px;
 }
 
-.ingreso-semana {
-  background-color: #ffffff;
-  text-align: center;
-  border: 1px solid rgb(211, 205, 205);
-  border-radius: 16px;
-  margin-left: 20px;
-}
 
-.view-week {
-  border-radius: 16px;
-  border: 1px solid #949090;
-  background-color: #ffffff;
-  text-align: center;
-  padding: 5px;
-  margin-left: 20px;
-}
 
 /*-----------------------------------------------------Estilos para el título----------------------------------*/
 .valve-title {
@@ -178,51 +163,14 @@
 }
 
 /*-----------------------------------------------------Estilos para el componente SemanaInput----------------------------------*/
-.week-container {
-  display: flex;
-  align-items: center;
-}
 
-.edit-week {
-  display: flex;
-  align-items: center;
-}
 
-.view-week {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  border: 1px solid #949090;
-  background-color: #ffffff;
-  padding: 5px;
-  text-align: center;
-  margin-left: 20px;
-}
 
-.ver-datos-semanas {
-  margin-left: 20px;
-}
 
-.ingreso-semana {
-  margin-right: 10px;
-}
 
 .icon {
   margin-left: 10px;
   cursor: pointer;
-}
-
-.save-icon-container {
-  color: green;
-  width: 50px;
-  margin-left: 20px;
-}
-
-.edit-icon-container {
-  color: blue;
-  width: 30px;
-  margin-left: 20px;
 }
 
 .icon-container {

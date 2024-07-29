@@ -137,6 +137,14 @@ html, body {
     gap: 30px;
     flex-wrap: wrap;
 }
+.cont-sensor-2-monitoreo {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
 /*---------------------- Elementos de Sensor ------------------------*/
 .sensores-item-2 {
@@ -199,6 +207,7 @@ html, body {
 }
 .ultima-hora, .hora-fecha{
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -243,4 +252,5 @@ html, body {
 }
 .estacion-ultima-hora, .estacion-hora-fecha{
     margin-left: 10px;
+    margin-right: 10px;
 }

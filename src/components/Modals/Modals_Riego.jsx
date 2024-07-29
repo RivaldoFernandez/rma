@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import "../Modals/Modals_Riego.css"; 
-import { FaEdit, FaTrash } from 'react-icons/fa';
 
 // Modal configurado desde la raíz
 Modal.setAppElement('#root');

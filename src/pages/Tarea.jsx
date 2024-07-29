@@ -77,7 +77,7 @@ const Tarea = () => {
             </li>
             <li>
               <Link to="/tarea" className={getLinkClass("/tarea")}>
-                <FaClipboardList className="menu-icon-6" />
+                <FaClipboardList className="menu-icon-6  ml-1.5" />
                 <span>Tarea</span>
               </Link>
             </li>

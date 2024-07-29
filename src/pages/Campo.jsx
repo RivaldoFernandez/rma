@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logofibertel.png";
-import { AiOutlineSetting } from "react-icons/ai";
-import ValveModal from "../components/Modals/Modals_Riego";
 import {
   FaHome,
   FaChartLine,
@@ -17,20 +15,9 @@ import {
 } from "react-icons/fa";
 import "../style/Campo.css";
 import CarouselCampoVista from "../components/Carousel/CarouselCampoVista";
+import TableComponent from "../components/Dispositivo Tabla/TableComponent";
 
 const Campo = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [currentValve, setCurrentValve] = useState("");
-
-  const openModal = (valve) => {
-    setCurrentValve(valve);
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-
   const location = useLocation();
 
   const getLinkClass = (path) => {
@@ -43,7 +30,7 @@ const Campo = () => {
         <div className="sidebar fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
           <ul className="sidebar-menu">
             <li>
-              <Link to="/iniciio" className="menu-link">
+              <Link to="/inicio" className="menu-link">
                 <img
                   src={logo}
                   alt="Inicio"
@@ -78,7 +65,7 @@ const Campo = () => {
             </li>
             <li>
               <Link to="/campo" className={getLinkClass("/campo")}>
-                <FaMapSigns className="menu-icon" />
+                <FaMapSigns className="menu-icon ml-1.5" />
                 <span>Campo</span>
               </Link>
             </li>
@@ -152,7 +139,7 @@ const Campo = () => {
           <div className="field-container">
             <div className="topology">
               <div className="image-text-setting">
-                <h1 >
+                <h1>
                   <strong>Topología</strong>
                 </h1>
               </div>
@@ -161,44 +148,23 @@ const Campo = () => {
                 estación meteorológica y las válvulas.
               </h2>
             </div>
-            <div className="valve-control">
+            <div className="valve-control-dispositive">
               <div className="image-text-setting">
                 <h1>
-                  <strong>Control de válvulas</strong>
+                  <strong>Control de dispositivos</strong>
                 </h1>
               </div>
               <h2 className="mt-3">
-                En esta sección puedes controlar el estado de las válvulas
+                En esta sección te permite ver el estado de los dispositivos que
+                están en el campo.
               </h2>
-              <div className="valve-item-container">
-                {[
-                  "Válvula 1",
-                  "Válvula 2",
-                  "Válvula 3",
-                  "Válvula 4",
-                  "Válvula 5",
-                ].map((valve, index) => (
-                  <div key={index} className="valve-text-setting">
-                    <h1>
-                      <strong>{valve}</strong>
-                    </h1>
-                    <AiOutlineSetting
-                      className="valve-settings-icon"
-                      alt="ValvulaComponent"
-                      onClick={() => openModal(valve)}
-                    />
-                  </div>
-                ))}
+              <div className="container-dispositive-3">
+                <TableComponent/>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <ValveModal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        valve={currentValve}
-      />
     </div>
   );
 };

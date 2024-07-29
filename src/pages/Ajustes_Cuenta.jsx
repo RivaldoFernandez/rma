@@ -93,7 +93,7 @@ const Ajustes_Cuenta = () => {
             <ul>
               <li>
                 <Link to="/Ajustes_Cuenta" className={getLinkClass("/Ajustes_Cuenta")}>
-                  <FaCog className="menu-icon-1" />
+                  <FaCog className="menu-icon-1  ml-1.5" />
                   <span>Ajustes</span>
                 </Link>
               </li>

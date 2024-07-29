@@ -1,0 +1,19 @@
+/* src/App.css */
+.table-container {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #0400ff;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #fff8d3;
+  }
+  

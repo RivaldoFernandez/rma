@@ -60,7 +60,7 @@ const Monitoreo = () => {
             </li>
             <li>
               <Link to="/monitoreo" className={getLinkClass("/monitoreo")}>
-                <FaChartLine className="menu-icon-2" />
+                <FaChartLine className="menu-icon-2  ml-1.5" />
                 Monitoreo
               </Link>
             </li>
@@ -153,14 +153,7 @@ const Monitoreo = () => {
           </div>
 
           <div className="contenido-sensores-2">
-            <ul className="cont-sensor-2">
-              <li className="sensores-item-2">
-                <HumedadSensor />
-              </li>
-              <li className="sensores-item-2">
-                <HumedadSensor />
-              </li>
-
+            <ul className="cont-sensor-2-monitoreo">
               <li className="sensores-item-2">
                 <HumedadSensor />
               </li>

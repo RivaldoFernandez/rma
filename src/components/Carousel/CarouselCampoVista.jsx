@@ -14,7 +14,7 @@ const CarouselCampoVista = () => {
         },
         {
             img: ImgTempEjemplo2,
-            date: '2024-07-23',
+            date: '2021-07-23',
             time: '09:00 AM'
         },
         {
@@ -24,7 +24,7 @@ const CarouselCampoVista = () => {
         },
         {
             img: ImgTempEjemplo2,
-            date: '2024-07-21',
+            date: '2020-07-21',
             time: '11:45 AM'
         },
         {
@@ -34,7 +34,7 @@ const CarouselCampoVista = () => {
         },
         {
             img: ImgTempEjemplo2,
-            date: '2024-07-21',
+            date: '2029-07-21',
             time: '11:45 AM'
         }
     ];

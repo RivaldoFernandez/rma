@@ -30,7 +30,6 @@ function App() {
     <Routes>
       <Route path="/" element={isAuthenticated ? <Inicio /> : <Login onLogin={handleLogin} />} />
       <Route path="/iniciio" element={ <Inicio/>}/>
-      <Route path="/inicio" element={<Inicio/>}/>
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login onLogin={handleLogin} />} />
       <Route path="/monitoreo" element={<Monitoreo />} />

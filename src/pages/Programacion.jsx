@@ -78,7 +78,7 @@ const Programacion_Riego = () => {
                 to="/programacion_riego"
                 className={getLinkClass("/programacion_riego")}
               >
-                <FaTint className="menu-icon-programacion" />
+                <FaTint className="menu-icon-programacion  ml-1.5" />
                 <span>Programación</span>
               </Link>
             </li>
@@ -130,7 +130,22 @@ const Programacion_Riego = () => {
               </div>
             </div>
           </div>
-          <div className="bienve-nombre-programacion">
+          <div>
+            <div className="filter-item-dev bg-white rounded-xl p-2 flex items-center w-full max-w-md mx-auto my-4">
+              <h1 className="titulo text-xl font-semibold mr-4">
+                Seleccione estación
+              </h1>
+              <select
+                name="valvula"
+                className="select p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">Seleccione</option>
+                <option value="Válvula 1">Válvula 1</option>
+                <option value="Válvula 2">Válvula 2</option>
+                <option value="Válvula 3">Válvula 3</option>
+              </select>
+            </div>
+
             <Programacion_Valvula />
           </div>
         </div>
