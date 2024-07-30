@@ -31,9 +31,10 @@ import {
   FaCog,
   FaSignOutAlt,
   FaTint,
-  FaBell,
   FaUser,
 } from "react-icons/fa";
+import { BsPersonBadge } from "react-icons/bs";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 
 const Inicio = () => {
   const [sensorSeleccionado, setSensorSeleccionado] = useState("Temperatura"); // Sensor por defecto
@@ -127,7 +128,7 @@ const Inicio = () => {
             </li>
           </ul>
           <div className="ajustes-cerrar-1">
-          <ul>
+            <ul>
               <li>
                 <Link
                   to="/Ajustes_Cuenta"
@@ -157,12 +158,27 @@ const Inicio = () => {
                 style={{ width: "60%", marginRight: "5" }}
               />
               <div className="icons-1" style={{ marginRight: "auto" }}>
-                <Link to="/ajustes_cuenta">
-                  <FaUser
-                    className="icon-1 profile-icon"
-                    size={24}
+                <Link to="/ajustes_cuenta" className="relative group">
+                  <BsPersonBadge
+                    className="icon-1 profile-icon text-blue-500"
+                    size={30}
                     aria-label="Ajustes Cuenta"
                   />
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-xs rounded-lg py-1 px-3 z-10 shadow-lg">
+                    Perfil
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-2 h-2 bg-gray-800 rotate-45"></div>
+                  </div>
+                </Link>
+                <Link to="/register" className="relative group">
+                  <AiOutlineUsergroupAdd
+                    className="icon-1 profile-icon"
+                    size={30}
+                    aria-label="Registrar Usuario"
+                  />
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-xs rounded-lg py-1 px-3 z-10 shadow-lg">
+                    Registrar
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-2 h-2 bg-gray-800 rotate-45"></div>
+                  </div>
                 </Link>
               </div>
             </div>

@@ -43,6 +43,7 @@ function App() {
       <Route path="/enviar_email" element={<Enviar_Email/>}/>
       <Route path="/tarea" element={<Tarea/>}/>
       <Route path="/programacion_riego" element={<Programacion_Riego/>}/>
+      <Route path="/reset-password/:token" element={<Recuperar_Contraseña/>}/>
     </Routes>
   );
 }

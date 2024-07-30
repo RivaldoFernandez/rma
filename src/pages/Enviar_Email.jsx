@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../style/Enviar_Email.css'
+import axiosInstance from '../axiosInstance';
+import '../style/Enviar_Email.css';
 
 const Enviar_Email = () => {
   const [email, setEmail] = useState('');
@@ -18,32 +19,38 @@ const Enviar_Email = () => {
     return null;
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const enviarEmail = async (e) => {
+    e.preventDefault();
     const emailError = validateEmail(email);
     if (emailError) {
       setErrors({ email: emailError });
       return;
     }
 
-    // Simulación de envío de correo
-    setSubmitMessage('Te hemos enviado un correo para restablecer tu contraseña.');
+    try {
+      const response = await axiosInstance.post('request-password-reset/', { email });
+      console.log('Correo enviado con éxito:', response.data);
+      setSubmitMessage('Te hemos enviado un correo para restablecer tu contraseña.');
+      
+      // Limpiar campos y errores
+      setEmail('');
+      setErrors({});
 
-    // Limpiar campos y errores
-    setEmail('');
-    setErrors({});
-
-    // Redirigir después de 5 segundos
-    setTimeout(() => {
-      navigate('/recuperar_contraseña');
-    }, 3000);
+      // Redirigir después de 5 segundos
+      setTimeout(() => {
+        navigate('/recuperar_contraseña');
+      }, 3000);
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitMessage('Error al enviar el correo. Inténtalo de nuevo más tarde.');
+    }
   };
 
   return (
     <div className="enviar-email-container flex justify-center items-center h-screen">
       <div className="enviar-email-form bg-white border-slate-600 rounded-md p-20 shadow-lg">
-        <h1 className="text-2xl font-semibold mb-4 ">Restablecer Contraseña</h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className="text-2xl font-semibold mb-4">Restablecer Contraseña</h1>
+        <form onSubmit={enviarEmail}>
           <div className="input-group-email">
             <label htmlFor="email" className="input-group-email text-green-600">Correo Electrónico</label>
             <input
@@ -70,3 +77,5 @@ const Enviar_Email = () => {
 };
 
 export default Enviar_Email;
+
+

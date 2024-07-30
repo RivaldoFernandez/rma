@@ -14,7 +14,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('https://3p7jzhtc-8000.brs.devtunnels.ms/api/token/', {
+      const response = await axios.post('https://test-production-18cc.up.railway.app/api/token/', {
         username: username,
         password: password
       });
@@ -81,3 +81,4 @@ const Login = () => {
 };
 
 export default Login;
+
