@@ -1,59 +1,64 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import '../style/Login.css';
-import logo from '../assets/logofibertel.png'; 
+import logo from '../assets/logofibertel.png';
 
-// Define your validation schema here (e.g., username and password are required)
-const loginSchema = z.object({
-  username: z.string().min( { message: "Usuario requerido" }),
-  contraseña: z.string().min( { message: "Contraseña requerida" }),
-});
-
-const Login = ({ onLogin }) => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: zodResolver(loginSchema),
-  });
-
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Call onLogin to set authentication state (if needed)
-    onLogin();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    // Redirect to the /inicio path after successful login
-    navigate('/iniciio');
+    try {
+      const response = await axios.post('https://3p7jzhtc-8000.brs.devtunnels.ms/api/token/', {
+        username: username,
+        password: password
+      });
+
+      const { access, refresh } = response.data;
+      localStorage.setItem('accessToken', access); // Almacenar el access token
+      localStorage.setItem('refreshToken', refresh); // Almacenar el refresh token
+
+      navigate('/iniciio'); // Corregir el enlace de navegación
+    } catch (error) {
+      setError('Error al iniciar sesión. Verifica tus credenciales.');
+      console.error('Error:', error);
+    }
   };
 
   return (
     <div className="login-container flex justify-start items-center h-screen">
       <div className="login-tom bg-white border-slate-600 rounded-md p-10 shadow-lg">
         <img src={logo} alt="FIBERTEL Logo" className="mx-auto mb-4" style={{ width: '150px' }} />
-        <form onSubmit={handleSubmit(onSubmit)} className="input-group">
+        
+        <form onSubmit={handleSubmit} className="input-group">
           <div className="input-group">
             <label htmlFor="username" className="title-user-pass text-green-600">Usuario</label>
             <input
               type="text"
               id="username"
-              {...register('username')}
-              className={`w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border ${errors.username ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent custom-input`}
-              placeholder="Ingresa tu usuario"
+              name="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className={`w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border ${error ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent custom-input`}
+              required
             />
-            {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username.message}</p>}
           </div>
           <div className="input-group">
-            <label htmlFor="contraseña" className="title-user-pass text-green-600">Contraseña</label>
+            <label htmlFor="password" className="title-user-pass text-green-600">Contraseña</label>
             <input
               type="password"
-              id="contraseña"
-              {...register('contraseña')}
-              className={`w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border ${errors.contraseña ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent custom-input`}
-              placeholder="Ingresa tu contraseña"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={`w-full px-3 py-2 mt-1 text-gray-800 bg-white rounded-md border ${error ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent custom-input`}
+              required
             />
-            {errors.contraseña && <p className="text-red-500 text-sm mt-1">{errors.contraseña.message}</p>}
           </div>
           
           <div className="flex flex-col gap-5">
@@ -69,6 +74,7 @@ const Login = ({ onLogin }) => {
             </a>
           </div>
         </form>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
       </div>
     </div>
   );

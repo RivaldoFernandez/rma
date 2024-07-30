@@ -1,4 +1,4 @@
-/* Estilo para centrar y dimensionar el modal */
+/*
 .modal {
     width: 80%;
     max-width: 800px; 
@@ -12,7 +12,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para el overlay que cubre toda la pantalla */
 .overlay {
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
@@ -84,10 +83,9 @@ input[type="date"], select {
 
 
 
-/*------------------ Container de divididos------------------*/
 .container-irrigation-izquierda-derecha {
     display: flex;
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    align-items: flex-start; 
 }
 .container-derecha {
     flex: 1;
@@ -126,7 +124,6 @@ input[type="date"], select {
 
 
 
-/*-------------Los dias de la semana ------------------*/
 .days-list {
     display: flex;
     flex-direction: column; 
@@ -148,30 +145,29 @@ input[type="date"], select {
 }
 
 .icon-edit, .icon-delete {
-    cursor: pointer; /* Cursor de puntero para los iconos */
-    color: #007bff; /* Color para los iconos */
+    cursor: pointer; 
+    color: #007bff; 
     margin-top: 10px;
 }
 
 .icon-edit:hover {
-    color: #000000; /* Color en hover para el icono de editar */
+    color: #000000; 
 }
 
 .icon-delete:hover {
-    color: #dc3545; /* Color en hover para el icono de eliminar */
+    color: #dc3545; 
 }
 
 
-/* ------------------Estilo para los botones del modal --------------------*/
 .modal-buttons {
     display: flex;
-    justify-content: flex-end; /* Alinea los botones al final */
+    justify-content: flex-end; 
     gap: 10px;
     margin-top: 20px;
 }
 
 .btn-save {
-    background-color: #4CAF50; /* Color verde */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -184,7 +180,7 @@ input[type="date"], select {
 }
 
 .btn-cancel {
-    background-color: #f44336; /* Color rojo */
+    background-color: #f44336;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -204,3 +200,4 @@ input[type="date"], select {
     margin-top: 20px;
     border-radius: 16px;
   }
+  */

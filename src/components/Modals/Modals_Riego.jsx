@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+{/*import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import "../Modals/Modals_Riego.css"; 
 
@@ -145,3 +145,4 @@ const ValveModal = ({ isOpen, onRequestClose, valve }) => {
 };
 
 export default ValveModal;
+*/}
