@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../axiosInstance';
 import '../style/Enviar_Email.css';
 
@@ -7,7 +6,6 @@ const Enviar_Email = () => {
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState('');
-  const navigate = useNavigate();
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -35,11 +33,6 @@ const Enviar_Email = () => {
       // Limpiar campos y errores
       setEmail('');
       setErrors({});
-
-      // Redirigir después de 5 segundos
-      setTimeout(() => {
-        navigate('/recuperar_contraseña');
-      }, 3000);
     } catch (error) {
       console.error('Error:', error);
       setSubmitMessage('Error al enviar el correo. Inténtalo de nuevo más tarde.');
@@ -77,5 +70,3 @@ const Enviar_Email = () => {
 };
 
 export default Enviar_Email;
-
-

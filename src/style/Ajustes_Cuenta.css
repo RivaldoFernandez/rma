@@ -56,7 +56,6 @@
 
 /*-------------- Contenedor del buscador --------------------*/
 .search-cont-ajustes {
-    background-color: #ffffff;
     padding: 15px;
     box-sizing: border-box;
     background-color: #E0F2E6;
@@ -66,7 +65,7 @@
 .search-bar-ajustes {
     padding: 10px;
     width: 100%;
-    border: 1px solid #e4e2e2;
+    border: 1px solid #000000;
     border-radius: 10px;
     outline: none;
     margin-top: 20px;

@@ -32,7 +32,7 @@
 .search-bar-6 {
     padding: 10px;
     margin-left: 100px;
-    border: 1px solid #777373;
+    border: 1px solid #000000;
     border-radius: 10px;
     outline: none;
     margin-right: 10px; 
@@ -158,42 +158,6 @@
     font-weight: bold;
 }
 
-
-/* ------------------ Grafico y maps ------------------ */
-.grafico-maps-6 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.grafico-reporte-6{
-    width: 48%; 
-    height:auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 24px;
-}
-
-.title-gm-6 {
-    text-align: center;
-    font-weight: bold;
-    
-}
-.maps-sensores-6 {
-width: 48%; 
-    height: auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 24px;
-}
-
-.maps-sensores-6 img {
-    width: 70%; 
-    height: auto; 
-    display: block;
-    margin: 0 auto;
-}
 /*-----------------------------Contenido tarea---------------------------*/
 .container-general-tarea{
     background-color: #ffffff;
