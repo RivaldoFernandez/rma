@@ -37,6 +37,7 @@ function App() {
       <Route path="/ajustes_cuenta" element={<Ajustes_Cuenta/>}/>
       <Route path="/enviar_email" element={<Enviar_Email/>}/>
       <Route path="/tarea" element={<Tarea/>}/>
+      <Route path="/recuperar_contraseña" element={<Recuperar_Contraseña/>}/>
       <Route path="/programacion_riego" element={<Programacion_Riego/>}/>
       <Route path="/reset-password/:token" element={<Recuperar_Contraseña/>}/>
     </Routes>
