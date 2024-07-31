@@ -22,8 +22,9 @@ ChartJS.register(
 );
 
 const LinealPH = () => {
-    const Dias = ["A", "B", "C", "D", "E", "F"];
-    const datosPH = [6, 6.5, 7, 7.2, 6.8, 6.5];
+    const Dias = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"];
+
+    const datosPH = [6, 6.5, 0.1, 7, 7.2, 6.8, 6.5];
 
     const data = {
         labels: Dias,
@@ -48,12 +49,11 @@ const LinealPH = () => {
                 display: true,
                 text: 'Gráfico de Valor de pH por Día',
                 font: {
-                    size: 18,
+                    size: 15,
                 },
             },
             legend: {
-                display: true,
-                position: 'bottom',
+                display: false,
             },
         },
         scales: {

@@ -28,6 +28,13 @@ const Sensores = () => {
       ? "menu-link-sensores active"
       : "menu-link-sensores";
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
+
   return (
     <div className="sensores-container-sensores">
       <div className="content-sensores">
@@ -96,7 +103,7 @@ const Sensores = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="menu-link-1">
+                <Link onClick={handleLogout} className="menu-link-1">
                   <FaSignOutAlt className="menu-icon-1" />
                   <span>Cerrar Sesión</span>
                 </Link>

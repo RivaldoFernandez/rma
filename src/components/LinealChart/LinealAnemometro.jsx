@@ -22,8 +22,9 @@ ChartJS.register(
 );
 
 const LinealAnemometro = () => {
-    const Dias = ["A", "B", "C", "D", "E", "F"];
-    const datosAnemometro = [10, 15, 12, 18, 20, 22];
+    const Dias = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"];
+
+    const datosAnemometro = [10, 15, 12, 18, 20, 22, 10];
 
     const data = {
         labels: Dias,
@@ -48,12 +49,11 @@ const LinealAnemometro = () => {
                 display: true,
                 text: 'Gráfico de Velocidad del Viento por Día',
                 font: {
-                    size: 18,
+                    size: 15,
                 },
             },
             legend: {
-                display: true,
-                position: 'bottom',
+                display: false,
             },
         },
         scales: {

@@ -24,13 +24,18 @@ const Campo = () => {
     return location.pathname === path ? "menu-link active" : "menu-link";
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
   return (
     <div className="main-container">
       <div className="content">
         <div className="sidebar fixed top-0 left-0 h-screen w-64 bg-white overflow-hidden">
           <ul className="sidebar-menu">
             <li>
-              <Link to="/inicio" className="menu-link">
+              <Link to="/iniciio" className="menu-link">
                 <img
                   src={logo}
                   alt="Inicio"
@@ -40,7 +45,7 @@ const Campo = () => {
               </Link>
             </li>
             <li>
-              <Link to="/inicio" className="menu-link">
+              <Link to="/iniciio" className="menu-link">
                 <FaHome className="menu-icon" />
                 Inicio
               </Link>
@@ -91,7 +96,7 @@ const Campo = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="menu-link-1">
+                <Link onClick={handleLogout} className="menu-link-1">
                   <FaSignOutAlt className="menu-icon-1" />
                   <span>Cerrar Sesión</span>
                 </Link>

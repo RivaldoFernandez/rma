@@ -37,7 +37,7 @@ const Recuperar_Contraseña = () => {
       // Redirect after 2 seconds to the login interface
       setTimeout(() => {
         navigate("/login");
-      }, 2000);
+      }, 1000);
     } catch (error) {
       console.error("Error:", error);
       setSubmitMessage(

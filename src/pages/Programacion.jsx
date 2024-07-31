@@ -27,6 +27,11 @@ const Programacion_Riego = () => {
       ? "menu-link-programacion active"
       : "menu-link-programacion";
   };
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
 
   return (
     <div className="program-container-programacion">
@@ -98,7 +103,7 @@ const Programacion_Riego = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="menu-link-programacion">
+                <Link onClick={handleLogout} className="menu-link-programacion">
                   <FaSignOutAlt className="menu-icon-programacion" />
                   <span>Cerrar Sesión</span>
                 </Link>

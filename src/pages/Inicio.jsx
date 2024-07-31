@@ -66,6 +66,20 @@ const Inicio = () => {
     return location.pathname === path ? "menu-link-1 active" : "menu-link-1";
   };
 
+  const fechaActual = new Date();
+  // Opciones de formato
+  const opcionesFormato = { year: "numeric", month: "long", day: "numeric" };
+  const fechaFormateada = fechaActual.toLocaleDateString(
+    "es-ES",
+    opcionesFormato
+  );
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
+
   return (
     <div className="inicio-container-1">
       <div className="content-1">
@@ -139,7 +153,7 @@ const Inicio = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className={getLinkClass("/login")}>
+                <Link onClick={handleLogout} className="menu-link">
                   <FaSignOutAlt className="menu-icon-1" />
                   <span>Cerrar Sesión</span>
                 </Link>
@@ -185,8 +199,7 @@ const Inicio = () => {
           </div>
           <div className="bienve-nombre-1">
             <span>
-              Bienvenido, <strong>Rivaldo Fernandez</strong> Hoy es 18 de Julio
-              de 2024
+              Bienvenido, <strong>userName</strong> Hoy es {fechaFormateada}
             </span>
           </div>
           <div className="contenido-sensores-1">

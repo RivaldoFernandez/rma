@@ -22,8 +22,9 @@ ChartJS.register(
 );
 
 const LinealTemperatura = () => {
-    const Dias = ["A", "B", "C", "D", "E", "F"];
-    const temperatura = [0, 20, 50, 20, 25, 60, 100];
+    const Dias = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"];
+
+    const temperatura = [0, 20, 50, 20, 25, 30, 10];
 
     const data = {
         labels: Dias,
@@ -48,12 +49,11 @@ const LinealTemperatura = () => {
                 display: true,
                 text: 'Gráfico de Temperatura por Día',
                 font: {
-                    size: 18,
+                    size: 15,
                 },
             },
             legend: {
-                display: true,
-                position: 'bottom',
+                display: false, // Oculta la leyenda
             },
         },
         scales: {
@@ -73,6 +73,7 @@ const LinealTemperatura = () => {
             },
         },
     };
+    
 
     return (
         <div className="chart-container" style={{ width: '100%', height: '248px' }}>

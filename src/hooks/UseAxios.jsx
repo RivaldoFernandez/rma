@@ -2,30 +2,28 @@
 // import axios from "axios";
 
 // const useAxios = (url, options = {}) => {
-//     const [data , setData] = useState(null);
-//     const [error , setError] = useState(null);
-//     const [loading , setLoading] = useState(true);
+//     const [data, setData] = useState(null);
+//     const [error, setError] = useState(null);
+//     const [loading, setLoading] = useState(true);
 
-//     useEffect(() =>{
-//         const fetchData = async() {
+//     useEffect(() => {
+//         const fetchData = async () => { // Corrected async function definition
 //             try {
 //                 const response = await axios(url, options);
-//                 setData(response.data)
+//                 setData(response.data);
 //                 setError(null);
-
 //             } catch (err) {
 //                 setData(null);
 //                 setError(err);
-                
-//             } finally{
+//             } finally {
 //                 setLoading(false);
-
 //             }
 //         };
-//         fetchData();    
+
+//         fetchData();
 //     }, [url, options]);
-    
-// return {data, options, loading}
+
+//     return { data, error, loading }; // Return error instead of options
 // };
 
 // export default useAxios;

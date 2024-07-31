@@ -22,8 +22,9 @@ ChartJS.register(
 );
 
 const LinealConductividadE = () => {
-    const Dias = ["A", "B", "C", "D", "E", "F"];
-    const datosConductividad = [10, 15, 20, 18, 22, 25];
+    const Dias = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"];
+
+    const datosConductividad = [10, 15, 20, 18, 22, 30, 25];
 
     const data = {
         labels: Dias,
@@ -48,12 +49,11 @@ const LinealConductividadE = () => {
                 display: true,
                 text: 'Gráfico de Conductividad Electrónica por Día',
                 font: {
-                    size: 18,
+                    size: 15,
                 },
             },
             legend: {
-                display: true,
-                position: 'bottom',
+                display: false,
             },
         },
         scales: {

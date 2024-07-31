@@ -22,8 +22,8 @@ ChartJS.register(
 );
 
 const LinealBarometro = () => {
-    const Dias = ["A", "B", "C", "D", "E", "F"];
-    const datosBarometro = [1010, 1005, 1008, 1012, 1015, 1000];
+    const Dias = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"];
+    const datosBarometro = [1010, 1005, 1008, 100, 1012, 1015, 7000];
 
     const data = {
         labels: Dias,
@@ -48,12 +48,11 @@ const LinealBarometro = () => {
                 display: true,
                 text: 'Gráfico de Presión Barométrica por Día',
                 font: {
-                    size: 18,
+                    size: 15,
                 },
             },
             legend: {
-                display: true,
-                position: 'bottom',
+                display: false,
             },
         },
         scales: {

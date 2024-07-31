@@ -24,6 +24,13 @@ const Tarea = () => {
   const getLinkClass = (path) => {
     return location.pathname === path ? "menu-link-6 active" : "menu-link-6";
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
+
   return (
     <div className="tarea-container-6">
       <div className="content-6">
@@ -91,7 +98,7 @@ const Tarea = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="menu-link-1">
+                <Link onClick={handleLogout} className="menu-link-1">
                   <FaSignOutAlt className="menu-icon-1" />
                   <span>Cerrar Sesión</span>
                 </Link>

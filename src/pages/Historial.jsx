@@ -82,6 +82,11 @@ const Historial = () => {
     return location.pathname === path ? "menu-link-3 active" : "menu-link-3";
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
   return (
     <div className="historial-container-3">
       <div className="content-3">
@@ -152,7 +157,7 @@ const Historial = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className="menu-link-3">
+                <Link onClick={handleLogout} className="menu-link-3">
                   <FaSignOutAlt className="menu-icon-3" />
                   <span>Cerrar Sesión</span>
                 </Link>

@@ -37,6 +37,12 @@ const Monitoreo = () => {
     return location.pathname === path ? "menu-link-2 active" : "menu-link-2";
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    window.location.href = "/"; // Redirige al usuario al inicio de sesión al cerrar sesión
+  };
+
   return (
     <div className="monitoreo-container-2">
       <div className="content-2">
@@ -110,7 +116,7 @@ const Monitoreo = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" className={getLinkClass("/login")}>
+                <Link onClick={handleLogout} className={getLinkClass("/login")}>
                   <FaSignOutAlt className="menu-icon-1" />
                   <span>Cerrar Sesión</span>
                 </Link>
