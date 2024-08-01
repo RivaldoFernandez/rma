@@ -16,6 +16,7 @@ import {
   FaTint ,
 } from "react-icons/fa";
 import "../style/Ajustes_Cuenta.css";
+import ConfigSistema from "../components/Config/Config_sistema";
 
 const Ajustes_Cuenta = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -174,6 +175,7 @@ const Ajustes_Cuenta = () => {
             {selectedOption === "configuracion" && (
               <form>
                 <h2 className="text-title-option">Configuración del Sistema</h2>
+                <ConfigSistema/>
               </form>
             )}
             {selectedOption === "soporte" && (

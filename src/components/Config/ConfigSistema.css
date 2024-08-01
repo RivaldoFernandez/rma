@@ -1,0 +1,81 @@
+.config-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+  
+  .collapsible-content {
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .collapsed {
+    max-height: 0;
+  }
+  
+  .expanded {
+    max-height: 500px; /* Ajusta este valor según el contenido */
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .save-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #218838;
+  }
+  
+  .disabled-input {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+
+
+  /* Oculta los botones de incremento y decremento en la mayoría de los navegadores */
+.input-field {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Chrome, Safari */
+    appearance: none; /* Estándar */
+  }
+  
+  /* Estilos adicionales para Safari */
+  .input-field::-webkit-inner-spin-button,
+  .input-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
