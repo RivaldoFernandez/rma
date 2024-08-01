@@ -33,12 +33,13 @@ const LinealHumedad = ({ userId, raspberryId }) => {
         const fetchData = async () => {
             try {
                 // Obtener datos de humedad para los últimos siete días basados en el ID del raspberry
-                const lecturaResponse = await axios.get(`https://3p7jzhtc-8000.brs.devtunnels.ms/api/lecturasRaspberry/ultimosSieteDiasRaspberry/${raspberryId}/`);
+                const lecturaResponse = await axios.get(`https://test-production-18cc.up.railway.app/api/lecturasRaspberry/ultimosSieteDiasRaspberry/1/`);
                 const lecturaData = lecturaResponse.data;
 
                 // Procesar los datos obtenidos en el formato requerido para el gráfico
-                const humedadData = lecturaData.map(item => item.humedad); // Ajustar según la estructura real de los datos
+                const humedadData = lecturaData.map(item => item.humedad_ambiente); // Ajustar según la estructura real de los datos
                 const diasData = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"]; // Días estáticos por simplicidad
+                console.log(humedadData, diasData)
 
                 setHumedad(humedadData); // Actualizar el estado con los datos de humedad obtenidos
                 setDias(diasData); // Actualizar el estado con los días
@@ -104,6 +105,7 @@ const LinealHumedad = ({ userId, raspberryId }) => {
     return (
         <div className="chart-container" style={{ width: '100%', height: '248px' }}>
             <Line data={data} options={options} />
+
         </div>
     );
 };
