@@ -55,7 +55,7 @@ const LinealHumedad = ({ userId, raspberryId }) => {
     const data = {
         labels: dias,
         datasets: [{
-            label: 'Humedad por día',
+            label: 'Humedad',
             data: humedad,
             tension: 0.4,
             borderColor: 'rgba(54, 162, 235, 1)',
@@ -74,7 +74,7 @@ const LinealHumedad = ({ userId, raspberryId }) => {
         plugins: {
             title: {
                 display: true,
-                text: 'Gráfico de Humedad por Día',
+                text: 'Gráfico de Humedad por Semana',
                 font: {
                     size: 15,
                 },

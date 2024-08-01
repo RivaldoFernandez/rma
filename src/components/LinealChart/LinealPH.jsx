@@ -47,7 +47,7 @@ const LinealPH = () => {
         plugins: {
             title: {
                 display: true,
-                text: 'Gráfico de Valor de pH por Día',
+                text: 'Gráfico de Valor de pH por Semana',
                 font: {
                     size: 15,
                 },

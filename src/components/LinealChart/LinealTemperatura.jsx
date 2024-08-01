@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
+import axios from 'axios';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -21,13 +22,37 @@ ChartJS.register(
     Filler
 );
 
-const LinealTemperatura = () => {
-    const Dias = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"];
+const LinealTemperatura = ({ apiUrl }) => {
+    // Variables de estado para almacenar datos de temperatura y días
+    const [temperatura, setTemperatura] = useState([]);
+    const [dias, setDias] = useState([]);
 
-    const temperatura = [0, 20, 50, 20, 25, 30, 10];
+    // Obtiene los datos para el gráfico cuando el componente se monta
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
 
+
+                const response = await axios.get(`https://test-production-18cc.up.railway.app/api/lecturasRaspberry/ultimosSieteDiasRaspberry/1/`);
+                const data = response.data;
+
+                // Procesar los datos obtenidos en el formato requerido para el gráfico
+                const temperaturaData = data.map(item => item.temperatura_ambiente); // Ajustar según la estructura real de los datos
+                const diasData = ["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"]; // Días estáticos por simplicidad
+
+                setTemperatura(temperaturaData); // Actualizar el estado con los datos de temperatura
+                setDias(diasData); // Actualizar el estado con los días
+            } catch (error) {
+                console.error('Error al obtener los datos:', error);
+            }
+        };
+
+        fetchData(); // Llamar a la función fetchData cuando el componente se monta
+    }, [apiUrl]); // Dependencia para activar el efecto
+
+    // Configuración de los datos para el gráfico
     const data = {
-        labels: Dias,
+        labels: dias,
         datasets: [{
             label: 'Temperatura por día',
             data: temperatura,
@@ -42,12 +67,13 @@ const LinealTemperatura = () => {
         }],
     };
 
+    // Configuración de opciones del gráfico
     const options = {
         responsive: true,
         plugins: {
             title: {
                 display: true,
-                text: 'Gráfico de Temperatura por Día',
+                text: 'Gráfico de Temperatura por Semana ',
                 font: {
                     size: 15,
                 },
@@ -73,8 +99,8 @@ const LinealTemperatura = () => {
             },
         },
     };
-    
 
+    // Renderizar el componente del gráfico
     return (
         <div className="chart-container" style={{ width: '100%', height: '248px' }}>
             <Line data={data} options={options} />

@@ -47,7 +47,7 @@ const LinealConductividadE = () => {
         plugins: {
             title: {
                 display: true,
-                text: 'Gráfico de Conductividad Electrónica por Día',
+                text: 'Gráfico de Conductividad Electrónica por Semana',
                 font: {
                     size: 15,
                 },
