@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../Programacion_Riego/Programacion_Riego_Valula.css";
-import { FaEdit, FaSave, FaTrash } from "react-icons/fa";
-import { MdCheckBox } from "react-icons/md";
+import { FaEdit, FaTrash } from "react-icons/fa";
 import Modals_Valvule from "../Modals/Modals_Valvule";
+import axios from 'axios';
 
 const Programacion_Valvula = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -20,18 +20,93 @@ const Programacion_Valvula = () => {
   ]);
 
   const [valve] = useState("01"); // Número de la válvula
-
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentDay, setCurrentDay] = useState(""); // Día actual para editar
+  const [descarga, setDescarga] = useState(""); // Descarga del sistema
+  const [eto, setEto] = useState(""); // ET0
+  const [kc, setKc] = useState(""); // Kc
+  const [frequency, setFrequency] = useState(""); // Frecuencia de riego
+  const [irrigationTime, setIrrigationTime] = useState(""); // Hora de riego
+  const [startTime, setStartTime] = useState(""); // Hora de inicio
+  const [endTime, setEndTime] = useState(""); // Hora de fin
+  const [selectedWeek, setSelectedWeek] = useState(getWeekNumber(new Date()) + 1);
 
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
     setStartDateStart(today);
     setStartDateEnd(today);
-    setLastWatering(today);
+    fetchEt0(); //Llamar a la función para obtener la evotranspiracion
+    fetchDescarga(); // Llamar a la función para obtener la descarga del sistema
+    fetchLastWatering(); // Llamar a la función para obtener el último riego programado
   }, []);
 
-  const saveChanges = () => {
+  const fetchDescarga = async () => {
+    try {
+      const response = await axios.get('https://test-production-18cc.up.railway.app/api/esp32/1/descarga/');
+      setDescarga(response.data.descarga); // Ajustar según el formato de la respuesta de tu API
+    } catch (error) {
+      console.error('Error fetching descarga:', error);
+    }
+  };
+
+  const fetchEt0 = async () => {
+    try {
+      const response = await axios.get('https://test-production-18cc.up.railway.app/api/lecturasRaspberry/ultimaSemana/1/');
+      const data = response.data;
+  
+      if (Array.isArray(data) && data.length > 0) {
+        setEto(data[0].et0); // Ajustar para obtener el et0 del primer objeto en el array
+      } else {
+        console.error('Error: La respuesta de la API no es un array o está vacía.');
+      }
+    } catch (error) {
+      console.error('Error fetching ET0:', error);
+    }
+  };
+
+  const fetchLastWatering = async () => {
+    try {
+      const response = await axios.get('https://test-production-18cc.up.railway.app/api/programa/ultimoRiegoProgramado/1/');
+      setLastWatering(response.data.fecha); // Ajustar según el formato de la respuesta de tu API
+    } catch (error) {
+      console.error('Error fetching LastWatering:', error);
+    }
+  };
+
+  useEffect(() => {
+    if (kc && frequency && eto && descarga) {
+      const hoursOfIrrigation = (eto * kc * frequency * 10) / descarga;
+      const irrigationHours = Math.floor(hoursOfIrrigation);
+      const irrigationMinutes = Math.round((hoursOfIrrigation - irrigationHours) * 60);
+      setIrrigationTime(`${irrigationHours} horas y ${irrigationMinutes} minutos`);
+
+      if (startTime) {
+        const end = new Date(new Date(`1970-01-01T${startTime}:00Z`).getTime() + hoursOfIrrigation * 60 * 60 * 1000);
+        setEndTime(end.toISOString().substr(11, 5));
+      }
+    }
+  }, [kc, frequency, eto, descarga, startTime]);
+
+  const saveChanges = async () => {
+    const volumeHa = (eto * kc * frequency * 10) / descarga; // Calcular volumen por ha
+    const payload = {
+      fecha: startDateStart,
+      semana: selectedWeek,
+      hora_inicio: startTime,
+      hora_fin: endTime,
+      kc: parseFloat(kc),
+      volumen_ha: volumeHa,
+      idEsp32: 1, // Ajustar según sea necesario
+    };
+
+    try {
+      await axios.post('https://test-production-18cc.up.railway.app/api/programas/', payload);
+      alert('Datos guardados exitosamente');
+    } catch (error) {
+      console.error('Error saving data:', error);
+      alert('Error guardando los datos');
+    }
+
     setIsEditing(false);
     closeModal();
   };
@@ -63,17 +138,54 @@ const Programacion_Valvula = () => {
     setModalIsOpen(false);
   };
 
+  const handleFrequencyChange = (event) => {
+    const freq = event.target.value;
+    setFrequency(freq);
+
+    if (freq && lastWatering) {
+      const startDayIndex = new Date(lastWatering).getDay();
+      const updatedDays = days.map((day, index) => ({
+        ...day,
+        checked: ((index - startDayIndex) % parseInt(freq, 10) === 0)
+      }));
+      setDays(updatedDays);
+    }
+  };
+
+  const resetForm = () => {
+    const today = new Date().toISOString().split("T")[0];
+    setStartDateStart(today);
+    setStartDateEnd(today);
+    setKc("");
+    setFrequency("");
+    setIrrigationTime("");
+    setStartTime("");
+    setEndTime("");
+    setDays([
+      { name: "Lunes", checked: false },
+      { name: "Martes", checked: false },
+      { name: "Miércoles", checked: false },
+      { name: "Jueves", checked: false },
+      { name: "Viernes", checked: false },
+      { name: "Sábado", checked: false },
+      { name: "Domingo", checked: false },
+    ]);
+    setIsEditing(false);
+  };
+
   // Obtener la semana actual
   const currentWeek = getWeekNumber(new Date());
 
   // Generar la semana siguiente
   const nextWeek = currentWeek + 1;
 
-  const [selectedWeek, setSelectedWeek] = useState(nextWeek);
-
   // Manejar el cambio de selección
   const handleChange = (event) => {
-    setSelectedWeek(parseInt(event.target.value, 10));
+    const weekNumber = parseInt(event.target.value, 10);
+    setSelectedWeek(weekNumber);
+    const { startOfWeek, endOfWeek } = getWeekStartAndEndDates(new Date().getFullYear(), weekNumber);
+    setStartDateStart(startOfWeek);
+    setStartDateEnd(endOfWeek);
   };
 
   // Mostrar semanas actuales y siguientes
@@ -136,7 +248,13 @@ const Programacion_Valvula = () => {
                   <label htmlFor="kc" className="label-kc-valvule mr-4">
                     KC:
                   </label>
-                  <input type="number" id="kc" className="ingress-kc-valvule" />
+                  <input
+                    type="number"
+                    id="kc"
+                    value={kc}
+                    onChange={(e) => setKc(e.target.value)}
+                    className="ingress-kc-valvule"
+                  />
                 </div>
                 <div className="container-kc-valvule-2">
                   <label htmlFor="frequency" className="label-kc-valvule">
@@ -145,16 +263,20 @@ const Programacion_Valvula = () => {
                   <input
                     type="number"
                     id="frequency"
+                    value={frequency}
+                    onChange={handleFrequencyChange}
                     className="ingress-kc-valvule"
                   />
                 </div>
                 <div className="container-kc-valvule-2">
                   <label htmlFor="irrigationTime" className="label-kc-valvule">
-                    Hora de Riego:
+                    Horas de Riego:
                   </label>
                   <input
-                    type="time"
+                    type="text"
                     id="irrigationTime"
+                    value={irrigationTime}
+                    readOnly
                     className="ingress-kc-valvule"
                   />
                 </div>
@@ -165,6 +287,8 @@ const Programacion_Valvula = () => {
                   <input
                     type="time"
                     id="startTime"
+                    value={startTime}
+                    onChange={(e) => setStartTime(e.target.value)}
                     className="ingress-kc-valvule"
                   />
                 </div>
@@ -175,6 +299,8 @@ const Programacion_Valvula = () => {
                   <input
                     type="time"
                     id="endTime"
+                    value={endTime}
+                    readOnly
                     className="ingress-kc-valvule"
                   />
                 </div>
@@ -193,19 +319,19 @@ const Programacion_Valvula = () => {
                     id="lastWatering"
                     name="lastWatering"
                     value={lastWatering}
-                    onChange={(e) => setLastWatering(e.target.value)}
+                    readOnly
                     className="date-title-ultimo-valvula"
                   />
                 </div>
                 <div className="container-eto-valvula">
                   <label htmlFor="eto" className="label-ETo mr-4">
-                    ETo:
+                    ET0:
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     id="eto"
-                    pattern="[A-Za-z0-9]*"
-                    title="Solo se permiten letras y números"
+                    value={eto}
+                    readOnly
                     className="ingress-eto-valvula"
                   />
                 </div>
@@ -217,6 +343,8 @@ const Programacion_Valvula = () => {
                     type="text"
                     id="systemDischarge"
                     className="ingress-eto-valvula"
+                    value={descarga}
+                    readOnly
                   />
                 </div>
                 <div className="day-checkbox">
@@ -238,17 +366,6 @@ const Programacion_Valvula = () => {
                         {day.name}
                       </label>
                       <div className="valve-day-icons">
-                        {isEditing ? (
-                          <FaSave
-                            className="icon save-icon"
-                            onClick={saveChanges} // Mostrar el ícono de guardar en modo de edición
-                          />
-                        ) : (
-                          <MdCheckBox
-                            className="icon check-icon"
-                            onClick={handleEdit} // Mostrar el ícono de editar en modo normal
-                          />
-                        )}
                         <FaEdit
                           className="icon edit-icon"
                           onClick={() => openModal(day.name)} // Mostrar el Modals_Valvule con el nombre del día actual
@@ -274,7 +391,7 @@ const Programacion_Valvula = () => {
               <button
                 type="button"
                 className="valve-btn-cancel"
-                onClick={closeModal}
+                onClick={resetForm}
               >
                 Cancelar
               </button>
@@ -302,4 +419,17 @@ const getWeekNumber = (date) => {
   d.setDate(d.getDate() + 4 - (d.getDay() || 7));
   const yearStart = new Date(d.getFullYear(), 0, 1);
   return Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+};
+
+// Función para obtener la fecha de inicio y fin de la semana
+const getWeekStartAndEndDates = (year, weekNumber) => {
+  const firstDayOfYear = new Date(year, 0, 1);
+  const daysOffset = (weekNumber - 1) * 7;
+  const startOfWeek = new Date(firstDayOfYear.setDate(firstDayOfYear.getDate() + daysOffset));
+  const endOfWeek = new Date(startOfWeek);
+  endOfWeek.setDate(startOfWeek.getDate() + 6);
+  return {
+    startOfWeek: startOfWeek.toISOString().split('T')[0],
+    endOfWeek: endOfWeek.toISOString().split('T')[0],
+  };
 };
